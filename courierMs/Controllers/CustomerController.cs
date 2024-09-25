@@ -202,7 +202,7 @@ namespace courierMs.Controllers
 
 
 
-            var data = _context.Lookup.Where(x => x.Id == model.Id).FirstOrDefault();
+            var data = _context.Lookup.FirstOrDefault(x => x.Id == model.Id);
 
             if (data == null)
             {
@@ -221,9 +221,10 @@ namespace courierMs.Controllers
             {
                 _context.Lookup.Update(data);// for Lookup table
                 _context.SaveChanges();
+                
 
-                var result = _context.Lookup.Where(x => x.Id == data.Id).OrderBy(x => x.Id).ToList();
-                return Json(new { success = true, message = PopupMessage.success, data = result });
+                
+                return Json(new { success = true, message = PopupMessage.success, data });
 
             }
             catch (Exception e)

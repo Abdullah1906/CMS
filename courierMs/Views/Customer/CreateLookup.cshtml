@@ -282,17 +282,10 @@
         //confirmedupdatebutton
 
         $("#submitUpdateButton").click(function () {
-             //var lookupId = $('#Id').val()
-            // console.log(lookupId);
-
-            // if (!lookupId) {
-            //     Swal.fire("Error", "Can't update without a valid ID", "error");
-            //     return;
-            // }
-
+            var lookupId = $('#Id').val();
 
             var lookupData = {
-                Id: $('#Id').val(),
+                Id: lookupId,
                 Type: $('#Type').val(),
                 Name: $('#Name').val(),
                 Value: $('#Value').val(),
@@ -307,51 +300,50 @@
                 data: lookupData,
                 success: function (response) {
                     Swal.fire("Done!");
-                    if (response.success) {
+                    if (response.success && response.data) {
 
-                        $('#lookupTable tbody').find('button[data-id="' + lookupId + '"]').closest('tr').remove();
+                        var updatedData = response.data;
 
-                        if (response && response.data && Array.isArray(response.data) && response.data.length > 0) {
+                        $('#lookupTable tbody').find('button[data-id="' + updatedData.id + '"]').closest('tr').remove();// Oi Id ar jonno pera dise
 
-                            var lastIndex = response.data.length - 1;
 
-                            var newRow =
-                                `
+
+                        var newRow =
+
+                            `
                                <tr>
-                                        <td>${response.data[lastIndex].serial}</td>
-                                        <td>${response.data[lastIndex].value}</td>
-                                        <td>${response.data[lastIndex].name}</td>
-                                        <td>${response.data[lastIndex].type}</td>
-                                        <td>${response.data[lastIndex].isActive ? 'Yes' : 'No'}</td>
+                                            <td>${updatedData.serial}</td>
+                                            <td>${updatedData.value}</td>
+                                            <td>${updatedData.name}</td>
+                                            <td>${updatedData.type}</td>
+                                            <td>${updatedData.isActive ? 'Yes' : 'No'}</td>
 
                                     <td>
-                                        <button type="button" id="GetupdateButton" class="btn btn-success btn-lg " data-id="${response.data[response.data.length - 1].id}">Update</button>
-                                        <button type="button" id="deleteButton" class="btn btn-success btn-lg" data-id="${response.data[response.data.length - 1].id}">Delete</button>
+                                            <button type="button" id="GetupdateButton" class="btn btn-success btn-lg " data-id="${updatedData.id}">Update</button>
+                                            <button type="button" id="deleteButton" class="btn btn-success btn-lg" data-id="${updatedData.id}">Delete</button>
                                     </td>
 
 
                                 </tr>
                         
                         
-                        `
+                        `;
 
-                                ;
-
-                            $('#lookupTable').append(newRow);
-                            $('#LookupForm')[0].reset();
-                        }
-                        else {
-                            console.error('Invalid response data:', response);
-                            Swal.fire("Failed!", "Invalid response data.", "error");
-                        }
+                        $('#lookupTable tbody').append(newRow);
+                        $('#LookupForm')[0].reset();
                     }
+                    else {
+                        Swal.fire("Error!", "Failed to update the record.", "error");
+
+                    }
+
 
                 },
                 error: function () {
                     swal.fire("Failed!");
                 }
 
-            })
+            });
 
 
 
