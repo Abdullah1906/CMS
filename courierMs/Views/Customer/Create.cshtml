@@ -1,0 +1,219 @@
+﻿@model courierMs.ViewModel.MultiModelVM
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1 class="text-center display-5">Create Customer & Parcel Info</h1>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="d-flex justify-content-center align-items-start min-vh-100 pt-5">
+            <div class="col-md-6">
+                <div class="card shadow-lg">
+                    <div class="card-header bg-primary text-white text-center">
+                        <h3 class="mb-0">Customer Details</h3>
+                    </div>
+                    <div class="card-body">
+                        <form asp-action="Create">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="Customerinfo.Name" class="control-label"></label>
+                                        <input asp-for="Customerinfo.Name" class="form-control" />
+                                        <span asp-validation-for="Customerinfo.Name" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="Customerinfo.PhoneNumber" class="control-label"></label>
+                                        <input asp-for="Customerinfo.PhoneNumber" class="form-control" />
+                                        <span asp-validation-for="Customerinfo.PhoneNumber" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="Customerinfo.Email" class="control-label"></label>
+                                        <input asp-for="Customerinfo.Email" class="form-control" />
+                                        <span asp-validation-for="Customerinfo.Email" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="Customerinfo.Address" class="control-label"></label>
+                                        <input asp-for="Customerinfo.Address" class="form-control" />
+                                        <span asp-validation-for="Customerinfo.Address" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="Customerinfo.Note" class="control-label"></label>
+                                        <input asp-for="Customerinfo.Note" class="form-control" />
+                                        <span asp-validation-for="Customerinfo.Note" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="Customerinfo.city" class="control-label">Select City</label>
+                                        <select asp-for="Customerinfo.city" class="form-control">
+                                            <option value="-1">Select One</option>
+                                            @if (ViewBag.CityList != null)
+                                            {
+                                                @foreach (var city in ViewBag.CityList)
+                                                {
+                                                    <option value="@city.Value">@city.Name</option>
+                                                }
+                                            }
+                                            else
+                                            {
+                                                <option value="">No cities available</option>
+                                            }
+
+                                        </select>
+                                        <span asp-validation-for="Customerinfo.city" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+                            <h3 class="text-center">Parcel Info</h3>
+                            <hr />
+                            <br/>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="Percelinfo.ParcelType" class="control-label">Select Parcel Type</label>
+                                        <select asp-for="Percelinfo.ParcelType" class="form-control">
+                                            <option value="-1">Select ParcelType</option>
+                                            @if (ViewBag.PercelList != null)
+                                            {
+                                                @foreach (var city in ViewBag.PercelList)
+                                                {
+                                                    <option value="@city.Value">@city.Name</option>
+                                                }
+                                            }
+                                            else
+                                            {
+                                                <option value="">No cities available</option>
+                                            }
+
+                                        </select>
+                                        <span asp-validation-for="Percelinfo.ParcelType" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="Percelinfo.Weight" class="control-label"></label>
+                                        <input asp-for="Percelinfo.Weight" class="form-control" />
+                                        <span asp-validation-for="Percelinfo.Weight" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="Percelinfo.Price" class="control-label"></label>
+                                        <input asp-for="Percelinfo.Price" class="form-control" />
+                                        <span asp-validation-for="Percelinfo.Price" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="Percelinfo.Note" class="control-label"></label>
+                                        <input asp-for="Percelinfo.Note" class="form-control" />
+                                        <span asp-validation-for="Percelinfo.Note" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="mr-auto ">
+                                    <a asp-action="Index" class="btn btn-primary text-end">Back to List</a>
+                                </div>
+                                <div class="form-group  ">
+                                    <input type="submit" value="Create" class="btn btn-primary  " />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+
+
+
+
+        @*       <div class="form-group">
+        <label asp-for="CustomerId" class="control-label"></label>
+        <input asp-for="CustomerId" class="form-control" />
+        <span asp-validation-for="CustomerId" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+        <label asp-for="Name" class="control-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+        <label asp-for="PhoneNumber" class="control-label"></label>
+        <input asp-for="PhoneNumber" class="form-control" />
+        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+        <label asp-for="Email" class="control-label"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+        <label asp-for="Address" class="control-label"></label>
+        <input asp-for="Address" class="form-control" />
+        <span asp-validation-for="Address" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+        <label asp-for="Note" class="control-label"></label>
+        <input asp-for="Note" class="form-control" />
+        <span asp-validation-for="Note" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+        <label asp-for="city" class="control-label"></label>
+        <input asp-for="city" class="form-control" />
+        <span asp-validation-for="city" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+        <label asp-for="CreatedAt" class="control-label"></label>
+        <input asp-for="CreatedAt" class="form-control" />
+        <span asp-validation-for="CreatedAt" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+        <label asp-for="CreatedBy" class="control-label"></label>
+        <input asp-for="CreatedBy" class="form-control" />
+        <span asp-validation-for="CreatedBy" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+        <label asp-for="UpdatedAt" class="control-label"></label>
+        <input asp-for="UpdatedAt" class="form-control" />
+        <span asp-validation-for="UpdatedAt" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+        <label asp-for="UpdatedBy" class="control-label"></label>
+        <input asp-for="UpdatedBy" class="form-control" />
+        <span asp-validation-for="UpdatedBy" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" />
+        </div>
+        </form>
+        </div>
+        </div>
+        *@

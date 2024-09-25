@@ -1,0 +1,65 @@
+﻿@{
+    ViewBag.Title = "Upload Image using Dropzone.js";
+}
+
+<script src="https://unpkg.com/dropzone@6.0.0-beta.1/dist/dropzone-min.js"></script>
+<link href="https://unpkg.com/dropzone@6.0.0-beta.1/dist/dropzone.css" rel="stylesheet" type="text/css" />
+<script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
+
+<form action="/Customer/UploadImage" class="dropzone" id="imageUploadDropzone" enctype="multipart/form-data">
+    @Html.AntiForgeryToken()
+</form>
+
+
+<script>
+    Dropzone.options.imageUploadDropzone = {
+        paramName: "file", // The name used to transfer the file
+        maxFilesize: 3, // MB
+        acceptedFiles: "image/*",
+        addRemoveLinks: false, // Enable the remove link in the Dropzone
+        //dictRemoveFile: "Remove file", // Explicitly set the remove file button text
+        headers: {
+            'X-CSRF-TOKEN': $('input[name="__RequestVerificationToken"]').val() // Pass AntiForgeryToken
+        },
+        success: function (file, response) {
+            if (response.success) {
+                alert("File uploaded successfully.");
+                file.uploadedFileName = file.name; // Store the file name for deletion
+            } else {
+                alert("File upload failed: " + response.message);
+            }
+        },
+        error: function (file, response) {
+            alert("An error occurred while uploading the file.");
+        },
+        removedfile: function (file) {
+            if (file.uploadedFileName) {
+                // Call the delete API to remove the file from the server
+                $.ajax({
+                    type: 'POST',
+                    url: '/Customer/DeleteImage', // Update with your delete endpoint
+                    data: { fileName: file.uploadedFileName },
+                    headers: {
+                        'X-CSRF-TOKEN': $('input[name="__RequestVerificationToken"]').val()
+                    },
+                    success: function (response) {
+                        if (response.success) {
+                            alert("File deleted successfully.");
+                        } else {
+                            alert("File deletion failed: " + response.message);
+                        }
+                    },
+                    error: function (response) {
+                        alert("An error occurred while deleting the file.");
+                    }
+                });
+            }
+
+            // Remove the file preview from Dropzone
+            var fileRef;
+            return (fileRef = file.previewElement) != null ? fileRef.parentNode.removeChild(file.previewElement) : void 0;
+        }
+    };
+</script>
+

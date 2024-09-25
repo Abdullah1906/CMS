@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35219.272
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "courierMs", "courierMs\courierMs.csproj", "{30D79635-F052-415C-98A0-002A8B814AE7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{30D79635-F052-415C-98A0-002A8B814AE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30D79635-F052-415C-98A0-002A8B814AE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30D79635-F052-415C-98A0-002A8B814AE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30D79635-F052-415C-98A0-002A8B814AE7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AE415E8B-9E61-4B8A-A129-5C717DB43C1C}
+	EndGlobalSection
+EndGlobal
