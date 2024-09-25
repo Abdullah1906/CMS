@@ -176,7 +176,7 @@ namespace courierMs.Controllers
                 
 
 
-                var submitdata = _context.Lookup.Where(x => x.Id == model.Id).FirstOrDefault();
+                var submitdata = _context.Lookup.Where(x => x.Id == data.Id).ToList();
                 return Json(new { success = true, message = PopupMessage.success, data= submitdata });
             }
             catch (Exception ex)
@@ -222,7 +222,7 @@ namespace courierMs.Controllers
                 _context.Lookup.Update(data);// for Lookup table
                 _context.SaveChanges();
 
-                var result = _context.Lookup.OrderBy(x => x.Id).ToList();
+                var result = _context.Lookup.Where(x => x.Id == data.Id).OrderBy(x => x.Id).ToList();
                 return Json(new { success = true, message = PopupMessage.success, data = result });
 
             }

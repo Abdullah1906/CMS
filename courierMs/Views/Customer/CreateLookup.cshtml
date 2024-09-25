@@ -243,7 +243,8 @@
                 success: function (response) {
                     Swal.fire("Done!");
 
-                    var newRow = `
+
+                        var newRow = `
 
                                 <tr>
                                 <td>${response.data[response.data.length - 1].serial}</td>
@@ -261,12 +262,10 @@
                                 </tr>
                     
                     
-                    `
+                    `;
 
-                        ;
-
-                    $('#lookupTable').append(newRow);
-                    $('#LookupForm')[0].reset();
+                        $('#lookupTable tbody').append(newRow);
+                        $('#LookupForm')[0].reset();
 
                 },
                 error: function () {
@@ -283,15 +282,14 @@
         //confirmedupdatebutton
 
         $("#submitUpdateButton").click(function () {
-            // var lookupId = $('#Id').val()
+             //var lookupId = $('#Id').val()
             // console.log(lookupId);
 
             // if (!lookupId) {
             //     Swal.fire("Error", "Can't update without a valid ID", "error");
             //     return;
             // }
-            debugger;
-            alert("okay");
+
 
             var lookupData = {
                 Id: $('#Id').val(),
