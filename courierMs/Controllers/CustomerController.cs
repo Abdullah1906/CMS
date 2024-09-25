@@ -73,7 +73,26 @@ namespace courierMs.Controllers
                 .Where(x=> x.Id>0)
                 .OrderBy(x=>x.Serial)
                 .ToList();
+
+            var lastSerial = _context.Lookup
+                .OrderByDescending(x => x.Serial)
+                .Select(x => x.Serial)
+                .FirstOrDefault();
+
+            // Pass the last serial to ViewBag
+            ViewBag.LastSerial = lastSerial;
+
+
             return View();
+        }
+
+        //get lastserial
+        [HttpGet]
+        public IActionResult GetLastSerial()
+        {
+            var lastSerial = _context.Lookup.OrderByDescending(x => x.Serial).Select(x => x.Serial).FirstOrDefault();
+
+            return Json(new { lastSerial });
         }
 
         public ActionResult UploadImage()

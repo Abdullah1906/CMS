@@ -8,7 +8,7 @@
 
 
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-10">
         <div class="align-items-start  pt-5">
             <div class="col-md-6">
                 <div class="card shadow-lg">
@@ -50,13 +50,21 @@
                                 </div>
                             </div>
                             <div class="d-grid gap-2">
-                                <button type="button" id="submitButton" class="btn btn-primary btn-lg">Submit</button>
-                                <button type="button" id="submitUpdateButton" class="btn btn-primary btn-lg">Confirm Update</button>
+                                <button type="button" id="submitButton" class=" btn btn-success btn-lg">Submit</button>
+                                <button type="button" id="submitUpdateButton" class="btn btn-success btn-lg">Confirm Update</button>
 
                             </div>
                         </form>
                     </div>
                 </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md-2 ">
+        <div class="card-body card shadow-lg btn btn-outline-success">
+            <div class="card-body bg-primary text-white table-bordered text-center">
+                <h4><strong>Last Serial:</strong> <span id="lastSerial">@ViewBag.LastSerial</span></h4>
             </div>
         </div>
 
@@ -72,7 +80,7 @@
             </div>
             <div class="card-body">
                 <table class="table table-hover table-bordered text-center align-middle" id="lookupTable">
-                    <thead class="table-dark">
+                    <thead class="text-white bg-dark">
                         <tr>
                             <th scope="col">Serial</th>
                             <th scope="col">Value</th>
@@ -96,8 +104,8 @@
                                     <td>@(city.IsActive ? "Yes" : "No")</td>
                                   
                                     <td>
-                                        <button type="button" id="GetupdateButton" class="btn btn-success btn-lg " data-id="@city.Id">Update</button>
-                                        <button type="button" id="deleteButton" class="btn btn-success btn-lg" data-id="@city.Id">Delete</button>
+                                        <button type="button" id="GetupdateButton" class="btn btn-outline-primary btn-lg " data-id="@city.Id">Update</button>
+                                        <button type="button" id="deleteButton" class="btn btn-outline-danger btn-lg" data-id="@city.Id">Delete</button>
                                     </td>
                                    
 
@@ -124,8 +132,25 @@
 <script>
 
 
-    // getupdatebutton
+    // lastserail
+    function updateLastSerial() {
+        $.ajax({
+            url: '@Url.Action("GetLastSerial", "Customer")',
+            type: 'GET',
+            success: function (response) {
+                $('#lastSerial').text(response.lastSerial);
+            },
+            error: function () {
+                console.log("Failed to update last serial.");
 
+            }
+
+
+        });
+    }
+
+
+    // getupdatebutton
     $(document).on('click', '#GetupdateButton', function () { //  is used to attach event handlers to dynamically added all delete elements
         var id = $(this).data('id');
         debugger;
@@ -206,6 +231,8 @@
                     Swal.fire("Deleted!", "The item has been deleted.", "success");
                     $('#lookupTable tbody').find('button[data-id="' + id + '"]').closest('tr').remove();
                 }
+
+                updateLastSerial();
             },
             error: function () {
                 swal.fire("Error!");
@@ -221,6 +248,8 @@
 
 
     $(document).ready(function () {
+
+
 
         //submitbutton
 
@@ -266,6 +295,8 @@
 
                         $('#lookupTable tbody').append(newRow);
                         $('#LookupForm')[0].reset();
+
+                    updateLastSerial();
 
                 },
                 error: function () {
@@ -331,11 +362,14 @@
 
                         $('#lookupTable tbody').append(newRow);
                         $('#LookupForm')[0].reset();
+
                     }
                     else {
                         Swal.fire("Error!", "Failed to update the record.", "error");
 
                     }
+                    var newLastSerial = response.data[response.data.length - 1].serial;
+                    $('#lastSerial').text(newLastSerial);
 
 
                 },
