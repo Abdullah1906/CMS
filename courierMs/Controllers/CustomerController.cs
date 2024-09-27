@@ -124,33 +124,55 @@ namespace courierMs.Controllers
             customerData.Email = model.Customerinfo.Email;
             customerData.city = model.Customerinfo.city;
             customerData.Note = model.Customerinfo.Note;
+            customerData.CreatedAt = DateTime.Now;
+            customerData.UpdatedAt = DateTime.Now;
             customerData.CreatedBy = GuidHelper.ToGuidOrDefault(userid);
             customerData.UpdatedBy = GuidHelper.ToGuidOrDefault(userid);
+            customerData.CustomerId=Guid.NewGuid();
+
+            // for receiver
+            Receiverinfo receiverData = new Receiverinfo();
+
+            receiverData.Name = model.Receiverinfo.Name;
+            receiverData.PhoneNumber = model.Receiverinfo.PhoneNumber;
+            receiverData.Address = model.Receiverinfo.Address;
+            receiverData.Email = model.Receiverinfo.Email;
+            receiverData.city = model.Receiverinfo.city;
+            receiverData.Note = model.Receiverinfo.Note;
+            receiverData.CreatedAt = DateTime.Now;
+            receiverData.UpdatedAt = DateTime.Now;
+            receiverData.CreatedBy = GuidHelper.ToGuidOrDefault(userid);
+            receiverData.UpdatedBy = GuidHelper.ToGuidOrDefault(userid);
+            receiverData.ReceiverId = Guid.NewGuid();
+
 
             // for percel
             percelData.ParcelType = model.Percelinfo.ParcelType;
             percelData.Weight = model.Percelinfo.Weight;
             percelData.Price = model.Percelinfo.Price;
             percelData.Note = model.Percelinfo.Note;
+            percelData.CreatedAt = DateTime.Now;
+            percelData.UpdatedAt = DateTime.Now;
+            customerData.UpdatedAt = DateTime.Now;
             percelData.CreatedBy = GuidHelper.ToGuidOrDefault(userid);
             percelData.UpdatedBy = GuidHelper.ToGuidOrDefault(userid);
+            percelData.ParcelId = Guid.NewGuid();
 
 
-            bool isSave = false;
 
             if (ModelState.IsValid)
             {
                 _context.Add(customerData);
                 await _context.SaveChangesAsync();
 
+                _context.Add(receiverData);
+                await _context.SaveChangesAsync();
+
+                percelData.SenderId = customerData.CustomerId;
+                percelData.ReceiverId = receiverData.ReceiverId;
+
                 _context.Add(percelData);
                 await _context.SaveChangesAsync();
-                isSave = true;
-            }
-            if (isSave)
-            {
-                percelData.SenderId = customerData.CustomerId;
-                percelData.ReceiverId= customerData.CustomerId;
 
             }
 
