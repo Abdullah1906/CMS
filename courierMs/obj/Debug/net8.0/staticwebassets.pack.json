@@ -5,6 +5,486 @@
       "PackagePath": "staticwebassets\\courierMs.bundle.scp.css"
     },
     {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\css\\animate.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\animate.min.css"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\assets\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\assets\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\assets\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\assets\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\assets\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\assets\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\assets\\css\\bootstrap.css"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\assets\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\assets\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\css\\cochin.css",
+      "PackagePath": "staticwebassets\\assets\\css\\cochin.css"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\css\\default-skin.css",
+      "PackagePath": "staticwebassets\\assets\\css\\default-skin.css"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\css\\icomoon.css",
+      "PackagePath": "staticwebassets\\assets\\css\\icomoon.css"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\css\\jquery-ui.css",
+      "PackagePath": "staticwebassets\\assets\\css\\jquery-ui.css"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\css\\jquery.fancybox.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\jquery.fancybox.min.css"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\css\\jquery.mCustomScrollbar.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\jquery.mCustomScrollbar.min.css"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\css\\meanmenu.css",
+      "PackagePath": "staticwebassets\\assets\\css\\meanmenu.css"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\css\\nice-select.css",
+      "PackagePath": "staticwebassets\\assets\\css\\nice-select.css"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\css\\normalize.css",
+      "PackagePath": "staticwebassets\\assets\\css\\normalize.css"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\css\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\owl.carousel.min.css"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\css\\responsive.css",
+      "PackagePath": "staticwebassets\\assets\\css\\responsive.css"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\css\\slick.css",
+      "PackagePath": "staticwebassets\\assets\\css\\slick.css"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\css\\style.css",
+      "PackagePath": "staticwebassets\\assets\\css\\style.css"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\fonts\\IcoMoon-Free.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\IcoMoon-Free.ttf"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\fonts\\Poppins-Black.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Poppins-Black.ttf"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\fonts\\Poppins-BlackItalic.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Poppins-BlackItalic.ttf"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\fonts\\Poppins-Bold.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Poppins-Bold.ttf"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\fonts\\Poppins-BoldItalic.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Poppins-BoldItalic.ttf"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\fonts\\Poppins-ExtraBold.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Poppins-ExtraBold.ttf"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\fonts\\Poppins-ExtraBoldItalic.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Poppins-ExtraBoldItalic.ttf"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\fonts\\Poppins-ExtraLight.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Poppins-ExtraLight.ttf"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\fonts\\Poppins-ExtraLightItalic.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Poppins-ExtraLightItalic.ttf"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\fonts\\Poppins-Italic.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Poppins-Italic.ttf"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\fonts\\Poppins-Light.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Poppins-Light.ttf"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\fonts\\Poppins-LightItalic.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Poppins-LightItalic.ttf"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\fonts\\Poppins-Medium.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Poppins-Medium.ttf"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\fonts\\Poppins-MediumItalic.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Poppins-MediumItalic.ttf"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\fonts\\Poppins-Regular.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Poppins-Regular.ttf"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\fonts\\Poppins-SemiBold.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Poppins-SemiBold.ttf"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\fonts\\Poppins-SemiBoldItalic.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Poppins-SemiBoldItalic.ttf"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\fonts\\Poppins-Thin.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Poppins-Thin.ttf"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\fonts\\Poppins-ThinItalic.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Poppins-ThinItalic.ttf"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\fonts\\cochin.woff",
+      "PackagePath": "staticwebassets\\assets\\fonts\\cochin.woff"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\fonts\\cochin.woff2",
+      "PackagePath": "staticwebassets\\assets\\fonts\\cochin.woff2"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\fonts\\cochinbold_italic.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\cochinbold_italic.ttf"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\fonts\\cochinbold_italic.woff",
+      "PackagePath": "staticwebassets\\assets\\fonts\\cochinbold_italic.woff"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\fonts\\cochinbold_italic.woff2",
+      "PackagePath": "staticwebassets\\assets\\fonts\\cochinbold_italic.woff2"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\images\\about.png",
+      "PackagePath": "staticwebassets\\assets\\images\\about.png"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\images\\banner.png",
+      "PackagePath": "staticwebassets\\assets\\images\\banner.png"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\images\\loading.gif",
+      "PackagePath": "staticwebassets\\assets\\images\\loading.gif"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\images\\map.png",
+      "PackagePath": "staticwebassets\\assets\\images\\map.png"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\images\\menu_icon.png",
+      "PackagePath": "staticwebassets\\assets\\images\\menu_icon.png"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\images\\our.png",
+      "PackagePath": "staticwebassets\\assets\\images\\our.png"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\images\\ser1.png",
+      "PackagePath": "staticwebassets\\assets\\images\\ser1.png"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\images\\ser2.png",
+      "PackagePath": "staticwebassets\\assets\\images\\ser2.png"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\images\\ser3.png",
+      "PackagePath": "staticwebassets\\assets\\images\\ser3.png"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\images\\ser4.png",
+      "PackagePath": "staticwebassets\\assets\\images\\ser4.png"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\images\\ser5.png",
+      "PackagePath": "staticwebassets\\assets\\images\\ser5.png"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\images\\test.png",
+      "PackagePath": "staticwebassets\\assets\\images\\test.png"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\images\\track.png",
+      "PackagePath": "staticwebassets\\assets\\images\\track.png"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\images\\why2.png",
+      "PackagePath": "staticwebassets\\assets\\images\\why2.png"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\assets\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\assets\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\assets\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\assets\\js\\bootstrap.js"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\assets\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\assets\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\custom.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom.js"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\jquery-3.0.0.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery-3.0.0.min.js"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\jquery.mCustomScrollbar.concat.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery.mCustomScrollbar.concat.min.js"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\jquery.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery.min.js"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery.validate.js"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\modernizer.js",
+      "PackagePath": "staticwebassets\\assets\\js\\modernizer.js"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\plugin.js",
+      "PackagePath": "staticwebassets\\assets\\js\\plugin.js"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\popper.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\popper.min.js"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\revolution\\assets\\coloredbg.png",
+      "PackagePath": "staticwebassets\\assets\\js\\revolution\\assets\\coloredbg.png"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\revolution\\assets\\gridtile.png",
+      "PackagePath": "staticwebassets\\assets\\js\\revolution\\assets\\gridtile.png"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\revolution\\assets\\gridtile_3x3.png",
+      "PackagePath": "staticwebassets\\assets\\js\\revolution\\assets\\gridtile_3x3.png"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\revolution\\assets\\gridtile_3x3_white.png",
+      "PackagePath": "staticwebassets\\assets\\js\\revolution\\assets\\gridtile_3x3_white.png"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\revolution\\assets\\gridtile_white.png",
+      "PackagePath": "staticwebassets\\assets\\js\\revolution\\assets\\gridtile_white.png"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\revolution\\assets\\loader.gif",
+      "PackagePath": "staticwebassets\\assets\\js\\revolution\\assets\\loader.gif"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\revolution\\css\\closedhand.html",
+      "PackagePath": "staticwebassets\\assets\\js\\revolution\\css\\closedhand.html"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\revolution\\css\\layers.css",
+      "PackagePath": "staticwebassets\\assets\\js\\revolution\\css\\layers.css"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\revolution\\css\\navigation.css",
+      "PackagePath": "staticwebassets\\assets\\js\\revolution\\css\\navigation.css"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\revolution\\css\\openhand.html",
+      "PackagePath": "staticwebassets\\assets\\js\\revolution\\css\\openhand.html"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\revolution\\css\\settings.css",
+      "PackagePath": "staticwebassets\\assets\\js\\revolution\\css\\settings.css"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\revolution\\fonts\\pe-icon-7-stroke\\css\\pe-icon-7-stroke.css",
+      "PackagePath": "staticwebassets\\assets\\js\\revolution\\fonts\\pe-icon-7-stroke\\css\\pe-icon-7-stroke.css"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\revolution\\fonts\\pe-icon-7-stroke\\fonts\\Pe-icon-7-strokebb1d.eot",
+      "PackagePath": "staticwebassets\\assets\\js\\revolution\\fonts\\pe-icon-7-stroke\\fonts\\Pe-icon-7-strokebb1d.eot"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\revolution\\fonts\\pe-icon-7-stroke\\fonts\\Pe-icon-7-strokebb1d.svg",
+      "PackagePath": "staticwebassets\\assets\\js\\revolution\\fonts\\pe-icon-7-stroke\\fonts\\Pe-icon-7-strokebb1d.svg"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\revolution\\fonts\\pe-icon-7-stroke\\fonts\\Pe-icon-7-strokebb1d.ttf",
+      "PackagePath": "staticwebassets\\assets\\js\\revolution\\fonts\\pe-icon-7-stroke\\fonts\\Pe-icon-7-strokebb1d.ttf"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\revolution\\fonts\\pe-icon-7-stroke\\fonts\\Pe-icon-7-strokebb1d.woff",
+      "PackagePath": "staticwebassets\\assets\\js\\revolution\\fonts\\pe-icon-7-stroke\\fonts\\Pe-icon-7-strokebb1d.woff"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\revolution\\fonts\\pe-icon-7-stroke\\fonts\\Pe-icon-7-stroked41d.eot",
+      "PackagePath": "staticwebassets\\assets\\js\\revolution\\fonts\\pe-icon-7-stroke\\fonts\\Pe-icon-7-stroked41d.eot"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\revolution\\fonts\\revicons\\revicons90c6.eot",
+      "PackagePath": "staticwebassets\\assets\\js\\revolution\\fonts\\revicons\\revicons90c6.eot"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\revolution\\fonts\\revicons\\revicons90c6.svg",
+      "PackagePath": "staticwebassets\\assets\\js\\revolution\\fonts\\revicons\\revicons90c6.svg"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\revolution\\fonts\\revicons\\revicons90c6.ttf",
+      "PackagePath": "staticwebassets\\assets\\js\\revolution\\fonts\\revicons\\revicons90c6.ttf"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\revolution\\fonts\\revicons\\revicons90c6.woff",
+      "PackagePath": "staticwebassets\\assets\\js\\revolution\\fonts\\revicons\\revicons90c6.woff"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\revolution\\js\\extensions\\revolution.extension.actions.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\revolution\\js\\extensions\\revolution.extension.actions.min.js"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\revolution\\js\\extensions\\revolution.extension.carousel.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\revolution\\js\\extensions\\revolution.extension.carousel.min.js"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\revolution\\js\\extensions\\revolution.extension.kenburn.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\revolution\\js\\extensions\\revolution.extension.kenburn.min.js"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\revolution\\js\\extensions\\revolution.extension.layeranimation.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\revolution\\js\\extensions\\revolution.extension.layeranimation.min.js"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\revolution\\js\\extensions\\revolution.extension.migration.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\revolution\\js\\extensions\\revolution.extension.migration.min.js"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\revolution\\js\\extensions\\revolution.extension.navigation.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\revolution\\js\\extensions\\revolution.extension.navigation.min.js"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\revolution\\js\\extensions\\revolution.extension.parallax.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\revolution\\js\\extensions\\revolution.extension.parallax.min.js"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\revolution\\js\\extensions\\revolution.extension.slideanims.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\revolution\\js\\extensions\\revolution.extension.slideanims.min.js"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\revolution\\js\\extensions\\revolution.extension.video.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\revolution\\js\\extensions\\revolution.extension.video.min.js"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\revolution\\js\\jquery.themepunch.revolution.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\revolution\\js\\jquery.themepunch.revolution.min.js"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\revolution\\js\\jquery.themepunch.tools.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\revolution\\js\\jquery.themepunch.tools.min.js"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\assets\\js\\slider-setting.js",
+      "PackagePath": "staticwebassets\\assets\\js\\slider-setting.js"
+    },
+    {
       "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\css\\css\\sb-admin-2.css",
       "PackagePath": "staticwebassets\\css\\css\\sb-admin-2.css"
     },
@@ -7439,6 +7919,206 @@
     {
       "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\fonts\\IcoMoon-Free.ttf",
+      "PackagePath": "staticwebassets\\fonts\\IcoMoon-Free.ttf"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\fonts\\Poppins-Black.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins-Black.ttf"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\fonts\\Poppins-BlackItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins-BlackItalic.ttf"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\fonts\\Poppins-Bold.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins-Bold.ttf"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\fonts\\Poppins-BoldItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins-BoldItalic.ttf"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\fonts\\Poppins-ExtraBold.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins-ExtraBold.ttf"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\fonts\\Poppins-ExtraBoldItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins-ExtraBoldItalic.ttf"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\fonts\\Poppins-ExtraLight.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins-ExtraLight.ttf"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\fonts\\Poppins-ExtraLightItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins-ExtraLightItalic.ttf"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\fonts\\Poppins-Italic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins-Italic.ttf"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\fonts\\Poppins-Light.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins-Light.ttf"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\fonts\\Poppins-LightItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins-LightItalic.ttf"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\fonts\\Poppins-Medium.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins-Medium.ttf"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\fonts\\Poppins-MediumItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins-MediumItalic.ttf"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\fonts\\Poppins-Regular.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins-Regular.ttf"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\fonts\\Poppins-SemiBold.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins-SemiBold.ttf"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\fonts\\Poppins-SemiBoldItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins-SemiBoldItalic.ttf"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\fonts\\Poppins-Thin.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins-Thin.ttf"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\fonts\\Poppins-ThinItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins-ThinItalic.ttf"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\fonts\\cochin.woff",
+      "PackagePath": "staticwebassets\\fonts\\cochin.woff"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\fonts\\cochin.woff2",
+      "PackagePath": "staticwebassets\\fonts\\cochin.woff2"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\fonts\\cochinbold_italic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\cochinbold_italic.ttf"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\fonts\\cochinbold_italic.woff",
+      "PackagePath": "staticwebassets\\fonts\\cochinbold_italic.woff"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\fonts\\cochinbold_italic.woff2",
+      "PackagePath": "staticwebassets\\fonts\\cochinbold_italic.woff2"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\images\\about.png",
+      "PackagePath": "staticwebassets\\images\\about.png"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\images\\banner.png",
+      "PackagePath": "staticwebassets\\images\\banner.png"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\images\\loading.gif",
+      "PackagePath": "staticwebassets\\images\\loading.gif"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\images\\logo.png",
+      "PackagePath": "staticwebassets\\images\\logo.png"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\images\\map.png",
+      "PackagePath": "staticwebassets\\images\\map.png"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\images\\menu_icon.png",
+      "PackagePath": "staticwebassets\\images\\menu_icon.png"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\images\\our.png",
+      "PackagePath": "staticwebassets\\images\\our.png"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\images\\ser1.png",
+      "PackagePath": "staticwebassets\\images\\ser1.png"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\images\\ser2.png",
+      "PackagePath": "staticwebassets\\images\\ser2.png"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\images\\ser3.png",
+      "PackagePath": "staticwebassets\\images\\ser3.png"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\images\\ser4.png",
+      "PackagePath": "staticwebassets\\images\\ser4.png"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\images\\ser5.png",
+      "PackagePath": "staticwebassets\\images\\ser5.png"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\images\\test.png",
+      "PackagePath": "staticwebassets\\images\\test.png"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\images\\track.png",
+      "PackagePath": "staticwebassets\\images\\track.png"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\images\\truc1.png",
+      "PackagePath": "staticwebassets\\images\\truc1.png"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\images\\truc2.png",
+      "PackagePath": "staticwebassets\\images\\truc2.png"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\images\\truc3.png",
+      "PackagePath": "staticwebassets\\images\\truc3.png"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\images\\truc4.png",
+      "PackagePath": "staticwebassets\\images\\truc4.png"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\images\\why1.png",
+      "PackagePath": "staticwebassets\\images\\why1.png"
+    },
+    {
+      "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\images\\why2.png",
+      "PackagePath": "staticwebassets\\images\\why2.png"
     },
     {
       "Id": "F:\\CMS\\CMS\\courierMs\\wwwroot\\img\\undraw_posting_photo.svg",
