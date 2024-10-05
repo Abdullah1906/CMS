@@ -49,6 +49,21 @@ namespace courierMs.Controllers
             return View(customerinfo);
         }
 
+        //showlist for admin
+        public IActionResult ShowList()
+        {
+            ViewBag.List=_context.Customerinfo.OrderBy(x=>x.Id).ToList();
+            ViewBag.PList = _context.Percelinfo.OrderBy(x => x.Id).ToList();
+            return View();
+
+          
+
+
+            // Pass the data to the view using ViewBag or ViewModel
+ 
+
+            return View();
+        }
         // GET: Customer/Create
         [Authorize(Roles = RoleType.Admin)]
         public IActionResult Create()
@@ -109,7 +124,8 @@ namespace courierMs.Controllers
         public async Task<IActionResult> Create(MultiModelVM model)
         {
             var userid = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            Customerinfo customerData = new Customerinfo();
+            Customerinfo senderData = new Customerinfo();
+            Customerinfo receiverData = new Customerinfo();
             Percelinfo percelData = new Percelinfo();
 
 
@@ -118,32 +134,31 @@ namespace courierMs.Controllers
 
 
             // for customer 
-            customerData.Name = model.Customerinfo.Name;
-            customerData.PhoneNumber = model.Customerinfo.PhoneNumber;
-            customerData.Address = model.Customerinfo.Address;
-            customerData.Email = model.Customerinfo.Email;
-            customerData.city = model.Customerinfo.city;
-            customerData.Note = model.Customerinfo.Note;
-            customerData.CreatedAt = DateTime.Now;
-            customerData.UpdatedAt = DateTime.Now;
-            customerData.CreatedBy = GuidHelper.ToGuidOrDefault(userid);
-            customerData.UpdatedBy = GuidHelper.ToGuidOrDefault(userid);
-            customerData.CustomerId=Guid.NewGuid();
+            senderData.CustomerId = Guid.NewGuid();
+            senderData.Name = model.Customerinfo.S_Name;
+            senderData.PhoneNumber = model.Customerinfo.S_PhoneNumber;
+            senderData.Address = model.Customerinfo.S_Address;
+            senderData.Email = model.Customerinfo.S_Email;
+            senderData.city = model.Customerinfo.S_city;
+            senderData.Note = model.Customerinfo.S_Note;
+            senderData.CreatedAt = DateTime.Now;
+            senderData.UpdatedAt = DateTime.Now;
+            senderData.CreatedBy = GuidHelper.ToGuidOrDefault(userid);
+            senderData.UpdatedBy = GuidHelper.ToGuidOrDefault(userid);
+
 
             // for receiver
-            Receiverinfo receiverData = new Receiverinfo();
-
-            receiverData.Name = model.Receiverinfo.Name;
-            receiverData.PhoneNumber = model.Receiverinfo.PhoneNumber;
-            receiverData.Address = model.Receiverinfo.Address;
-            receiverData.Email = model.Receiverinfo.Email;
-            receiverData.city = model.Receiverinfo.city;
-            receiverData.Note = model.Receiverinfo.Note;
+            receiverData.CustomerId = Guid.NewGuid();
+            receiverData.Name = model.Customerinfo.R_Name;
+            receiverData.PhoneNumber = model.Customerinfo.R_PhoneNumber;
+            receiverData.Address = model.Customerinfo.R_Address;
+            receiverData.Email = model.Customerinfo.R_Email;
+            receiverData.city = model.Customerinfo.R_city;
+            receiverData.Note = model.Customerinfo.R_Note;
             receiverData.CreatedAt = DateTime.Now;
             receiverData.UpdatedAt = DateTime.Now;
             receiverData.CreatedBy = GuidHelper.ToGuidOrDefault(userid);
             receiverData.UpdatedBy = GuidHelper.ToGuidOrDefault(userid);
-            receiverData.ReceiverId = Guid.NewGuid();
 
 
             // for percel
@@ -153,7 +168,7 @@ namespace courierMs.Controllers
             percelData.Note = model.Percelinfo.Note;
             percelData.CreatedAt = DateTime.Now;
             percelData.UpdatedAt = DateTime.Now;
-            customerData.UpdatedAt = DateTime.Now;
+            percelData.UpdatedAt = DateTime.Now;
             percelData.CreatedBy = GuidHelper.ToGuidOrDefault(userid);
             percelData.UpdatedBy = GuidHelper.ToGuidOrDefault(userid);
             percelData.ParcelId = Guid.NewGuid();
@@ -162,24 +177,39 @@ namespace courierMs.Controllers
 
             if (ModelState.IsValid)
             {
-                _context.Add(customerData);
+                _context.Add(senderData);
                 await _context.SaveChangesAsync();
+
 
                 _context.Add(receiverData);
                 await _context.SaveChangesAsync();
 
-                percelData.SenderId = customerData.CustomerId;
-                percelData.ReceiverId = receiverData.ReceiverId;
+                percelData.SenderId = senderData.CustomerId;
+                percelData.ReceiverId = receiverData.CustomerId;
 
                 _context.Add(percelData);
                 await _context.SaveChangesAsync();
 
+
             }
+            ViewBag.CityList = _context.Lookup
+                .Where(x=> x.Type== LookupType.City && x.Serial>0)
+                .OrderBy(x=> x.Serial)
+                .ToList();
+
+            ViewBag.PercelList = _context.Lookup
+                .Where(x=> x.Type== LookupType.Percel && x.Serial>0)
+                .OrderBy(x=> x.Serial)
+                .ToList();
+
+
+            
+
 
             return View(model);
         }
 
-
+       
 
 
         // CREATE LOOKUP

@@ -17,103 +17,107 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = courierMs
 build_property.RootNamespace = courierMs
-build_property.ProjectDir = F:\CMS\CMS\courierMs\
+build_property.ProjectDir = E:\CMS\CMS\courierMs\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = F:\CMS\CMS\courierMs
+build_property.MSBuildProjectDirectory = E:\CMS\CMS\courierMs
 build_property._RazorSourceGeneratorDebug = 
 
-[F:/CMS/CMS/courierMs/Areas/Identity/Pages/Account/Login.cshtml]
+[E:/CMS/CMS/courierMs/Areas/Identity/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/CMS/CMS/courierMs/Areas/Identity/Pages/Account/Logout.cshtml]
+[E:/CMS/CMS/courierMs/Areas/Identity/Pages/Account/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/CMS/CMS/courierMs/Areas/Identity/Pages/Account/Register.cshtml]
+[E:/CMS/CMS/courierMs/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/CMS/CMS/courierMs/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[E:/CMS/CMS/courierMs/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/CMS/CMS/courierMs/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+[E:/CMS/CMS/courierMs/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/CMS/CMS/courierMs/Areas/Identity/Pages/_ViewImports.cshtml]
+[E:/CMS/CMS/courierMs/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/CMS/CMS/courierMs/Areas/Identity/Pages/_ViewStart.cshtml]
+[E:/CMS/CMS/courierMs/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/CMS/CMS/courierMs/Views/Customer/Create.cshtml]
+[E:/CMS/CMS/courierMs/Views/Customer/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/CMS/CMS/courierMs/Views/Customer/CreateLookup.cshtml]
+[E:/CMS/CMS/courierMs/Views/Customer/CreateLookup.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcQ3JlYXRlTG9va3VwLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/CMS/CMS/courierMs/Views/Customer/Delete.cshtml]
+[E:/CMS/CMS/courierMs/Views/Customer/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/CMS/CMS/courierMs/Views/Customer/Details.cshtml]
+[E:/CMS/CMS/courierMs/Views/Customer/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/CMS/CMS/courierMs/Views/Customer/Edit.cshtml]
+[E:/CMS/CMS/courierMs/Views/Customer/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/CMS/CMS/courierMs/Views/Customer/Index.cshtml]
+[E:/CMS/CMS/courierMs/Views/Customer/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/CMS/CMS/courierMs/Views/Customer/Uploadfile.cshtml]
+[E:/CMS/CMS/courierMs/Views/Customer/ShowList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcU2hvd0xpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/CMS/CMS/courierMs/Views/Customer/Uploadfile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcVXBsb2FkZmlsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/CMS/CMS/courierMs/Views/Home/Index.cshtml]
+[E:/CMS/CMS/courierMs/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/CMS/CMS/courierMs/Views/Home/Privacy.cshtml]
+[E:/CMS/CMS/courierMs/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/CMS/CMS/courierMs/Views/Shared/Error.cshtml]
+[E:/CMS/CMS/courierMs/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/CMS/CMS/courierMs/Views/Shared/_admin.cshtml]
+[E:/CMS/CMS/courierMs/Views/Shared/_admin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9hZG1pbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/CMS/CMS/courierMs/Views/Shared/_LoginPartial.cshtml]
+[E:/CMS/CMS/courierMs/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/CMS/CMS/courierMs/Views/Shared/_ValidationScriptsPartial.cshtml]
+[E:/CMS/CMS/courierMs/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/CMS/CMS/courierMs/Views/_ViewImports.cshtml]
+[E:/CMS/CMS/courierMs/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/CMS/CMS/courierMs/Views/_ViewStart.cshtml]
+[E:/CMS/CMS/courierMs/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/CMS/CMS/courierMs/Views/Shared/_Layout.cshtml]
+[E:/CMS/CMS/courierMs/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-at7pqc3v2k

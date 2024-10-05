@@ -1,0 +1,113 @@
+﻿<div class="col-md-12">
+    <div class="card shadow-lg mb-4">
+        <div class="card-header bg-secondary text-white text-center">
+            <h4 class="mb-0">List of Sender & Reciever</h4>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover table-bordered text-center align-middle" id="lookupTable">
+                <thead class="text-white bg-dark">
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Number</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Note</th>
+                        <th scope="col">City</th>
+                        <th scope="col">Action</th>
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (ViewBag.List != null && ViewBag.List.Count > 0)
+                    {
+                        foreach (var list in ViewBag.List)
+                        {
+                            <tr>
+                                <td>@list.Name</td>
+                                <td>@list.PhoneNumber</td>
+                                <td>@list.Email</td>
+                                <td>@list.Address</td>
+                                <td>@list.city</td>
+                                <td>@list.Note</td>
+
+
+                                <td>
+                                    <button type="button" id="GetupdateButton" class="btn btn-outline-primary btn-lg " data-id="@list.Id">Update</button>
+                                    <button type="button" id="deleteButton" class="btn btn-outline-danger btn-lg" data-id="@list.Id">Delete</button>
+                                </td>
+
+
+
+
+
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="7" class="text-muted">No data available</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="col-md-12">
+    <div class="card shadow-lg mb-4">
+        <div class="card-header bg-secondary text-white text-center">
+            <h4 class="mb-0">Percel Details</h4>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover table-bordered text-center align-middle" id="lookupTable">
+                <thead class="text-white bg-dark">
+                    <tr>
+                        <th scope="col">Percel Type</th>
+                        <th scope="col">Weight</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Note</th>
+                        <th scope="col">Sender Id</th>
+                        <th scope="col">Reciever Id</th>
+                        <th scope="col">Action</th>
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (ViewBag.PList != null && ViewBag.PList.Count > 0)
+                    {
+                        foreach (var Plist in ViewBag.PList)
+                        {
+                            <tr>
+                                <td>@Plist.ParcelType</td>
+                                <td>@Plist.Weight</td>
+                                <td>@Plist.Price</td>
+                                <td>@Plist.Note</td>
+                                <td>@Plist.SenderId</td>
+                                <td>@Plist.ReceiverId</td>
+                                
+
+                                <td>
+                                    <button type="button" id="GetupdateButton" class="btn btn-outline-primary btn-lg " data-id="@Plist.Id">Update</button>
+                                    <button type="button" id="deleteButton" class="btn btn-outline-danger btn-lg" data-id="@Plist.Id">Delete</button>
+                                </td>
+
+
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="7" class="text-muted">No data available</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+

@@ -19,24 +19,28 @@
 </div>
 
 <!-- Nav Item - Pages Collapse Menu -->
+
 <li class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
        aria-expanded="true" aria-controls="collapseTwo">
-        <i class="fas fa-fw fa-cog"></i>
+        <i class="fas fa-cog"></i>
         <span>Management Table</span>
     </a>
     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
             @if (User.IsInRole(RoleType.Admin))
             {
-                <a class="collapse-item" asp-area="" asp-controller="Customer" asp-action="Create">Add Details</a>
-                <a class="collapse-item" asp-area="" asp-controller="Customer" asp-action="Create">Percel Management</a>
+                <a class="collapse-item" href="/Customer/Create">
+                    <i class="fa-solid fa-circle-plus"></i>
+                    Customer Information
+                </a>
+                <a class="collapse-item" asp-area="" asp-controller="Customer" asp-action="ShowList"><i class="bi bi-person-fill-add"></i>Information Management</a>
                 <a class="collapse-item" asp-area="" asp-controller="Customer" asp-action="Uploadfile">Upload File</a>
             }
 
             @if (User.IsInRole(RoleType.S_Admin))
             {
-                <a class="collapse-item" asp-area="" asp-controller="Customer" asp-action="CreateLookup">Lookup</a>
+                <a class="collapse-item" asp-area="" asp-controller="Customer" asp-action="CreateLookup"><i class="bi bi-table"></i>Lookup</a>
             }
            
         </div>

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "F:\\CMS\\CMS\\courierMs\\courierMs.csproj": {}
+    "E:\\CMS\\CMS\\courierMs\\courierMs.csproj": {}
   },
   "projects": {
-    "F:\\CMS\\CMS\\courierMs\\courierMs.csproj": {
+    "E:\\CMS\\CMS\\courierMs\\courierMs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\CMS\\CMS\\courierMs\\courierMs.csproj",
+        "projectUniqueName": "E:\\CMS\\CMS\\courierMs\\courierMs.csproj",
         "projectName": "courierMs",
-        "projectPath": "F:\\CMS\\CMS\\courierMs\\courierMs.csproj",
-        "packagesPath": "C:\\Users\\new\\.nuget\\packages\\",
-        "outputPath": "F:\\CMS\\CMS\\courierMs\\obj\\",
+        "projectPath": "E:\\CMS\\CMS\\courierMs\\courierMs.csproj",
+        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
+        "outputPath": "E:\\CMS\\CMS\\courierMs\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\new\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -54,6 +54,10 @@
               "target": "Package",
               "version": "[8.0.8, )"
             },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.8, )"
@@ -67,6 +71,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[8.0.5, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.8, )"
             }
           },
           "imports": [
