@@ -8041,12 +8041,24 @@
       "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.woff2"
     },
     {
+      "Id": "E:\\CMS\\CMS\\courierMs\\wwwroot\\images\\646c762a7496e-square.jpg",
+      "PackagePath": "staticwebassets\\images\\646c762a7496e-square.jpg"
+    },
+    {
       "Id": "E:\\CMS\\CMS\\courierMs\\wwwroot\\images\\about.png",
       "PackagePath": "staticwebassets\\images\\about.png"
     },
     {
       "Id": "E:\\CMS\\CMS\\courierMs\\wwwroot\\images\\banner.png",
       "PackagePath": "staticwebassets\\images\\banner.png"
+    },
+    {
+      "Id": "E:\\CMS\\CMS\\courierMs\\wwwroot\\images\\download (1).jpg",
+      "PackagePath": "staticwebassets\\images\\download (1).jpg"
+    },
+    {
+      "Id": "E:\\CMS\\CMS\\courierMs\\wwwroot\\images\\download.jpg",
+      "PackagePath": "staticwebassets\\images\\download.jpg"
     },
     {
       "Id": "E:\\CMS\\CMS\\courierMs\\wwwroot\\images\\loading.gif",
@@ -8067,6 +8079,10 @@
     {
       "Id": "E:\\CMS\\CMS\\courierMs\\wwwroot\\images\\our.png",
       "PackagePath": "staticwebassets\\images\\our.png"
+    },
+    {
+      "Id": "E:\\CMS\\CMS\\courierMs\\wwwroot\\images\\pexels-pixabay-122429.jpg",
+      "PackagePath": "staticwebassets\\images\\pexels-pixabay-122429.jpg"
     },
     {
       "Id": "E:\\CMS\\CMS\\courierMs\\wwwroot\\images\\ser1.png",
@@ -8499,6 +8515,18 @@
     {
       "Id": "E:\\CMS\\CMS\\courierMs\\wwwroot\\scss\\utilities\\_text.scss",
       "PackagePath": "staticwebassets\\scss\\utilities\\_text.scss"
+    },
+    {
+      "Id": "E:\\CMS\\CMS\\courierMs\\wwwroot\\uploadimages\\2b83bfa5-5a4a-43d8-bbb9-c41fe1a6841e_646c762a7496e-square.jpg",
+      "PackagePath": "staticwebassets\\uploadimages\\2b83bfa5-5a4a-43d8-bbb9-c41fe1a6841e_646c762a7496e-square.jpg"
+    },
+    {
+      "Id": "E:\\CMS\\CMS\\courierMs\\wwwroot\\uploadimages\\5d75c464-296e-41ba-a141-7cbcd79acc35_646c762a7496e-square.jpg",
+      "PackagePath": "staticwebassets\\uploadimages\\5d75c464-296e-41ba-a141-7cbcd79acc35_646c762a7496e-square.jpg"
+    },
+    {
+      "Id": "E:\\CMS\\CMS\\courierMs\\wwwroot\\uploadimages\\9c28fd30-8c62-450b-8a7c-71a81fd461ee_646c762a7496e-square.jpg",
+      "PackagePath": "staticwebassets\\uploadimages\\9c28fd30-8c62-450b-8a7c-71a81fd461ee_646c762a7496e-square.jpg"
     },
     {
       "Id": "E:\\CMS\\CMS\\courierMs\\wwwroot\\vendor\\bootstrap\\js\\bootstrap.bundle.js",

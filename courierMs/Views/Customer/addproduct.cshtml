@@ -1,0 +1,334 @@
+﻿@model courierMs.ViewModel.ProductVM
+
+@{
+    ViewData["Title"] = "addproduct";
+}
+
+<div class="d-flex justify-content-center align-items-start min-vh-100 pt-5">
+    <div class="col-md-7">
+        <div class="card shadow-lg">
+            <div class="card-header bg-primary text-white text-center">
+                <h3 class="mb-0">Product</h3>
+            </div>
+            <div class="card-body">
+                <div class="col-md-12">
+                    <p>@ViewBag.success</p>
+                    <form asp-action="addproduct" id="LookupForm" enctype="multipart/form-data">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                        <div class="form-group">
+                            <label asp-for="Name" class="control-label"></label>
+                            <input id="Id" type="hidden" class="form-control" placeholder="" />
+                            <input id="Name" asp-for="Name" class="form-control" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Image" class="control-label"></label>
+                            <input id="Image" asp-for="Image" class="form-control" type="file" />
+                            <span asp-validation-for="Image" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="price" class="control-label"></label>
+                            <input id="price" asp-for="price" class="form-control" />
+                            <span asp-validation-for="price" class="text-danger"></span>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button type="button" id="submitButton" class=" btn btn-success btn-lg">Submit</button>
+
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-12">
+    <div class="card shadow-lg mb-4">
+        <div class="card-header bg-secondary text-white text-center">
+            <h4 class="mb-0">Product Data</h4>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover table-bordered text-center align-middle" id="lookupTable">
+                <thead class="text-white bg-dark">
+                    <tr>
+                        <th>Name</th>
+                        <th>Image</th>
+                        <th>Price</th>
+                        <th>Action</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (ViewBag.Plist != null && ViewBag.Plist.Count > 0)
+                    {
+                        @foreach (var item in ViewBag.Plist)
+                        {
+                            <tr>
+                                <td>
+                                    @item.Name
+                                </td>
+                                <td>
+                                    <img src="~/uploadimages/@item.Image" style="width:100px;height:100px" />
+                                </td>
+                                <td>
+                                    @item.price
+                                </td>
+
+
+                                <td>
+                                    <button type="button" id="deleteButton" class="btn btn-outline-danger btn-lg" data-id="@item.Id">Delete</button>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="7" class="text-muted">No data available</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/jquery-3.6.0.min.js"></script>
+<script src="~/js/alert.js"></script>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+<script>
+
+
+    $(document).on('click', '#deleteButton', function () { //  is used to attach event handlers to dynamically added all delete elements
+        var id = $(this).data('id');
+
+        var lookupData = {
+            Id: id,
+
+        };
+        console.log(lookupData);
+
+        $.ajax({
+            url: '@Url.Action("DeleteLookup", "Image")',
+            type: 'POST',
+            data: lookupData,
+            success: function (receive) {
+
+
+                if (receive.success) {
+                    Swal.fire("Deleted!", "The item has been deleted.", "success");
+                    $('#lookupTable tbody').find('button[data-id="' + id + '"]').closest('tr').remove();
+                }
+
+                // updateLastSerial();
+            },
+            error: function () {
+                swal.fire("Error!");
+            }
+
+        })
+
+    });
+
+
+
+
+    $(document).ready(function () {
+
+
+
+        //submitbutton
+
+        $("#submitButton").click(function (e) {
+            debugger;
+            e.preventDefault();  // Prevent form submission and page reload
+
+            // Create a FormData object to handle both the image file and the form fields
+            var formData = new FormData();
+
+            // Add form fields to the FormData object
+            formData.append("Name", $('#Name').val());
+            formData.append("price", $('#price').val());
+
+            // Get the image file input and append it to the FormData
+            var fileInput = $('#Image')[0].files[0];  // Access the file from the input field
+            if (fileInput) {
+                formData.append("Image", fileInput);  // Append the image file to the FormData
+            } else {
+                console.log("No image selected");
+            }
+
+            console.log(formData);
+
+            $.ajax({
+                url: '@Url.Action("CreateLookup", "Image")',
+                type: 'POST',
+                data: formData,
+                processData: false,  
+                contentType: false,
+                success: function (response) {
+                    Swal.fire("Done!");
+
+
+                    var newRow = `
+
+                                    <tr>
+                                    <td>${response.data[response.data.length - 1].name}</td>
+                                    <td><img src="${response.data[response.data.length - 1].image}" width="100"></td>
+                                    <td>${response.data[response.data.length - 1].price}</td>
+
+
+                                    <td>
+                                        <button type="button" id="deleteButton" class="btn btn-outline-danger btn-lg" data-id="${response.data[response.data.length - 1].id}">Delete</button>
+                                    </td>
+
+
+                                    </tr>
+
+
+                        `;
+
+                    $('#lookupTable tbody').append(newRow);
+                    $('#LookupForm')[0].reset();
+
+                    // updateLastSerial();
+
+                },
+                error: function () {
+                    swal.fire("Failed!");
+                }
+
+            })
+
+
+
+        });
+
+
+        //confirmedupdatebutton .....aikhane kaj baki ache
+
+        // $("#submitUpdateButton").click(function () {
+        //     var lookupId = $('#Id').val();
+
+        //     var lookupData = {
+        //         Id: lookupId,
+        //         Name: $('#Name').val(),
+        //         Image: $('#Image').val(),
+        //         price: $('#price').val(),
+        //     };
+        //     console.log(lookupData);
+
+        //     $.ajax({
+        //         url: '@Url.Action("UpdateLookup", "Image")',
+        //         type: 'POST',
+        //         data: lookupData,
+        //         success: function (response) {
+        //             Swal.fire("Done!");
+        //             if (response.success && response.data) {
+
+        //                 var updatedData = response.data;
+
+        //                 $('#lookupTable tbody').find('button[data-id="' + updatedData.id + '"]').closest('tr').remove();// Oi Id ar jonno pera dise
+
+
+
+        //                 var newRow =
+
+        //                     `
+        //                            <tr>
+        //                                         <td>${updatedData.name}</td>
+        //                                         <td>${updatedData.image}</td>
+        //                                         <td>${updatedData.price}</td>
+
+
+        //                                 <td>
+        //                                         <button type="button" id="GetupdateButton" class="btn btn-outline-primary btn-lg " data-id="${updatedData.id}">Update</button>
+        //                                         <button type="button" id="deleteButton" class="btn btn-outline-danger btn-lg" data-id="${updatedData.id}">Delete</button>
+        //                                 </td>
+
+
+        //                             </tr>
+
+
+        //                     `;
+
+        //                 $('#lookupTable tbody').append(newRow);
+        //                 $('#LookupForm')[0].reset();
+
+        //             }
+        //             else {
+        //                 Swal.fire("Error!", "Failed to update the record.", "error");
+
+        //             }
+        //             // var newLastSerial = response.data[response.data.length - 1].serial;
+        //             // $('#lastSerial').text(newLastSerial);
+
+
+        //         },
+        //         error: function () {
+        //             swal.fire("Failed!");
+        //         }
+
+        //     });
+
+
+
+        // });
+
+
+
+
+
+    });
+    //     //updatebutton
+    //     $(document).on('click', '#GetupdateButton', function () { //  is used to attach event handlers to dynamically added all delete elements
+    //         var id = $(this).data('id');
+    //         debugger;
+
+    //         var lookupData = {
+    //             Id: id
+
+    //         };
+    //         console.log(lookupData);
+
+
+    //         $.ajax({
+    //             url: '@Url.Action("GetUpdateLookup", "Image")',
+    //             type: 'POST',
+    //             data: lookupData,
+    //             success: function (response) {
+    //                 Swal.fire("Updated!", "The item has been Updated.", "success");
+
+    //                 console.log(response.data);
+
+    //                 $('#Image').val(response.data.image);
+    //                 $('#Id').val(response.data.id);
+    //                 $('#Name').val(response.data.name);
+    //                 $('#price').val(response.data.price);
+    // ;
+
+
+    //                 // document.getElementById("Type").value=response.data.type;
+    //                 // document.getElementById("Name").value =response.data.name;
+    //                 // document.getElementById("Value").value = response.data.value;
+    //                 // document.getElementById("IsActive").value = response.data.isActive;
+
+    //             },
+    //             error: function () {
+    //                 swal.fire("Error!");
+    //             }
+
+    //         })
+
+
+
+    //     });
+
+    // deletebutton
+</script>

@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using courierMs.Data;
 using courierMs.Areas.Identity.Model;
+using courierMs.DataModel;
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("courierMsContextConnection") ?? throw new InvalidOperationException("Connection string 'courierMsContextConnection' not found.");
 
@@ -13,6 +14,7 @@ builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.R
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<mycontext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("courierMsContextConnection")));
 
 var app = builder.Build();
 

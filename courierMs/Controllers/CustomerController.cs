@@ -11,6 +11,8 @@ using courierMs.Models;
 using System.Security.Claims;
 using courierMs.ViewModel;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.Extensions.Hosting;
+using NuGet.Protocol.Plugins;
 
 namespace courierMs.Controllers
 {
@@ -18,10 +20,12 @@ namespace courierMs.Controllers
     public class CustomerController : Controller
     {
         private readonly courierMsContext _context;
+        IWebHostEnvironment _environment;
 
-        public CustomerController(courierMsContext context)
+        public CustomerController(courierMsContext context, IWebHostEnvironment environment)
         {
             _context = context;
+            _environment = environment;
         }
 
         // GET: Customer
@@ -50,20 +54,54 @@ namespace courierMs.Controllers
         }
 
         //showlist for admin
-        public IActionResult ShowList()
+        public IActionResult ShowList(Guid senderId,Guid receiverId)
         {
-            ViewBag.List=_context.Customerinfo.OrderBy(x=>x.Id).ToList();
-            ViewBag.PList = _context.Percelinfo.OrderBy(x => x.Id).ToList();
+
+            var senderData = _context.Customerinfo.FirstOrDefault(x => x.CustomerId == senderId);
+            var receiverData = _context.Customerinfo.FirstOrDefault(x => x.CustomerId == receiverId);
+            var percelData = _context.Percelinfo.FirstOrDefault(x=>x.SenderId== senderId);
+
+
+            if(senderData!=null && receiverData != null)
+            {
+                var Data = new MultiModelVM
+                {
+                    Customerinfo = new CustomerinfoVM
+                    {
+                        S_Name = senderData.Name,
+                        S_PhoneNumber = senderData.PhoneNumber,
+                        S_city = senderData.city,
+                        S_Address = senderData.Address,
+                        S_Email = senderData.Address,
+                        S_Note = senderData.Note,
+                        R_Name = receiverData.Name,
+                        R_PhoneNumber = receiverData.PhoneNumber,
+                        R_city = receiverData.city,
+                        R_Address = receiverData.Address,
+                        R_Email = receiverData.Address,
+                        R_Note = receiverData.Note
+
+
+                    },
+                    Percelinfo = new PercelinfoVM
+                    {
+                        ParcelType = percelData.ParcelType,
+                        Weight = percelData.Weight,
+                        Price = percelData.Price,
+                        Note = percelData.Note,
+                        SenderId = percelData.SenderId,
+                        ReceiverId = percelData.ReceiverId
+
+
+                    }
+                };
+                return View(Data);
+            }
+
             return View();
 
-          
-
-
-            // Pass the data to the view using ViewBag or ViewModel
- 
-
-            return View();
         }
+
         // GET: Customer/Create
         [Authorize(Roles = RoleType.Admin)]
         public IActionResult Create()
@@ -110,10 +148,6 @@ namespace courierMs.Controllers
             return Json(new { lastSerial });
         }
 
-        public ActionResult UploadImage()
-        {
-            return View();
-        }
 
         // POST: Customer/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
@@ -190,6 +224,12 @@ namespace courierMs.Controllers
                 _context.Add(percelData);
                 await _context.SaveChangesAsync();
 
+
+                return RedirectToAction("ShowList", new
+                {
+                    senderId = senderData.CustomerId,
+                    receiverId = receiverData.CustomerId
+                });
 
             }
             ViewBag.CityList = _context.Lookup
@@ -362,42 +402,52 @@ namespace courierMs.Controllers
                 return Json(new { success = false, message = PopupMessage.error });
             }
 
-
-           
         }
 
 
-
-
-        // uploadfile
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult UploadImage(IFormFile file)
+        //upload image
+        public IActionResult addproduct()
         {
-            if (file != null && file.Length > 0)
+            ViewBag.Plist = _context.Product.ToList();
+            return View();
+        }
+        [HttpPost]
+        public IActionResult addproduct(ProductVM model)
+        {
+            string filename = "";
+            var userid = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (model.Image != null)
             {
-
-                var uploadsFolderPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "UploadedFile");
-
-                // Check if the directory exists; if not, create it
-                if (!Directory.Exists(uploadsFolderPath))
-                {
-                    Directory.CreateDirectory(uploadsFolderPath);
-                }
-
-                var fileName = Path.GetFileName(file.FileName);
-                var path = Path.Combine(uploadsFolderPath, fileName);
-
-                using (var stream = new FileStream(path, FileMode.Create))
-                {
-                    file.CopyTo(stream);
-                }
-
-                return Json(new { success = true, fileName = fileName });
+                string uploadfolder = Path.Combine(_environment.WebRootPath, "uploadimages");
+                filename = Guid.NewGuid().ToString() + "_" + model.Image.FileName;
+                string filepath = Path.Combine(uploadfolder, filename);
+                model.Image.CopyTo(new FileStream(filepath, FileMode.Create));
             }
 
-            return Json(new { success = false, message = "File upload failed." });
+            Product product = new Product();
+            product.Name = model.Name;
+            product.Image = filename;
+            product.price = model.price;
+            product.CreatedAt = DateTime.Now;
+            product.UpdatedAt = DateTime.Now;
+            product.CreatedBy = GuidHelper.ToGuidOrDefault(userid);
+            product.UpdatedBy = GuidHelper.ToGuidOrDefault(userid);
+
+            if (ModelState.IsValid) 
+            {
+                _context.Product.Add(product);
+                _context.SaveChanges();
+
+            }
+
+            ViewBag.Plist = _context.Product.ToList();
+            ViewBag.success = "Record Add";
+            return View(model);
         }
+
+
+
+
 
 
         //// GET: Customer/Edit/5
