@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using courierMs.DataModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace courierMs.ViewModel
 {
@@ -33,6 +34,8 @@ namespace courierMs.ViewModel
 
     public class MultiModelVM
     {
+        public List<Customerinfo>? Customer { get; set; }
+        public List<Percelinfo>? Percel { get; set; }
         public CustomerinfoVM? Customerinfo { get; set; }
         public PercelinfoVM? Percelinfo { get; set; }
     }

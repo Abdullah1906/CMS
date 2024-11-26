@@ -5,206 +5,210 @@
 }
 
 
-<h1 class="text-center display-5">Create Customer & Parcel Info</h1>
 
 
 <div class="row">
     <div class="col-md-12">
-        <div class="d-flex justify-content-center align-items-start min-vh-100 pt-5">
-            <div class="col-md-8">
+        <div class="d-flex justify-content-center align-items-start min-vh-100">
+            <div class="col-md-12">
                 <div class="card shadow-lg">
-                    <div class="card-header bg-primary text-white text-center">
-                        <h3 class="mb-0">Customer Details</h3>
+                    <div class="card-header text-white text-center " style="background-color:#54a0ff">
+                        <h1 class="mb-0 display-5">Create Customer & Parcel Info</h1>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body" id="price-items">
                         <form asp-action="Create">
                             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                             <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <h3 class="mb-0 text-center text-dark">Sender Information</h3>
-                                        <hr />
-                                        <label asp-for="Customerinfo.S_Name" class="control-label">Sender Name</label>
-                                        <input asp-for="Customerinfo.S_Name" id="name" class="form-control" />
-                                        <span asp-validation-for="Customerinfo.S_Name" class="text-danger"></span>
+                                <div class="col-md-6 mr-5">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <h3 class="mb-0 text-center text-dark">Sender Information</h3>
+                                                <hr />
+                                                <label asp-for="Customerinfo.S_Name" class="control-label">Sender Name</label>
+                                                <input asp-for="Customerinfo.S_Name" id="name" class="form-control" placeholder="Enter Sender Name"/>
+                                                <span asp-validation-for="Customerinfo.S_Name" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <h3 class="mb-0 text-center text-dark">Receiver Information</h3>
+                                                <hr />
+                                                <label asp-for="Customerinfo.R_Name" class="control-label">Reciever Name</label>
+                                                <input asp-for="Customerinfo.R_Name" id="name1" class="form-control" placeholder="Enter Reciever Name" />
+                                                <span asp-validation-for="Customerinfo.R_Name" class="text-danger"></span>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <h3 class="mb-0 text-center text-dark">Receiver Information</h3>
-                                        <hr />
-                                        <label asp-for="Customerinfo.R_Name" class="control-label">Reciever Name</label>
-                                        <input asp-for="Customerinfo.R_Name" id="name1" class="form-control" />
-                                        <span asp-validation-for="Customerinfo.R_Name" class="text-danger"></span>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label asp-for="Customerinfo.S_PhoneNumber" class="control-label">Phone Number</label>
+                                                <input asp-for="Customerinfo.S_PhoneNumber" id="p_number" class="form-control" placeholder="Enter Sender Number" />
+                                                <span asp-validation-for="Customerinfo.S_PhoneNumber" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label asp-for="Customerinfo.R_PhoneNumber" class="control-label">Phone Number</label>
+                                                <input asp-for="Customerinfo.R_PhoneNumber" id="p_number1" class="form-control" placeholder="Enter Reciever Number" />
+                                                <span asp-validation-for="Customerinfo.R_PhoneNumber" class="text-danger"></span>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label asp-for="Customerinfo.S_PhoneNumber" class="control-label">Phone Number</label>
-                                        <input asp-for="Customerinfo.S_PhoneNumber" id="p_number" class="form-control" />
-                                        <span asp-validation-for="Customerinfo.S_PhoneNumber" class="text-danger"></span>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label asp-for="Customerinfo.S_Email" class="control-label">Email</label>
+                                                <input asp-for="Customerinfo.S_Email" id="email" class="form-control" placeholder="Enter Sender Email" />
+                                                <span asp-validation-for="Customerinfo.S_Email" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label asp-for="Customerinfo.R_Email" class="control-label">Email</label>
+                                                <input asp-for="Customerinfo.R_Email" id="email1" class="form-control" placeholder="Enter Reciever Email" />
+                                                <span asp-validation-for="Customerinfo.R_Email" class="text-danger"></span>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label asp-for="Customerinfo.R_PhoneNumber" class="control-label">Phone Number</label>
-                                        <input asp-for="Customerinfo.R_PhoneNumber" id="p_number1" class="form-control" />
-                                        <span asp-validation-for="Customerinfo.R_PhoneNumber" class="text-danger"></span>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label asp-for="Customerinfo.S_Address" class="control-label">Address</label>
+                                                <input asp-for="Customerinfo.S_Address" id="address" class="form-control" placeholder="Enter Sender Address" />
+                                                <span asp-validation-for="Customerinfo.S_Address" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label asp-for="Customerinfo.R_Address" class="control-label">Address</label>
+                                                <input asp-for="Customerinfo.R_Address" id="address1" class="form-control" placeholder="Enter Reciever Address" />
+                                                <span asp-validation-for="Customerinfo.R_Address" class="text-danger"></span>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label asp-for="Customerinfo.S_Email" class="control-label">Email</label>
-                                        <input asp-for="Customerinfo.S_Email" id="email" class="form-control" />
-                                        <span asp-validation-for="Customerinfo.S_Email" class="text-danger"></span>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label asp-for="Customerinfo.S_Note" class="control-label">Note</label>
+                                                <input asp-for="Customerinfo.S_Note" id="note" class="form-control" placeholder="Enter Note" />
+                                                <span asp-validation-for="Customerinfo.S_Note" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label asp-for="Customerinfo.R_Note" class="control-label">Message</label>
+                                                <input asp-for="Customerinfo.R_Note" id="note1" class="form-control" placeholder="Enter Note" />
+                                                <span asp-validation-for="Customerinfo.R_Note" class="text-danger"></span>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label asp-for="Customerinfo.R_Email" class="control-label">Email</label>
-                                        <input asp-for="Customerinfo.R_Email" id="email1" class="form-control" />
-                                        <span asp-validation-for="Customerinfo.R_Email" class="text-danger"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label asp-for="Customerinfo.S_Address" class="control-label">Address</label>
-                                        <input asp-for="Customerinfo.S_Address" id="address" class="form-control" />
-                                        <span asp-validation-for="Customerinfo.S_Address" class="text-danger"></span>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label asp-for="Customerinfo.R_Address" class="control-label">Address</label>
-                                        <input asp-for="Customerinfo.R_Address" id="address1" class="form-control" />
-                                        <span asp-validation-for="Customerinfo.R_Address" class="text-danger"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label asp-for="Customerinfo.S_Note" class="control-label">Note</label>
-                                        <input asp-for="Customerinfo.S_Note" id="note" class="form-control" />
-                                        <span asp-validation-for="Customerinfo.S_Note" class="text-danger"></span>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label asp-for="Customerinfo.R_Note" class="control-label">Special Message</label>
-                                        <input asp-for="Customerinfo.R_Note" id="note1" class="form-control" />
-                                        <span asp-validation-for="Customerinfo.R_Note" class="text-danger"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label asp-for="Customerinfo.S_city" class="control-label">Select One</label>
-                                        <select asp-for="Customerinfo.S_city" id="city" class="form-control">
-                                            <option value="-1">Select One</option>
-                                            @if (ViewBag.CityList != null)
-                                            {
-                                                @foreach (var city in ViewBag.CityList)
-                                                {
-                                                    <option value="@city.Value">@city.Name</option>
-                                                }
-                                            }
-                                            else
-                                            {
-                                                <option value="">No cities available</option>
-                                            }
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label asp-for="Customerinfo.S_city" class="control-label">City</label>
+                                                <select asp-for="Customerinfo.S_city" id="city" class="form-control">
+                                                    <option value="-1">Select City</option>
+                                                    @if (ViewBag.CityList != null)
+                                                    {
+                                                        @foreach (var city in ViewBag.CityList)
+                                                        {
+                                                            <option value="@city.Value">@city.Name</option>
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        <option value="">No cities available</option>
+                                                    }
 
-                                        </select>
-                                        <span asp-validation-for="Customerinfo.S_city" class="text-danger"></span>
+                                                </select>
+                                                <span asp-validation-for="Customerinfo.S_city" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label asp-for="Customerinfo.R_city" class="control-label">City</label>
+                                                <select asp-for="Customerinfo.R_city" id="city1" class="form-control">
+                                                    <option value="-1">Select City</option>
+                                                    @if (ViewBag.CityList != null)
+                                                    {
+                                                        @foreach (var city in ViewBag.CityList)
+                                                        {
+                                                            <option value="@city.Value">@city.Name</option>
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        <option value="">No cities available</option>
+                                                    }
+
+                                                </select>
+                                                <span asp-validation-for="Customerinfo.R_city" class="text-danger"></span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label asp-for="Customerinfo.R_city" class="control-label">Select One</label>
-                                        <select asp-for="Customerinfo.R_city" id="city1" class="form-control">
-                                            <option value="-1">Select One</option>
-                                            @if (ViewBag.CityList != null)
-                                            {
-                                                @foreach (var city in ViewBag.CityList)
-                                                {
-                                                    <option value="@city.Value">@city.Name</option>
-                                                }
-                                            }
-                                            else
-                                            {
-                                                <option value="">No cities available</option>
-                                            }
+                                <div class="col-md-5 ml-5">
+                                    <div>
+                                        <h3 class="text-center text-dark">Parcel Info</h3><hr>
+                                    </div>
+                                    
+                                    <div class="">
+                                        <div class="row">
+                                            <div class="form-group col-md-6">
+                                                <label asp-for="Percelinfo.ParcelType" class="control-label">Parcel Type</label>
+                                                <select asp-for="Percelinfo.ParcelType" id="percel" class="form-control">
+                                                    <option value="-1">Select ParcelType</option>
+                                                    @if (ViewBag.PercelList != null)
+                                                    {
+                                                        @foreach (var city in ViewBag.PercelList)
+                                                        {
+                                                            <option value="@city.Value">@city.Name</option>
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        <option value="">Not available</option>
+                                                    }
 
-                                        </select>
-                                        <span asp-validation-for="Customerinfo.R_city" class="text-danger"></span>
+                                                </select>
+                                                <span asp-validation-for="Percelinfo.ParcelType" class="text-danger"></span>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label asp-for="Percelinfo.Note" class="control-label">Note</label>
+                                                <input asp-for="Percelinfo.Note" id="note2" class="form-control" placeholder="Enter Note" />
+                                                <span asp-validation-for="Percelinfo.Note" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-md-4">
+                                                <label class="control-label">Charge(৳)</label>
+                                                <input id="charge" class="form-control" onkeyup="calculateTotal(this)" autocomplete="off" placeholder="Enter Charge" />
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label asp-for="Percelinfo.Weight" class="control-label">Weight(kg)</label>
+                                                <input asp-for="Percelinfo.Weight" id="weight" class="form-control" autocomplete="off" onkeyup="calculateTotal(this)" placeholder="Enter Weight" />
+                                                <span asp-validation-for="Percelinfo.Weight" class="text-danger"></span>
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label asp-for="Percelinfo.Price" class="control-label">Price</label>
+                                                <input asp-for="Percelinfo.Price" id="price" class="form-control" readonly />
+                                                <span asp-validation-for="Percelinfo.Price" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                        
                                     </div>
                                 </div>
                             </div>
-                            <br />
-                            <h3 class="text-center text-dark">Parcel Info</h3>
-                            <hr />
-                            <br/>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label asp-for="Percelinfo.ParcelType" class="control-label">Select Parcel Type</label>
-                                        <select asp-for="Percelinfo.ParcelType" id="percel" class="form-control">
-                                            <option value="-1">Select ParcelType</option>
-                                            @if (ViewBag.PercelList != null)
-                                            {
-                                                @foreach (var city in ViewBag.PercelList)
-                                                {
-                                                    <option value="@city.Value">@city.Name</option>
-                                                }
-                                            }
-                                            else
-                                            {
-                                                <option value="">No cities available</option>
-                                            }
-
-                                        </select>
-                                        <span asp-validation-for="Percelinfo.ParcelType" class="text-danger"></span>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label asp-for="Percelinfo.Weight" class="control-label">Weight</label>
-                                        <input asp-for="Percelinfo.Weight" id="weight" class="form-control" />
-                                        <span asp-validation-for="Percelinfo.Weight" class="text-danger"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label asp-for="Percelinfo.Price" class="control-label">Price</label>
-                                        <input asp-for="Percelinfo.Price" id="price" class="form-control" />
-                                        <span asp-validation-for="Percelinfo.Price" class="text-danger"></span>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label asp-for="Percelinfo.Note" class="control-label">Note</label>
-                                        <input asp-for="Percelinfo.Note" id="note2" class="form-control" />
-                                        <span asp-validation-for="Percelinfo.Note" class="text-danger"></span>
-                                    </div>
-                                </div>
-                            </div>
-
                             <div class="row">
                                 <div class="mr-auto ">
                                     <a asp-action="Index" class="btn btn-primary text-end">Back to List</a>
                                 </div>
                                 <div class="form-group  ">
-                                    <input type="submit" value="Create" class="btn btn-primary  " />
                                     <input type="submit" value="Clear" id="clearButton" class="btn btn-danger  " />
+                                    <input type="submit" value="Create" class="btn btn-primary  " />
+                                    
 
                                 </div>
                             </div>
@@ -241,12 +245,44 @@
             $('#note1').val('');
             $('#city').val('');
             $('#city1').val('');
+            $('#charge').val('');
             $('#percel').val('');
             $('#weight').val('');
             $('#price').val('');
             $('#note2').val('');
         });
     });
+</script>
+<script>
+    function calculateTotal(element) {
+
+        const itemRow = element.closest('#price-items');
+
+        const Weight = parseFloat(document.getElementById('weight').value) || 0;
+        const Charge = parseFloat(document.getElementById('charge').value) || 0;
+        const Type = document.getElementById('percel').value;
+        const chargeCal = calculateCharge(Type, Weight, Charge);
+        
+
+        const price = document.getElementById('price');
+        price.value = chargeCal;
+        //itemRow.querySelector('input[name*="Total"]').value = total;
+
+    }
+
+    function calculateCharge(Type, Weight, Charge) {
+        switch (Type) {
+            case 'Paper':
+                return (Weight * Charge);
+            case 'Tool':
+                return (Weight * Charge);
+            case 'Chemical':
+                return (Weight * Charge);
+            default:
+                return 0;
+        }
+
+    }
 </script>
 
 

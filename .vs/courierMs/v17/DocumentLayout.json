@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|e:\\cms\\cms\\courierms\\views\\customer\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\views\\customer\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|e:\\cms\\cms\\courierms\\viewmodel\\customerinfovm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\viewmodel\\customerinfovm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,12 +19,20 @@
       "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\viewmodel\\percelinfovm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|e:\\cms\\cms\\courierms\\datamodel\\percelinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\datamodel\\percelinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|e:\\cms\\cms\\courierms\\views\\customer\\showlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\views\\customer\\showlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|e:\\cms\\cms\\courierms\\views\\customer\\addproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\views\\customer\\addproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|e:\\cms\\cms\\courierms\\models\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\models\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|e:\\cms\\cms\\courierms\\views\\customer\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\views\\customer\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|e:\\cms\\cms\\courierms\\datamodel\\customerinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -33,135 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|e:\\cms\\cms\\courierms\\datamodel\\mycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\datamodel\\mycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|e:\\cms\\cms\\courierms\\datamodel\\percelinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\datamodel\\percelinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|e:\\cms\\cms\\courierms\\datamodel\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\datamodel\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|e:\\cms\\cms\\courierms\\viewmodel\\productvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\viewmodel\\productvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|e:\\cms\\cms\\courierms\\areas\\identity\\data\\couriermscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\areas\\identity\\data\\couriermscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|e:\\cms\\cms\\courierms\\viewmodel\\lookupvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\viewmodel\\lookupvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|e:\\cms\\cms\\courierms\\views\\customer\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\views\\customer\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|e:\\cms\\cms\\courierms\\areas\\identity\\pages\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\areas\\identity\\pages\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|e:\\cms\\cms\\courierms\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|e:\\cms\\cms\\courierms\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|e:\\cms\\cms\\courierms\\properties\\servicedependencies.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\properties\\servicedependencies.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|e:\\cms\\cms\\courierms\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|e:\\cms\\cms\\courierms\\wwwroot\\css\\scss\\_footer.scss||{181FE41B-5A5D-479F-9F8F-BF665F4EBC2A}",
-      "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\wwwroot\\css\\scss\\_footer.scss||{181FE41B-5A5D-479F-9F8F-BF665F4EBC2A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|e:\\cms\\cms\\courierms\\wwwroot\\scss\\_footer.scss||{181FE41B-5A5D-479F-9F8F-BF665F4EBC2A}",
-      "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\wwwroot\\scss\\_footer.scss||{181FE41B-5A5D-479F-9F8F-BF665F4EBC2A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|e:\\cms\\cms\\courierms\\wwwroot\\css\\vendor\\fontawesome-free\\css\\all.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\wwwroot\\css\\vendor\\fontawesome-free\\css\\all.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|e:\\cms\\cms\\courierms\\wwwroot\\css\\sb-admin-2.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\wwwroot\\css\\sb-admin-2.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|e:\\cms\\cms\\courierms\\wwwroot\\css\\sb-admin-2.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\wwwroot\\css\\sb-admin-2.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|e:\\cms\\cms\\courierms\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|e:\\cms\\cms\\courierms\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\ViewModel\\CustomerinfoVM.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\ViewModel\\LookupVM.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\DataModel\\Lookup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\DataModel\\Customerinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\Controllers\\LookupController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\DataModel\\CPinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\Views\\Customer\\CreateLookup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\Models\\Helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\Views\\Customer\\Create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\jquiry-3.6.0.min.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\DataModel\\Percelinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\Migrations\\20240910174420_updateLookup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\Views\\Customer\\Index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\Migrations\\20240910014802_CreateLookup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\Migrations\\20240910005310_percelinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\DataModel\\PercelType.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\ViewModel\\PercelTypeVM.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\Migrations\\20240908154854_createCustomerinfoandPercelinfoandPercelType.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\Views\\Customer\\Edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -181,7 +64,7 @@
               "RelativeDocumentMoniker": "courierMs\\Controllers\\CustomerController.cs",
               "ToolTip": "E:\\CMS\\CMS\\courierMs\\Controllers\\CustomerController.cs",
               "RelativeToolTip": "courierMs\\Controllers\\CustomerController.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAApwD0AAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAYwGQAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-20T19:05:01.868Z",
               "IsPinned": true,
@@ -189,35 +72,69 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ShowList.cshtml",
-              "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\Views\\Customer\\ShowList.cshtml",
-              "RelativeDocumentMoniker": "courierMs\\Views\\Customer\\ShowList.cshtml",
-              "ToolTip": "E:\\CMS\\CMS\\courierMs\\Views\\Customer\\ShowList.cshtml",
-              "RelativeToolTip": "courierMs\\Views\\Customer\\ShowList.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIsAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-10T05:28:36.051Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 1,
               "Title": "Create.cshtml",
               "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\Views\\Customer\\Create.cshtml",
               "RelativeDocumentMoniker": "courierMs\\Views\\Customer\\Create.cshtml",
               "ToolTip": "E:\\CMS\\CMS\\courierMs\\Views\\Customer\\Create.cshtml",
               "RelativeToolTip": "courierMs\\Views\\Customer\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAALoAAAAAAAAAAAAAANAAAABzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-09-20T19:07:04.481Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "Helper.cs",
+              "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\Models\\Helper.cs",
+              "RelativeDocumentMoniker": "courierMs\\Models\\Helper.cs",
+              "ToolTip": "E:\\CMS\\CMS\\courierMs\\Models\\Helper.cs",
+              "RelativeToolTip": "courierMs\\Models\\Helper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T04:00:30.263Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\Views\\Customer\\Index.cshtml",
+              "RelativeDocumentMoniker": "courierMs\\Views\\Customer\\Index.cshtml",
+              "ToolTip": "E:\\CMS\\CMS\\courierMs\\Views\\Customer\\Index.cshtml",
+              "RelativeToolTip": "courierMs\\Views\\Customer\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-26T03:45:25.248Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ShowList.cshtml",
+              "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\Views\\Customer\\ShowList.cshtml",
+              "RelativeDocumentMoniker": "courierMs\\Views\\Customer\\ShowList.cshtml",
+              "ToolTip": "E:\\CMS\\CMS\\courierMs\\Views\\Customer\\ShowList.cshtml",
+              "RelativeToolTip": "courierMs\\Views\\Customer\\ShowList.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-05T10:01:18.434Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Customerinfo.cs",
+              "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\DataModel\\Customerinfo.cs",
+              "RelativeDocumentMoniker": "courierMs\\DataModel\\Customerinfo.cs",
+              "ToolTip": "E:\\CMS\\CMS\\courierMs\\DataModel\\Customerinfo.cs",
+              "RelativeToolTip": "courierMs\\DataModel\\Customerinfo.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA5wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T09:39:28.923Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Lookup.cs",
               "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\DataModel\\Lookup.cs",
               "RelativeDocumentMoniker": "courierMs\\DataModel\\Lookup.cs",
@@ -225,12 +142,11 @@
               "RelativeToolTip": "courierMs\\DataModel\\Lookup.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAzwA0AAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T08:01:40.101Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-10T08:01:40.101Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "mycontext.cs",
               "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\DataModel\\mycontext.cs",
               "RelativeDocumentMoniker": "courierMs\\DataModel\\mycontext.cs",
@@ -238,440 +154,43 @@
               "RelativeToolTip": "courierMs\\DataModel\\mycontext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T08:01:27.048Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-10T08:01:27.048Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
               "Title": "Percelinfo.cs",
               "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\DataModel\\Percelinfo.cs",
               "RelativeDocumentMoniker": "courierMs\\DataModel\\Percelinfo.cs",
               "ToolTip": "E:\\CMS\\CMS\\courierMs\\DataModel\\Percelinfo.cs",
               "RelativeToolTip": "courierMs\\DataModel\\Percelinfo.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAYwAwAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA1wAwAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T08:01:19.01Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-10T08:01:19.01Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "PercelinfoVM.cs",
               "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\ViewModel\\PercelinfoVM.cs",
               "RelativeDocumentMoniker": "courierMs\\ViewModel\\PercelinfoVM.cs",
               "ToolTip": "E:\\CMS\\CMS\\courierMs\\ViewModel\\PercelinfoVM.cs",
               "RelativeToolTip": "courierMs\\ViewModel\\PercelinfoVM.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T08:00:13.394Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-10T08:00:13.394Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "CustomerinfoVM.cs",
               "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\ViewModel\\CustomerinfoVM.cs",
               "RelativeDocumentMoniker": "courierMs\\ViewModel\\CustomerinfoVM.cs",
               "ToolTip": "E:\\CMS\\CMS\\courierMs\\ViewModel\\CustomerinfoVM.cs",
               "RelativeToolTip": "courierMs\\ViewModel\\CustomerinfoVM.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwCQAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T07:15:59.73Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Customerinfo.cs",
-              "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\DataModel\\Customerinfo.cs",
-              "RelativeDocumentMoniker": "courierMs\\DataModel\\Customerinfo.cs",
-              "ToolTip": "E:\\CMS\\CMS\\courierMs\\DataModel\\Customerinfo.cs",
-              "RelativeToolTip": "courierMs\\DataModel\\Customerinfo.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAwA4AAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T08:01:50.657Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "addproduct.cshtml",
-              "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\Views\\Customer\\addproduct.cshtml",
-              "RelativeDocumentMoniker": "courierMs\\Views\\Customer\\addproduct.cshtml",
-              "ToolTip": "E:\\CMS\\CMS\\courierMs\\Views\\Customer\\addproduct.cshtml",
-              "RelativeToolTip": "courierMs\\Views\\Customer\\addproduct.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-10T08:02:08.208Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Product.cs",
-              "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\DataModel\\Product.cs",
-              "RelativeDocumentMoniker": "courierMs\\DataModel\\Product.cs",
-              "ToolTip": "E:\\CMS\\CMS\\courierMs\\DataModel\\Product.cs",
-              "RelativeToolTip": "courierMs\\DataModel\\Product.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T08:01:01.296Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "courierMsContext.cs",
-              "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\Areas\\Identity\\Data\\courierMsContext.cs",
-              "RelativeDocumentMoniker": "courierMs\\Areas\\Identity\\Data\\courierMsContext.cs",
-              "ToolTip": "E:\\CMS\\CMS\\courierMs\\Areas\\Identity\\Data\\courierMsContext.cs",
-              "RelativeToolTip": "courierMs\\Areas\\Identity\\Data\\courierMsContext.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAowAwAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T07:20:16.582Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ProductVM.cs",
-              "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\ViewModel\\ProductVM.cs",
-              "RelativeDocumentMoniker": "courierMs\\ViewModel\\ProductVM.cs",
-              "ToolTip": "E:\\CMS\\CMS\\courierMs\\ViewModel\\ProductVM.cs",
-              "RelativeToolTip": "courierMs\\ViewModel\\ProductVM.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T08:00:21.39Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "LookupVM.cs",
-              "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\ViewModel\\LookupVM.cs",
-              "RelativeDocumentMoniker": "courierMs\\ViewModel\\LookupVM.cs",
-              "ToolTip": "E:\\CMS\\CMS\\courierMs\\ViewModel\\LookupVM.cs",
-              "RelativeToolTip": "courierMs\\ViewModel\\LookupVM.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAA5wAoAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T07:59:33.913Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Logout.cshtml",
-              "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
-              "RelativeDocumentMoniker": "courierMs\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
-              "ToolTip": "E:\\CMS\\CMS\\courierMs\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
-              "RelativeToolTip": "courierMs\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-03T11:36:25.553Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "CustomerinfoVM.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\ViewModel\\CustomerinfoVM.cs",
-              "ToolTip": "C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\ViewModel\\CustomerinfoVM.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T17:33:57.242Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "LookupVM.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\ViewModel\\LookupVM.cs",
-              "ToolTip": "C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\ViewModel\\LookupVM.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-11T05:01:37.233Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "Lookup.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\DataModel\\Lookup.cs",
-              "ToolTip": "C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\DataModel\\Lookup.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T01:43:27.823Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "Customerinfo.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\DataModel\\Customerinfo.cs",
-              "ToolTip": "C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\DataModel\\Customerinfo.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T17:27:09.096Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "LookupController.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\Controllers\\LookupController.cs",
-              "ToolTip": "C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\Controllers\\LookupController.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T01:57:15.996Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "CPinfo.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\DataModel\\CPinfo.cs",
-              "ToolTip": "C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\DataModel\\CPinfo.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-08T18:44:46.218Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "CreateLookup.cshtml",
-              "DocumentMoniker": "C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\Views\\Customer\\CreateLookup.cshtml",
-              "ToolTip": "C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\Views\\Customer\\CreateLookup.cshtml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-10T18:55:04.376Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "Helper.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\Models\\Helper.cs",
-              "ToolTip": "C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\Models\\Helper.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T17:18:42.823Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\Views\\Customer\\Create.cshtml",
-              "ToolTip": "C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\Views\\Customer\\Create.cshtml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-08T13:51:00.175Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "jquiry-3.6.0.min.js",
-              "DocumentMoniker": "C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\jquiry-3.6.0.min.js",
-              "ToolTip": "C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\jquiry-3.6.0.min.js",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-09-11T03:54:11.217Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "Percelinfo.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\DataModel\\Percelinfo.cs",
-              "ToolTip": "C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\DataModel\\Percelinfo.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T17:36:30.009Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "20240910174420_updateLookup.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\Migrations\\20240910174420_updateLookup.cs",
-              "ToolTip": "C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\Migrations\\20240910174420_updateLookup.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T17:44:20.631Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\Views\\Customer\\Index.cshtml",
-              "ToolTip": "C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\Views\\Customer\\Index.cshtml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-08T18:56:41.698Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "20240910014802_CreateLookup.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\Migrations\\20240910014802_CreateLookup.cs",
-              "ToolTip": "C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\Migrations\\20240910014802_CreateLookup.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T01:48:02.334Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "20240910005310_percelinfo.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\Migrations\\20240910005310_percelinfo.cs",
-              "ToolTip": "C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\Migrations\\20240910005310_percelinfo.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T00:53:10.759Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "PercelType.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\DataModel\\PercelType.cs",
-              "ToolTip": "C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\DataModel\\PercelType.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T18:07:05.737Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "PercelTypeVM.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\ViewModel\\PercelTypeVM.cs",
-              "ToolTip": "C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\ViewModel\\PercelTypeVM.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T18:11:16.81Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "20240908154854_createCustomerinfoandPercelinfoandPercelType.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\Migrations\\20240908154854_createCustomerinfoandPercelinfoandPercelType.cs",
-              "ToolTip": "C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\Migrations\\20240908154854_createCustomerinfoandPercelinfoandPercelType.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-08T15:48:54.352Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\Views\\Customer\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\USER\\Documents\\GitHub\\intern_JoniMiah\\courierMs\\Views\\Customer\\Edit.cshtml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-08T15:14:38.184Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ErrorViewModel.cs",
-              "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\Models\\ErrorViewModel.cs",
-              "RelativeDocumentMoniker": "courierMs\\Models\\ErrorViewModel.cs",
-              "ToolTip": "E:\\CMS\\CMS\\courierMs\\Models\\ErrorViewModel.cs",
-              "RelativeToolTip": "courierMs\\Models\\ErrorViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-04T15:24:16.333Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "courierMs\\Properties\\launchSettings.json",
-              "ToolTip": "E:\\CMS\\CMS\\courierMs\\Properties\\launchSettings.json",
-              "RelativeToolTip": "courierMs\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-09-04T19:23:44.562Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "serviceDependencies.json",
-              "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\Properties\\serviceDependencies.json",
-              "RelativeDocumentMoniker": "courierMs\\Properties\\serviceDependencies.json",
-              "ToolTip": "E:\\CMS\\CMS\\courierMs\\Properties\\serviceDependencies.json",
-              "RelativeToolTip": "courierMs\\Properties\\serviceDependencies.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-09-04T19:24:48.59Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "site.css",
-              "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "courierMs\\wwwroot\\css\\site.css",
-              "ToolTip": "E:\\CMS\\CMS\\courierMs\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "courierMs\\wwwroot\\css\\site.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-09-04T15:08:42.793Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "sb-admin-2.css",
-              "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\wwwroot\\css\\sb-admin-2.css",
-              "RelativeDocumentMoniker": "courierMs\\wwwroot\\css\\sb-admin-2.css",
-              "ToolTip": "E:\\CMS\\CMS\\courierMs\\wwwroot\\css\\sb-admin-2.css",
-              "RelativeToolTip": "courierMs\\wwwroot\\css\\sb-admin-2.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-09-04T15:08:54.033Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "sb-admin-2.min.css",
-              "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\wwwroot\\css\\sb-admin-2.min.css",
-              "RelativeDocumentMoniker": "courierMs\\wwwroot\\css\\sb-admin-2.min.css",
-              "ToolTip": "E:\\CMS\\CMS\\courierMs\\wwwroot\\css\\sb-admin-2.min.css",
-              "RelativeToolTip": "courierMs\\wwwroot\\css\\sb-admin-2.min.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-09-04T15:08:56.674Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "_footer.scss",
-              "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\wwwroot\\css\\scss\\_footer.scss",
-              "RelativeDocumentMoniker": "courierMs\\wwwroot\\css\\scss\\_footer.scss",
-              "ToolTip": "E:\\CMS\\CMS\\courierMs\\wwwroot\\css\\scss\\_footer.scss",
-              "RelativeToolTip": "courierMs\\wwwroot\\css\\scss\\_footer.scss",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002663|",
-              "WhenOpened": "2024-09-04T15:09:17.255Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "all.min.css",
-              "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\wwwroot\\css\\vendor\\fontawesome-free\\css\\all.min.css",
-              "RelativeDocumentMoniker": "courierMs\\wwwroot\\css\\vendor\\fontawesome-free\\css\\all.min.css",
-              "ToolTip": "E:\\CMS\\CMS\\courierMs\\wwwroot\\css\\vendor\\fontawesome-free\\css\\all.min.css",
-              "RelativeToolTip": "courierMs\\wwwroot\\css\\vendor\\fontawesome-free\\css\\all.min.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-09-04T15:09:51.14Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "_footer.scss",
-              "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\wwwroot\\scss\\_footer.scss",
-              "RelativeDocumentMoniker": "courierMs\\wwwroot\\scss\\_footer.scss",
-              "ToolTip": "E:\\CMS\\CMS\\courierMs\\wwwroot\\scss\\_footer.scss",
-              "RelativeToolTip": "courierMs\\wwwroot\\scss\\_footer.scss",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002663|",
-              "WhenOpened": "2024-09-04T15:10:23.67Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "courierMs\\appsettings.Development.json",
-              "ToolTip": "E:\\CMS\\CMS\\courierMs\\appsettings.Development.json",
-              "RelativeToolTip": "courierMs\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-09-03T12:29:25.61Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "_Layout.cshtml.css",
-              "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\Views\\Shared\\_Layout.cshtml.css",
-              "RelativeDocumentMoniker": "courierMs\\Views\\Shared\\_Layout.cshtml.css",
-              "ToolTip": "E:\\CMS\\CMS\\courierMs\\Views\\Shared\\_Layout.cshtml.css",
-              "RelativeToolTip": "courierMs\\Views\\Shared\\_Layout.cshtml.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-09-03T12:52:17.442Z"
+              "WhenOpened": "2024-10-10T07:15:59.73Z"
             }
           ]
         }

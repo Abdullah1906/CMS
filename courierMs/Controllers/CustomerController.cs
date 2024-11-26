@@ -97,8 +97,11 @@ namespace courierMs.Controllers
                 };
                 return View(Data);
             }
-
-            return View();
+            else
+            {
+                return View();
+            }
+ 
 
         }
 
@@ -115,6 +118,7 @@ namespace courierMs.Controllers
                 .Where(x=> x.Type== LookupType.Percel && x.Serial>0)
                 .OrderBy(x=> x.Serial)
                 .ToList();
+            
 
             return View();
         }
