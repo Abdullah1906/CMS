@@ -14,6 +14,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Hosting;
 using NuGet.Protocol.Plugins;
 
+
 namespace courierMs.Controllers
 {
     [Authorize]
@@ -54,53 +55,48 @@ namespace courierMs.Controllers
         }
 
         //showlist for admin
-        public IActionResult ShowList(Guid senderId,Guid receiverId)
+        public IActionResult ShowList()
         {
+            var query = from percel in _context.Percelinfo
+                        join sender in _context.Customerinfo on percel.SenderId equals sender.CustomerId
+                        join receiver in _context.Customerinfo on percel.ReceiverId equals receiver.CustomerId
+                        select new MultiModelVM
+                        {
+                            Percelinfo = new PercelinfoVM
+                            {
+                                Id = percel.Id,
+                                ParcelId = percel.ParcelId,
+                                ParcelType = percel.ParcelType,
+                                Weight = percel.Weight,
+                                Price = percel.Price,
+                                Note = percel.Note,
+                                SenderId = percel.SenderId,
+                                ReceiverId = percel.ReceiverId
+                            },
+                            SenderInfo = new CustomerinfoVM
+                            {
+                                S_Name = sender.Name,
+                                S_PhoneNumber = sender.PhoneNumber,
+                                S_Email = sender.Email,
+                                S_Address = sender.Address,
+                                S_Note = sender.Note,
+                                S_city = sender.city
+                            },
+                            ReceiverInfo = new CustomerinfoVM
+                            {
+                                R_Name = receiver.Name,
+                                R_PhoneNumber = receiver.PhoneNumber,
+                                R_Email = receiver.Email,
+                                R_Address = receiver.Address,
+                                R_Note = receiver.Note,
+                                R_city = receiver.city
+                            }
+                        };
 
-            var senderData = _context.Customerinfo.FirstOrDefault(x => x.CustomerId == senderId);
-            var receiverData = _context.Customerinfo.FirstOrDefault(x => x.CustomerId == receiverId);
-            var percelData = _context.Percelinfo.FirstOrDefault(x=>x.SenderId== senderId);
-
-
-            if(senderData!=null && receiverData != null)
-            {
-                var Data = new MultiModelVM
-                {
-                    Customerinfo = new CustomerinfoVM
-                    {
-                        S_Name = senderData.Name,
-                        S_PhoneNumber = senderData.PhoneNumber,
-                        S_city = senderData.city,
-                        S_Address = senderData.Address,
-                        S_Email = senderData.Address,
-                        S_Note = senderData.Note,
-                        R_Name = receiverData.Name,
-                        R_PhoneNumber = receiverData.PhoneNumber,
-                        R_city = receiverData.city,
-                        R_Address = receiverData.Address,
-                        R_Email = receiverData.Address,
-                        R_Note = receiverData.Note
-
-
-                    },
-                    Percelinfo = new PercelinfoVM
-                    {
-                        ParcelType = percelData.ParcelType,
-                        Weight = percelData.Weight,
-                        Price = percelData.Price,
-                        Note = percelData.Note,
-                        SenderId = percelData.SenderId,
-                        ReceiverId = percelData.ReceiverId
-
-
-                    }
-                };
-                return View(Data);
-            }
-            else
-            {
-                return View();
-            }
+            var result = query.ToList(); 
+            
+                return View(result);
+            
  
 
         }
@@ -162,8 +158,8 @@ namespace courierMs.Controllers
         public async Task<IActionResult> Create(MultiModelVM model)
         {
             var userid = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            Customerinfo senderData = new Customerinfo();
-            Customerinfo receiverData = new Customerinfo();
+            Customerinfo sender = new Customerinfo();
+            Customerinfo receiver = new Customerinfo();
             Percelinfo percelData = new Percelinfo();
 
 
@@ -171,33 +167,36 @@ namespace courierMs.Controllers
             //var exCustomer = _context.Customerinfo.Where(x => x.PhoneNumber == model.Customerinfo.PhoneNumber).Any(); // for using any() because it will return true false
 
 
-            // for customer 
-            senderData.CustomerId = Guid.NewGuid();
-            senderData.Name = model.Customerinfo.S_Name;
-            senderData.PhoneNumber = model.Customerinfo.S_PhoneNumber;
-            senderData.Address = model.Customerinfo.S_Address;
-            senderData.Email = model.Customerinfo.S_Email;
-            senderData.city = model.Customerinfo.S_city;
-            senderData.Note = model.Customerinfo.S_Note;
-            senderData.CreatedAt = DateTime.Now;
-            senderData.UpdatedAt = DateTime.Now;
-            senderData.CreatedBy = GuidHelper.ToGuidOrDefault(userid);
-            senderData.UpdatedBy = GuidHelper.ToGuidOrDefault(userid);
+            // for customer sender and reciever
+            
+            sender.CustomerId = Guid.NewGuid();
+            sender.Name = model.Customerinfo.S_Name;
+            sender.PhoneNumber = model.Customerinfo.S_PhoneNumber;
+            sender.Address = model.Customerinfo.S_Address;
+            sender.Email = model.Customerinfo.S_Email;
+            sender.city = model.Customerinfo.S_city;
+            sender.Note = model.Customerinfo.S_Note;
+            sender.CreatedAt = DateTime.Now;
+            sender.UpdatedAt = DateTime.Now;
+            sender.CreatedBy = GuidHelper.ToGuidOrDefault(userid);
+            sender.UpdatedBy = GuidHelper.ToGuidOrDefault(userid);
 
 
-            // for receiver
-            receiverData.CustomerId = Guid.NewGuid();
-            receiverData.Name = model.Customerinfo.R_Name;
-            receiverData.PhoneNumber = model.Customerinfo.R_PhoneNumber;
-            receiverData.Address = model.Customerinfo.R_Address;
-            receiverData.Email = model.Customerinfo.R_Email;
-            receiverData.city = model.Customerinfo.R_city;
-            receiverData.Note = model.Customerinfo.R_Note;
-            receiverData.CreatedAt = DateTime.Now;
-            receiverData.UpdatedAt = DateTime.Now;
-            receiverData.CreatedBy = GuidHelper.ToGuidOrDefault(userid);
-            receiverData.UpdatedBy = GuidHelper.ToGuidOrDefault(userid);
+            
+            receiver.CustomerId = Guid.NewGuid();
+            receiver.Name = model.Customerinfo.R_Name;
+            receiver.PhoneNumber = model.Customerinfo.R_PhoneNumber;
+            receiver.Address = model.Customerinfo.R_Address;
+            receiver.Email = model.Customerinfo.R_Email;
+            receiver.city = model.Customerinfo.R_city;
+            receiver.Note = model.Customerinfo.R_Note;
+            receiver.CreatedAt = DateTime.Now;
+            receiver.UpdatedAt = DateTime.Now;
+            receiver.CreatedBy = GuidHelper.ToGuidOrDefault(userid);
+            receiver.UpdatedBy = GuidHelper.ToGuidOrDefault(userid);
 
+
+            
 
             // for percel
             percelData.ParcelType = model.Percelinfo.ParcelType;
@@ -215,25 +214,26 @@ namespace courierMs.Controllers
 
             if (ModelState.IsValid)
             {
-                _context.Add(senderData);
+                _context.Add(sender);
                 await _context.SaveChangesAsync();
 
 
-                _context.Add(receiverData);
+                _context.Add(receiver);
                 await _context.SaveChangesAsync();
 
-                percelData.SenderId = senderData.CustomerId;
-                percelData.ReceiverId = receiverData.CustomerId;
+
+                percelData.SenderId = sender.CustomerId;
+                percelData.ReceiverId = receiver.CustomerId;
 
                 _context.Add(percelData);
                 await _context.SaveChangesAsync();
 
 
-                return RedirectToAction("ShowList", new
-                {
-                    senderId = senderData.CustomerId,
-                    receiverId = receiverData.CustomerId
-                });
+                //return RedirectToAction("ShowList", new
+                //{
+                //    senderId = sender.CustomerId,
+                //    receiverId = receiver.CustomerId
+                //});
 
             }
             ViewBag.CityList = _context.Lookup

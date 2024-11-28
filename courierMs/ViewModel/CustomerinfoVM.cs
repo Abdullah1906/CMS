@@ -34,8 +34,8 @@ namespace courierMs.ViewModel
 
     public class MultiModelVM
     {
-        public List<Customerinfo>? Customer { get; set; }
-        public List<Percelinfo>? Percel { get; set; }
+        public CustomerinfoVM? SenderInfo { get; set; } 
+        public CustomerinfoVM? ReceiverInfo { get; set; } 
         public CustomerinfoVM? Customerinfo { get; set; }
         public PercelinfoVM? Percelinfo { get; set; }
     }

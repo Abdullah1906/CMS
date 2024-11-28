@@ -1,100 +1,113 @@
-﻿@model courierMs.ViewModel.MultiModelVM
+﻿@model IEnumerable<courierMs.ViewModel.MultiModelVM>
 @{
     ViewData["Title"] = "ShowList";
 
 }
 
-
-<div class="col-md-10">
-    <div class="card shadow-lg mb-4">
-        <div class="card-header bg-secondary text-white text-center">
-            <h4 class="mb-0">List of Sender</h4>
-        </div>
-        <div class="card-body">
-            <table class="table table-hover table-bordered text-center align-middle" id="lookupTable">
-                <thead class="text-white bg-dark">
-                    <tr>
-                        <th scope="col">Name</th>
-                        <th scope="col">Number</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Address</th>
-                        <th scope="col">Note</th>
-                        <th scope="col">City</th>
-                        <th scope="col">Action</th>
-
-
-                    </tr>
-                </thead>
-                <tbody>
-                    @if (Model != null && Model.Customerinfo != null)
-                    {
+<div class="row">
+    <div class="col-md-12">
+        <div class="card shadow-lg mb-4">
+            <div class="card-header bg-secondary text-white text-center">
+                <h4 class="mb-0">List of Sender</h4>
+            </div>
+            <div class="card-body">
+                <table class="table table-hover table-bordered text-center align-middle" id="lookupTable">
+                    <thead class="text-white bg-dark">
                         <tr>
-                            <td>@Model.Customerinfo.S_Name</td>
-                            <td>@Model.Customerinfo.S_PhoneNumber</td>
-                            <td>@Model.Customerinfo.S_Email</td>
-                            <td>@Model.Customerinfo.S_Address</td>
-                            <td>@Model.Customerinfo.S_Note</td>
-                            <td>@Model.Customerinfo.S_city</td>
+                            <th scope="col">Name</th>
+                            <th scope="col">Number</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">Note</th>
+                            <th scope="col">City</th>
+                            <th scope="col">Action</th>
 
-
-                            <td>
-                                <button type="button" id="GetupdateButton" class="btn btn-outline-primary btn-lg " data-id="@Model.Customerinfo.Id">Update</button>
-                                <button type="button" id="deleteButton" class="btn btn-outline-danger btn-lg" data-id="@Model.Customerinfo.Id">Delete</button>
-                            </td>
 
                         </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model != null && Model.Any())
+                        {
+                            foreach (var item in Model)
+                            {
+                                if (item.SenderInfo != null)
+                                {
+                                    <tr>
+                                        <td>@item.SenderInfo.S_Name</td>
+                                        <td>@item.SenderInfo.S_PhoneNumber</td>
+                                        <td>@item.SenderInfo.S_Email</td>
+                                        <td>@item.SenderInfo.S_Address</td>
+                                        <td>@item.SenderInfo.S_Note</td>
+                                        <td>@item.SenderInfo.S_city</td>
+                                        <td>
+                                            <button type="button" id="GetupdateButton" class="btn btn-outline-primary btn-md " data-id="@item.SenderInfo.Id">Update</button>
+                                            <button type="button" id="deleteButton" class="btn btn-outline-danger btn-md" data-id="@item.SenderInfo.Id">Delete</button>
+                                        </td>
 
-                    }
-                </tbody>
-            </table>
+                                    </tr>
+
+                                }
+
+                            }
+
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="card shadow-lg mb-4">
+            <div class="card-header bg-secondary text-white text-center">
+                <h4 class="mb-0">List of Receiver</h4>
+            </div>
+            <div class="card-body">
+                <table class="table table-hover table-bordered text-center align-middle" id="lookupTable">
+                    <thead class="text-white bg-dark">
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Number</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">Note</th>
+                            <th scope="col">City</th>
+                            <th scope="col">Action</th>
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model != null && Model.Any())
+                        {
+                            foreach (var item in Model)
+                            {
+                                if (item.ReceiverInfo != null)
+                                {
+                                    <tr>
+                                        <td>@item.ReceiverInfo.R_Name</td>
+                                        <td>@item.ReceiverInfo.R_PhoneNumber</td>
+                                        <td>@item.ReceiverInfo.R_Email</td>
+                                        <td>@item.ReceiverInfo.R_Address</td>
+                                        <td>@item.ReceiverInfo.R_Note</td>
+                                        <td>@item.ReceiverInfo.R_city</td>
+                                        <td>
+                                            <button type="button" id="GetupdateButton" class="btn btn-outline-primary btn-md " data-id="@item.ReceiverInfo.Id">Update</button>
+                                            <button type="button" id="deleteButton" class="btn btn-outline-danger btn-md" data-id="@item.ReceiverInfo.Id">Delete</button>
+                                        </td>
+
+                                    </tr>
+                                }
+
+                            }
+
+                        }
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>
-<div class="col-md-10">
-    <div class="card shadow-lg mb-4">
-        <div class="card-header bg-secondary text-white text-center">
-            <h4 class="mb-0">List of Receiver</h4>
-        </div>
-        <div class="card-body">
-            <table class="table table-hover table-bordered text-center align-middle" id="lookupTable">
-                <thead class="text-white bg-dark">
-                    <tr>
-                        <th scope="col">Name</th>
-                        <th scope="col">Number</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Address</th>
-                        <th scope="col">Note</th>
-                        <th scope="col">City</th>
-                        <th scope="col">Action</th>
 
-
-                    </tr>
-                </thead>
-                <tbody>
-                    @if (Model != null && Model.Customerinfo != null)
-                    {
-                        <tr>
-                            <td>@Model.Customerinfo.R_Name</td>
-                            <td>@Model.Customerinfo.R_PhoneNumber</td>
-                            <td>@Model.Customerinfo.R_Email</td>
-                            <td>@Model.Customerinfo.R_Address</td>
-                            <td>@Model.Customerinfo.R_Note</td>
-                            <td>@Model.Customerinfo.R_city</td>
-
-
-                            <td>
-                                <button type="button" id="GetupdateButton" class="btn btn-outline-primary btn-lg " data-id="@Model.Customerinfo.Id">Update</button>
-                                <button type="button" id="deleteButton" class="btn btn-outline-danger btn-lg" data-id="@Model.Customerinfo.Id">Delete</button>
-                            </td>
-
-                        </tr>
-
-                    }
-                </tbody>
-            </table>
-        </div>
-    </div>
-</div>
 <div class="col-md-12">
     <div class="card shadow-lg mb-4">
         <div class="card-header bg-secondary text-white text-center">
@@ -116,25 +129,31 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @if (Model != null && Model.Percelinfo!=null)
+                    @if (Model != null && Model.Any())
                     {
-
-                            <tr>
-                                <td>@Model.Percelinfo.ParcelType</td>
-                                <td>@Model.Percelinfo.Weight</td>
-                                <td>@Model.Percelinfo.Price</td>
-                                <td>@Model.Percelinfo.Note</td>
-                                <td>@Model.Percelinfo.SenderId</td>
-                                <td>@Model.Percelinfo.ReceiverId</td>
-                                
-
-                                <td>
-                                    <button type="button" id="GetupdateButton" class="btn btn-outline-primary btn-lg " data-id="@Model.Percelinfo.Id">Update</button>
-                                    <button type="button" id="deleteButton" class="btn btn-outline-danger btn-lg" data-id="@Model.Percelinfo.Id">Delete</button>
-                                </td>
+                        foreach(var item in Model)
+                        {
+                            if (item.Percelinfo != null)
+                            {
+                                <tr>
+                                    <td>@item.Percelinfo.ParcelType</td>
+                                    <td>@item.Percelinfo.Weight</td>
+                                    <td>@item.Percelinfo.Price</td>
+                                    <td>@item.Percelinfo.Note</td>
+                                    <td>@item.Percelinfo.SenderId</td>
+                                    <td>@item.Percelinfo.ReceiverId</td>
 
 
-                            </tr>
+                                    <td>
+                                        <button type="button" id="GetupdateButton" class="btn btn-outline-primary btn-md " data-id="@item.Percelinfo.Id">Update</button>
+                                        <button type="button" id="deleteButton" class="btn btn-outline-danger btn-md" data-id="@item.Percelinfo.Id">Delete</button>
+                                    </td>
+
+
+                                </tr>
+                            }
+                        }
+                       
                         
                     }
                     else

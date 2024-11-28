@@ -243,7 +243,6 @@ namespace courierMs.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Address")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreatedAt")
@@ -256,19 +255,15 @@ namespace courierMs.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Note")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PhoneNumber")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("UpdatedAt")
@@ -278,7 +273,6 @@ namespace courierMs.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("city")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -304,14 +298,12 @@ namespace courierMs.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Serial")
                         .HasColumnType("int");
 
                     b.Property<string>("Type")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("UpdatedAt")
@@ -321,7 +313,6 @@ namespace courierMs.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Value")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -344,14 +335,12 @@ namespace courierMs.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Note")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<Guid>("ParcelId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("ParcelType")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<double>("Price")
@@ -392,11 +381,9 @@ namespace courierMs.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Image")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("UpdatedAt")
@@ -411,6 +398,88 @@ namespace courierMs.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Product");
+                });
+
+            modelBuilder.Entity("courierMs.DataModel.Reciever", b =>
+                {
+                    b.Property<Guid>("RecieverId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("CreatedBy")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("R_Address")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("R_Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("R_Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("R_Note")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("R_PhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("R_city")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("UpdatedBy")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("RecieverId");
+
+                    b.ToTable("Recievers");
+                });
+
+            modelBuilder.Entity("courierMs.DataModel.Sender", b =>
+                {
+                    b.Property<Guid>("SenderId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("CreatedBy")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("S_Address")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("S_Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("S_Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("S_Note")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("S_PhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("S_city")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("UpdatedBy")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("SenderId");
+
+                    b.ToTable("Senders");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

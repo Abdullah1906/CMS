@@ -86,7 +86,7 @@ namespace courierMs.Areas.Identity.Pages.Account
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
-                    return RedirectToAction("Index", "Customer");
+                    return RedirectToAction("Create", "Customer");
                 }
                 if (result.RequiresTwoFactor)
                 {
