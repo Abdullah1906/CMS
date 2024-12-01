@@ -25,90 +25,91 @@
                                             <div class="form-group">
                                                 <h3 class="mb-0 text-center text-dark">Sender Information</h3>
                                                 <hr />
-                                                <label asp-for="Customerinfo.S_Name" class="control-label">Sender Name</label>
-                                                <input asp-for="Customerinfo.S_Name" id="name" class="form-control" placeholder="Enter Sender Name" />
-                                                <span asp-validation-for="Customerinfo.S_Name" class="text-danger"></span>
+                                                <label asp-for="Customerinfo.Name" class="control-label">Sender Name</label>
+                                                <input asp-for="Customerinfo.Name" id="name" class="form-control" placeholder="Enter Sender Name" />
+                                                <input asp-for="Customerinfo.Id" id="Id" name="Id" hidden />
+                                                <span asp-validation-for="Customerinfo.Name" class="text-danger"></span>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <h3 class="mb-0 text-center text-dark">Receiver Information</h3>
                                                 <hr />
-                                                <label asp-for="Customerinfo.R_Name" class="control-label">Reciever Name</label>
-                                                <input asp-for="Customerinfo.R_Name" id="name1" class="form-control" placeholder="Enter Reciever Name" />
-                                                <span asp-validation-for="Customerinfo.R_Name" class="text-danger"></span>
+                                                <label asp-for="ReceiverInfo.Name" class="control-label">Reciever Name</label>
+                                                <input asp-for="ReceiverInfo.Name" id="name1" class="form-control" placeholder="Enter Reciever Name" />
+                                                <span asp-validation-for="ReceiverInfo.Name" class="text-danger"></span>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label asp-for="Customerinfo.S_PhoneNumber" class="control-label">Phone Number</label>
-                                                <input asp-for="Customerinfo.S_PhoneNumber" id="p_number" class="form-control" placeholder="Enter Sender Number" />
-                                                <span asp-validation-for="Customerinfo.S_PhoneNumber" class="text-danger"></span>
+                                                <label asp-for="Customerinfo.PhoneNumber" class="control-label">Phone Number</label>
+                                                <input asp-for="Customerinfo.PhoneNumber" id="p_number" class="form-control" placeholder="Enter Sender Number" />
+                                                <span asp-validation-for="Customerinfo.PhoneNumber" class="text-danger"></span>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label asp-for="Customerinfo.R_PhoneNumber" class="control-label">Phone Number</label>
-                                                <input asp-for="Customerinfo.R_PhoneNumber" id="p_number1" class="form-control" placeholder="Enter Reciever Number" />
-                                                <span asp-validation-for="Customerinfo.R_PhoneNumber" class="text-danger"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label asp-for="Customerinfo.S_Email" class="control-label">Email</label>
-                                                <input asp-for="Customerinfo.S_Email" id="email" class="form-control" placeholder="Enter Sender Email" />
-                                                <span asp-validation-for="Customerinfo.S_Email" class="text-danger"></span>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label asp-for="Customerinfo.R_Email" class="control-label">Email</label>
-                                                <input asp-for="Customerinfo.R_Email" id="email1" class="form-control" placeholder="Enter Reciever Email" />
-                                                <span asp-validation-for="Customerinfo.R_Email" class="text-danger"></span>
+                                                <label asp-for="ReceiverInfo.PhoneNumber" class="control-label">Phone Number</label>
+                                                <input asp-for="ReceiverInfo.PhoneNumber" id="p_number1" class="form-control" placeholder="Enter Reciever Number" />
+                                                <span asp-validation-for="ReceiverInfo.PhoneNumber" class="text-danger"></span>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label asp-for="Customerinfo.S_Address" class="control-label">Address</label>
-                                                <input asp-for="Customerinfo.S_Address" id="address" class="form-control" placeholder="Enter Sender Address" />
-                                                <span asp-validation-for="Customerinfo.S_Address" class="text-danger"></span>
+                                                <label asp-for="Customerinfo.Email" class="control-label">Email</label>
+                                                <input asp-for="Customerinfo.Email" id="email" class="form-control" placeholder="Enter Sender Email" />
+                                                <span asp-validation-for="Customerinfo.Email" class="text-danger"></span>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label asp-for="Customerinfo.R_Address" class="control-label">Address</label>
-                                                <input asp-for="Customerinfo.R_Address" id="address1" class="form-control" placeholder="Enter Reciever Address" />
-                                                <span asp-validation-for="Customerinfo.R_Address" class="text-danger"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label asp-for="Customerinfo.S_Note" class="control-label">Note</label>
-                                                <input asp-for="Customerinfo.S_Note" id="note" class="form-control" placeholder="Enter Note" />
-                                                <span asp-validation-for="Customerinfo.S_Note" class="text-danger"></span>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label asp-for="Customerinfo.R_Note" class="control-label">Message</label>
-                                                <input asp-for="Customerinfo.R_Note" id="note1" class="form-control" placeholder="Enter Note" />
-                                                <span asp-validation-for="Customerinfo.R_Note" class="text-danger"></span>
+                                                <label asp-for="ReceiverInfo.Email" class="control-label">Email</label>
+                                                <input asp-for="ReceiverInfo.Email" id="email1" class="form-control" placeholder="Enter Reciever Email" />
+                                                <span asp-validation-for="ReceiverInfo.Email" class="text-danger"></span>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label asp-for="Customerinfo.S_city" class="control-label">City</label>
-                                                <select asp-for="Customerinfo.S_city" id="city" class="form-control">
+                                                <label asp-for="Customerinfo.Address" class="control-label">Address</label>
+                                                <input asp-for="Customerinfo.Address" id="address" class="form-control" placeholder="Enter Sender Address" />
+                                                <span asp-validation-for="Customerinfo.Address" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label asp-for="ReceiverInfo.Address" class="control-label">Address</label>
+                                                <input asp-for="ReceiverInfo.Address" id="address1" class="form-control" placeholder="Enter Reciever Address" />
+                                                <span asp-validation-for="ReceiverInfo.Address" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label asp-for="Customerinfo.Note" class="control-label">Note</label>
+                                                <input asp-for="Customerinfo.Note" id="note" class="form-control" placeholder="Enter Note" />
+                                                <span asp-validation-for="Customerinfo.Note" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label asp-for="ReceiverInfo.Note" class="control-label">Message</label>
+                                                <input asp-for="ReceiverInfo.Note" id="note1" class="form-control" placeholder="Enter Note" />
+                                                <span asp-validation-for="ReceiverInfo.Note" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label asp-for="Customerinfo.city" class="control-label">City</label>
+                                                <select asp-for="Customerinfo.city" id="city" class="form-control">
                                                     <option value="-1">Select City</option>
                                                     @if (ViewBag.CityList != null)
                                                     {
@@ -123,13 +124,13 @@
                                                     }
 
                                                 </select>
-                                                <span asp-validation-for="Customerinfo.S_city" class="text-danger"></span>
+                                                <span asp-validation-for="Customerinfo.city" class="text-danger"></span>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label asp-for="Customerinfo.R_city" class="control-label">City</label>
-                                                <select asp-for="Customerinfo.R_city" id="city1" class="form-control">
+                                                <label asp-for="ReceiverInfo.city" class="control-label">City</label>
+                                                <select asp-for="ReceiverInfo.city" id="city1" class="form-control">
                                                     <option value="-1">Select City</option>
                                                     @if (ViewBag.CityList != null)
                                                     {
@@ -144,7 +145,7 @@
                                                     }
 
                                                 </select>
-                                                <span asp-validation-for="Customerinfo.R_city" class="text-danger"></span>
+                                                <span asp-validation-for="ReceiverInfo.city" class="text-danger"></span>
                                             </div>
                                         </div>
                                     </div>

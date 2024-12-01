@@ -4,6 +4,7 @@
 
 }
 
+
 <div class="row">
     <div class="col-md-12">
         <div class="card shadow-lg mb-4">
@@ -11,7 +12,7 @@
                 <h4 class="mb-0">List of Sender</h4>
             </div>
             <div class="card-body">
-                <table class="table table-hover table-bordered text-center align-middle" id="lookupTable">
+                <table class="table table-hover table-bordered text-center align-middle display" id="lookupTable">
                     <thead class="text-white bg-dark">
                         <tr>
                             <th scope="col">Name</th>
@@ -30,18 +31,17 @@
                         {
                             foreach (var item in Model)
                             {
-                                if (item.SenderInfo != null)
+                                if (item.Customerinfo != null)
                                 {
                                     <tr>
-                                        <td>@item.SenderInfo.S_Name</td>
-                                        <td>@item.SenderInfo.S_PhoneNumber</td>
-                                        <td>@item.SenderInfo.S_Email</td>
-                                        <td>@item.SenderInfo.S_Address</td>
-                                        <td>@item.SenderInfo.S_Note</td>
-                                        <td>@item.SenderInfo.S_city</td>
+                                        <td>@item.Customerinfo.Name</td>
+                                        <td>@item.Customerinfo.PhoneNumber</td>
+                                        <td>@item.Customerinfo.Email</td>
+                                        <td>@item.Customerinfo.Address</td>
+                                        <td>@item.Customerinfo.Note</td>
+                                        <td>@item.Customerinfo.city</td>
                                         <td>
-                                            <button type="button" id="GetupdateButton" class="btn btn-outline-primary btn-md " data-id="@item.SenderInfo.Id">Update</button>
-                                            <button type="button" id="deleteButton" class="btn btn-outline-danger btn-md" data-id="@item.SenderInfo.Id">Delete</button>
+                                            <button type="button" id="GetupdateButton" onclick="window.location.href='/Customer/Create';" class="btn btn-outline-primary btn-md " data-id="@item.Customerinfo.Id">Update</button>
                                         </td>
 
                                     </tr>
@@ -84,15 +84,15 @@
                                 if (item.ReceiverInfo != null)
                                 {
                                     <tr>
-                                        <td>@item.ReceiverInfo.R_Name</td>
-                                        <td>@item.ReceiverInfo.R_PhoneNumber</td>
-                                        <td>@item.ReceiverInfo.R_Email</td>
-                                        <td>@item.ReceiverInfo.R_Address</td>
-                                        <td>@item.ReceiverInfo.R_Note</td>
-                                        <td>@item.ReceiverInfo.R_city</td>
+                                        <td>@item.ReceiverInfo.Name</td>
+                                        <td>@item.ReceiverInfo.PhoneNumber</td>
+                                        <td>@item.ReceiverInfo.Email</td>
+                                        <td>@item.ReceiverInfo.Address</td>
+                                        <td>@item.ReceiverInfo.Note</td>
+                                        <td>@item.ReceiverInfo.city</td>
                                         <td>
-                                            <button type="button" id="GetupdateButton" class="btn btn-outline-primary btn-md " data-id="@item.ReceiverInfo.Id">Update</button>
-                                            <button type="button" id="deleteButton" class="btn btn-outline-danger btn-md" data-id="@item.ReceiverInfo.Id">Delete</button>
+                                            <button type="button" id="GetupdateButton" onclick="window.location.href='/Customer/Create';" class="btn btn-outline-primary btn-md " data-id="@item.ReceiverInfo.Id">Update</button>
+
                                         </td>
 
                                     </tr>
@@ -145,8 +145,8 @@
 
 
                                     <td>
-                                        <button type="button" id="GetupdateButton" class="btn btn-outline-primary btn-md " data-id="@item.Percelinfo.Id">Update</button>
-                                        <button type="button" id="deleteButton" class="btn btn-outline-danger btn-md" data-id="@item.Percelinfo.Id">Delete</button>
+                                        <button type="button" id="GetupdateButton" onclick="window.location.href='/Customer/Create';" class="btn btn-outline-primary btn-md " data-id="@item.Percelinfo.Id">Update</button>
+                                        
                                     </td>
 
 
@@ -168,8 +168,77 @@
     </div>
 </div>
 
+
+<script src="~/js/jquery-3.6.0.min.js"></script>
+<script src="~/js/alert.js"></script>
+
 <script>
 
 
+    // getupdatebutton
+    $(document).on('click', '#GetupdateButton', function () { //  is used to attach event handlers to dynamically added all delete elements
+        var id = $(this).data('id');
+        debugger;
+
+        var ListData = {
+            Id: id,
+
+        };
+        console.log(ListData);
+
+
+        $.ajax({
+            url: '@Url.Action("GetUpdate", "Customer")',
+            type: 'POST',
+            data: ListData,
+            success: function (response) {
+                Swal.fire("Updated!", "The item has been Updated.", "success");
+
+                console.log(response.data);
+
+                var sender = response.data.Sender;
+                var receiver = response.data.Receiver;
+                var percel = response.data.Percel;
+
+                $('#name').val(sender.name)
+                $('#name1').val(receiver.name);
+                $('#p_number').val(sender.phoneNumber);
+                $('#p_number1').val(receiver.phoneNumber);
+                $('#email').val(sender.email);
+                $('#email1').val(receiver.email);
+                $('#address').val(sender.address);
+                $('#address1').val(receiver.address);
+                $('#note').val(sender.note);
+                $('#note1').val(receiver.note);
+                $('#city').val(sender.city);
+                $('#city1').val(receiver.city);
+                $('#charge').val(percel);
+                $('#percel').val(percel.parcelType);
+                $('#weight').val(percel.weight);
+                $('#price').val(percel.price);
+                $('#note2').val(percel.note);
+
+
+
+                // document.getElementById("Type").value=response.data.type;
+                // document.getElementById("Name").value =response.data.name;
+                // document.getElementById("Value").value = response.data.value;
+                // document.getElementById("IsActive").value = response.data.isActive;
+
+
+
+            },
+            error: function () {
+                swal.fire("Error!");
+            }
+
+        })
+
+
+
+    });
+
+
+    
 
 </script>

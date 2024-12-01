@@ -400,11 +400,16 @@ namespace courierMs.Migrations
                     b.ToTable("Product");
                 });
 
-            modelBuilder.Entity("courierMs.DataModel.Reciever", b =>
+            modelBuilder.Entity("courierMs.DataModel.ReceiverInfo", b =>
                 {
-                    b.Property<Guid>("RecieverId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Address")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
@@ -412,23 +417,20 @@ namespace courierMs.Migrations
                     b.Property<Guid>("CreatedBy")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("R_Address")
+                    b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("R_Email")
+                    b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("R_Name")
+                    b.Property<string>("Note")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("R_Note")
+                    b.Property<string>("PhoneNumber")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("R_PhoneNumber")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("R_city")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<Guid>("ReceiverId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2");
@@ -436,50 +438,12 @@ namespace courierMs.Migrations
                     b.Property<Guid>("UpdatedBy")
                         .HasColumnType("uniqueidentifier");
 
-                    b.HasKey("RecieverId");
-
-                    b.ToTable("Recievers");
-                });
-
-            modelBuilder.Entity("courierMs.DataModel.Sender", b =>
-                {
-                    b.Property<Guid>("SenderId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid>("CreatedBy")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("S_Address")
+                    b.Property<string>("city")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("S_Email")
-                        .HasColumnType("nvarchar(max)");
+                    b.HasKey("Id");
 
-                    b.Property<string>("S_Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("S_Note")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("S_PhoneNumber")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("S_city")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid>("UpdatedBy")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("SenderId");
-
-                    b.ToTable("Senders");
+                    b.ToTable("ReceiverInfo");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

@@ -14,6 +14,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Hosting;
 using NuGet.Protocol.Plugins;
 using courierMs.Services;
+using courierMs.Migrations;
 
 
 namespace courierMs.Controllers
@@ -60,7 +61,7 @@ namespace courierMs.Controllers
         {
             var query = from percel in _context.Percelinfo
                         join sender in _context.Customerinfo on percel.SenderId equals sender.CustomerId
-                        join receiver in _context.Customerinfo on percel.ReceiverId equals receiver.CustomerId
+                        join receiver in _context.ReceiverInfo on percel.ReceiverId equals receiver.ReceiverId
                         select new MultiModelVM
                         {
                             Percelinfo = new PercelinfoVM
@@ -74,23 +75,25 @@ namespace courierMs.Controllers
                                 SenderId = percel.SenderId,
                                 ReceiverId = percel.ReceiverId
                             },
-                            SenderInfo = new CustomerinfoVM
+                            Customerinfo = new CustomerinfoVM
                             {
-                                S_Name = sender.Name,
-                                S_PhoneNumber = sender.PhoneNumber,
-                                S_Email = sender.Email,
-                                S_Address = sender.Address,
-                                S_Note = sender.Note,
-                                S_city = sender.city
+                                Id=sender.Id,
+                                Name = sender.Name,
+                                PhoneNumber = sender.PhoneNumber,
+                                Email = sender.Email,
+                                Address = sender.Address,
+                                Note = sender.Note,
+                                city = sender.city
                             },
-                            ReceiverInfo = new CustomerinfoVM
+                            ReceiverInfo = new ReceiverInfoVM
                             {
-                                R_Name = receiver.Name,
-                                R_PhoneNumber = receiver.PhoneNumber,
-                                R_Email = receiver.Email,
-                                R_Address = receiver.Address,
-                                R_Note = receiver.Note,
-                                R_city = receiver.city
+                                Id=receiver.Id,
+                                Name = receiver.Name,
+                                PhoneNumber = receiver.PhoneNumber,
+                                Email = receiver.Email,
+                                Address = receiver.Address,
+                                Note = receiver.Note,
+                                city = receiver.city
                             }
                         };
 
@@ -99,6 +102,63 @@ namespace courierMs.Controllers
                 return View(result);
             
  
+
+        }
+        public IActionResult GetUpdate(int Id)
+        {
+            if (Id <= 0)
+                return Json(new { success = false, message = PopupMessage.error });
+
+
+            var Senderdata = _context.Customerinfo.FirstOrDefault(x => x.Id == Id);
+            var Receiverdata = _context.ReceiverInfo.FirstOrDefault(x => x.Id == Id);
+            var Perceldata = _context.Percelinfo.FirstOrDefault(x => x.Id == Id);
+
+
+            if (Senderdata == null && Receiverdata == null && Perceldata == null)
+                return Json(new { success = false, message = PopupMessage.error });
+
+            return Json(new
+            {
+                success = true,
+                message = PopupMessage.success,
+
+                data = new
+                {
+                    Sender = new
+                    {
+                        Senderdata.Id,
+                        Senderdata.Name,
+                        Senderdata.PhoneNumber,
+                        Senderdata.Email,
+                        Senderdata.Address,
+                        Senderdata.city,
+                        Senderdata.Note
+                    },
+
+                    Receiver = new
+                    {
+                        Receiverdata.Id,
+                        Receiverdata.Name,
+                        Receiverdata.PhoneNumber,
+                        Receiverdata.Email,
+                        Receiverdata.Address,
+                        Receiverdata.city,
+                        Receiverdata.Note
+                    },
+                    Percel = new
+                    {
+                        Perceldata.Id,
+                        Perceldata.ParcelType,
+                        Perceldata.Note,
+                        Perceldata.Weight,
+                        Perceldata.Price
+
+                    }
+                }
+
+
+            });
 
         }
 
@@ -167,7 +227,7 @@ namespace courierMs.Controllers
         {
             var userid = User.FindFirstValue(ClaimTypes.NameIdentifier);
             Customerinfo sender = new Customerinfo();
-            Customerinfo receiver = new Customerinfo();
+            ReceiverInfo receiver = new ReceiverInfo();
             Percelinfo percelData = new Percelinfo();
 
 
@@ -176,35 +236,34 @@ namespace courierMs.Controllers
 
 
             // for customer sender and reciever
-            
             sender.CustomerId = Guid.NewGuid();
-            sender.Name = model.Customerinfo.S_Name;
-            sender.PhoneNumber = model.Customerinfo.S_PhoneNumber;
-            sender.Address = model.Customerinfo.S_Address;
-            sender.Email = model.Customerinfo.S_Email;
-            sender.city = model.Customerinfo.S_city;
-            sender.Note = model.Customerinfo.S_Note;
+            sender.Name = model.Customerinfo.Name;
+            sender.PhoneNumber = model.Customerinfo.PhoneNumber;
+            sender.Address = model.Customerinfo.Address;
+            sender.Email = model.Customerinfo.Email;
+            sender.city = model.Customerinfo.city;
+            sender.Note = model.Customerinfo.Note;
             sender.CreatedAt = DateTime.Now;
             sender.UpdatedAt = DateTime.Now;
             sender.CreatedBy = GuidHelper.ToGuidOrDefault(userid);
             sender.UpdatedBy = GuidHelper.ToGuidOrDefault(userid);
 
 
-            
-            receiver.CustomerId = Guid.NewGuid();
-            receiver.Name = model.Customerinfo.R_Name;
-            receiver.PhoneNumber = model.Customerinfo.R_PhoneNumber;
-            receiver.Address = model.Customerinfo.R_Address;
-            receiver.Email = model.Customerinfo.R_Email;
-            receiver.city = model.Customerinfo.R_city;
-            receiver.Note = model.Customerinfo.R_Note;
+
+            receiver.ReceiverId = Guid.NewGuid();
+            receiver.Name = model.ReceiverInfo.Name;
+            receiver.PhoneNumber = model.ReceiverInfo.PhoneNumber;
+            receiver.Address = model.ReceiverInfo.Address;
+            receiver.Email = model.ReceiverInfo.Email;
+            receiver.city = model.ReceiverInfo.city;
+            receiver.Note = model.ReceiverInfo.Note;
             receiver.CreatedAt = DateTime.Now;
             receiver.UpdatedAt = DateTime.Now;
             receiver.CreatedBy = GuidHelper.ToGuidOrDefault(userid);
             receiver.UpdatedBy = GuidHelper.ToGuidOrDefault(userid);
 
 
-            
+
 
             // for percel
             percelData.ParcelType = model.Percelinfo.ParcelType;
@@ -231,7 +290,7 @@ namespace courierMs.Controllers
 
 
                 percelData.SenderId = sender.CustomerId;
-                percelData.ReceiverId = receiver.CustomerId;
+                percelData.ReceiverId = receiver.ReceiverId;
 
                 _context.Add(percelData);
                 await _context.SaveChangesAsync();
@@ -245,17 +304,17 @@ namespace courierMs.Controllers
 
             }
             ViewBag.CityList = _context.Lookup
-                .Where(x=> x.Type== LookupType.City && x.Serial>0)
-                .OrderBy(x=> x.Serial)
+                .Where(x => x.Type == LookupType.City && x.Serial > 0)
+                .OrderBy(x => x.Serial)
                 .ToList();
 
             ViewBag.PercelList = _context.Lookup
-                .Where(x=> x.Type== LookupType.Percel && x.Serial>0)
-                .OrderBy(x=> x.Serial)
+                .Where(x => x.Type == LookupType.Percel && x.Serial > 0)
+                .OrderBy(x => x.Serial)
                 .ToList();
 
 
-            
+
 
 
             return View(model);
