@@ -541,6 +541,10 @@
       "PackagePath": "staticwebassets\\css\\js\\sb-admin-2.min.js"
     },
     {
+      "Id": "E:\\CMS\\CMS\\courierMs\\wwwroot\\css\\pagination.css",
+      "PackagePath": "staticwebassets\\css\\pagination.css"
+    },
+    {
       "Id": "E:\\CMS\\CMS\\courierMs\\wwwroot\\css\\sb-admin-2.css",
       "PackagePath": "staticwebassets\\css\\sb-admin-2.css"
     },

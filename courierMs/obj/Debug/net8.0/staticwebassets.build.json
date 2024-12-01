@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "lo0PHvMpH2bHV84c+MwKiUgway18bP1WYIhautY0PCU=",
+  "Hash": "AlalfoSHnTVqXn27HcT+QTTCDPUYOk5YLqiV5kztq5M=",
   "Source": "courierMs",
   "BasePath": "_content/courierMs",
   "Mode": "Default",
@@ -3739,6 +3739,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\js\\sb-admin-2.min.js"
+    },
+    {
+      "Identity": "E:\\CMS\\CMS\\courierMs\\wwwroot\\css\\pagination.css",
+      "SourceId": "courierMs",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\CMS\\CMS\\courierMs\\wwwroot\\",
+      "BasePath": "_content/courierMs",
+      "RelativePath": "css/pagination.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\pagination.css"
     },
     {
       "Identity": "E:\\CMS\\CMS\\courierMs\\wwwroot\\css\\sb-admin-2.css",

@@ -1,46 +1,44 @@
-﻿@model courierMs.DataModel.Lookup
+﻿@model courierMs.Services.Pagination<courierMs.DataModel.Lookup>
 
 @{
     ViewData["Title"] = "Create";
 }
-
-<h1 class="text-center display-5">Create Lookup Table</h1>
-
+<head>
+    <link href="~/css/pagination.css" rel="stylesheet">
+</head>
 
 <div class="row">
     <div class="col-md-10">
-        <div class="align-items-start  pt-5">
-            <div class="col-md-8">
+        <div class="align-items-start">
+            <div class="col-md-12">
                 <div class="card shadow-lg">
                     <div class="card-header bg-primary text-white text-center">
-                        <h3 class="mb-0">Lookup Information</h3>
+                        <h3 class="mb-0">Create Lookup</h3>
                     </div>
                     <div class="card-body">
                         <form id="LookupForm">
                             <div class="row">
-                                <div class="col-md-12 mb-3">
+                                <div class="col-md-4 mb-3">
                                     <label for="Type" class="form-label">Type</label>
                                     <input id="Id" type="hidden" class="form-control" placeholder="" />
                                     <input id="Type" class="form-control" placeholder="Enter Type" autocomplete="off" required />
 
                                 </div>
-                                <div class="col-md-12 mb-3">
+                                <div class="col-md-4 mb-3">
                                     <label for="Name" class="form-label">Name</label>
                                     <input id="Name" type="text" class="form-control" placeholder="Enter Name" required />
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12 mb-3">
+                                <div class="col-md-4 mb-3">
                                     <label for="Value" class="form-label">Value</label>
                                     <input id="Value" type="text" class="form-control" placeholder="Enter Value" required />
                                 </div>
-                                <div class="col-md-12 mb-3">
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
                                     <label for="Serial" class="form-label">Serial</label>
                                     <input id="Serial" type="number" class="form-control" placeholder="Enter Serial" />
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12 mb-3">
+                                <div class="col-md-4 mb-3">
                                     <label class="control-label">Is Active</label>
                                     <select class="form-control" id="IsActive" required>
                                         <option value="-1">Select one</option>
@@ -48,12 +46,16 @@
                                         <option value="false">No</option>
                                     </select>
                                 </div>
-                            </div>
-                            <div class="d-grid gap-2">
-                                <button type="button" id="submitButton" class=" btn btn-success btn-lg">Submit</button>
-                                <button type="button" id="submitUpdateButton" class="btn btn-success btn-lg">Confirm Update</button>
+                                <div class="row d-flex align-items-center justify-content-center col-md-4 mt-3">
+                                    <div class="d-grid gap-2 ">
+                                        <button type="button" id="submitButton" class=" btn btn-success btn-md text-white" style="background-color:#009432">Submit</button>
+                                        <button type="button" id="submitUpdateButton" class="btn btn-md text-white" style="background-color:#6F1E51">Confirm Update</button>
+
+                                    </div>
+                                </div>
 
                             </div>
+
                         </form>
                     </div>
                 </div>
@@ -69,57 +71,17 @@
         </div>
 
     </div>
-    <div class="col-md-12">
-        <br/>
-        <br/>
-        <br/>
-        <br/>
+    <div class="col-md-12 mt-2">
         <div class="card shadow-lg mb-4">
-            <div class="card-header bg-secondary text-white text-center">
-                <h4 class="mb-0">Lookup Data</h4>
+            <div class="card-header bg-primary text-white text-center">
+                <h4 class="mb-0">Lookup Information</h4>
             </div>
             <div class="card-body">
-                <table class="table table-hover table-bordered text-center align-middle" id="lookupTable">
-                    <thead class="text-white bg-dark">
-                        <tr>
-                            <th scope="col">Serial</th>
-                            <th scope="col">Value</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Type</th>
-                            <th scope="col">IsActive</th>
-                            <th scope="col">Action</th>
-
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @if (ViewBag.List != null && ViewBag.List.Count > 0)
-                        {
-                            foreach (var city in ViewBag.List)
-                            {
-                                <tr>
-                                    <td>@city.Serial</td>
-                                    <td>@city.Value</td>
-                                    <td>@city.Name</td>
-                                    <td>@city.Type</td>
-                                    <td>@(city.IsActive ? "Yes" : "No")</td>
-                                  
-                                    <td>
-                                        <button type="button" id="GetupdateButton" class="btn btn-outline-primary btn-lg " data-id="@city.Id">Update</button>
-                                        <button type="button" id="deleteButton" class="btn btn-outline-danger btn-lg" data-id="@city.Id">Delete</button>
-                                    </td>
-                                   
-
-                                </tr>
-                            }
-                        }
-                        else
-                        {
-                            <tr>
-                                <td colspan="7" class="text-muted">No data available</td>
-                            </tr>
-                        }
-                    </tbody>
-                </table>
+                <div class="table-responsive" id="lookupTable">
+                    @{
+                        @Html.Partial("_LookupPartial",Model)
+                    }
+                </div>
             </div>
         </div>
     </div>
@@ -131,7 +93,37 @@
 
 <script>
 
+    function loadPage(pageNumber) {
+        $.ajax({
+            url: '@Url.Action("LoadPage", "Customer")',
+            data: { pageNumber: pageNumber },
+            success: function (result) {
+                $('#lookupTable').html(result);
 
+                // Update the active button
+                updateActiveButton(pageNumber);
+            },
+            error: function () {
+                alert('Error loading data.');
+            }
+        });
+    }
+
+    // Function to update the active button
+    function updateActiveButton(pageNumber) {
+        // Remove 'active' class from all buttons
+        $('#pagination button').removeClass('active');
+
+        // Add 'active' class to the button for the current page
+        $('#pagination button').each(function () {
+            if ($(this).text() == pageNumber) {
+                $(this).addClass('active');
+            }
+        });
+    }
+    $(document).ready(function () {
+        loadPage(1);
+    });
     // lastserail
     function updateLastSerial() {
         $.ajax({
@@ -283,8 +275,8 @@
                                 <td>${response.data[response.data.length - 1].isActive ? 'Yes' : 'No'}</td>
 
                                 <td>
-                                    <button type="button" id="GetupdateButton" class="btn btn-outline-primary btn-lg " data-id="${response.data[response.data.length - 1].id}">Update</button>
-                                    <button type="button" id="deleteButton" class="btn btn-outline-danger btn-lg" data-id="${response.data[response.data.length - 1].id}">Delete</button>
+                                    <button type="button" id="GetupdateButton" class="btn btn-outline-primary btn-md " data-id="${response.data[response.data.length - 1].id}">Update</button>
+                                    <button type="button" id="deleteButton" class="btn btn-outline-danger btn-md" data-id="${response.data[response.data.length - 1].id}">Delete</button>
                                 </td>
 
 
@@ -350,8 +342,8 @@
                                             <td>${updatedData.isActive ? 'Yes' : 'No'}</td>
 
                                     <td>
-                                            <button type="button" id="GetupdateButton" class="btn btn-outline-primary btn-lg " data-id="${updatedData.id}">Update</button>
-                                            <button type="button" id="deleteButton" class="btn btn-outline-danger btn-lg" data-id="${updatedData.id}">Delete</button>
+                                            <button type="button" id="GetupdateButton" class="btn btn-outline-primary btn-md " data-id="${updatedData.id}">Update</button>
+                                            <button type="button" id="deleteButton" class="btn btn-outline-danger btn-md" data-id="${updatedData.id}">Delete</button>
                                     </td>
 
 

@@ -1,0 +1,85 @@
+﻿@model courierMs.Services.Pagination<courierMs.DataModel.Lookup>
+
+
+<link href="~/css/pagination.css" rel="stylesheet">
+
+<div class="table-responsive">
+    <table class="table table-hover table-bordered text-center align-middle" id="lookupnewTable">
+        <thead class="text-white bg-secondary">
+            <tr>
+                <th scope="col">Serial</th>
+                <th scope="col">Value</th>
+                <th scope="col">Name</th>
+                <th scope="col">Type</th>
+                <th scope="col">IsActive</th>
+                <th scope="col">Action</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Items.Count > 0)
+            {
+                foreach (var city in Model.Items)
+                {
+                    <tr>
+                        <td>@city.Serial</td>
+                        <td>@city.Value</td>
+                        <td>@city.Name</td>
+                        <td>@city.Type</td>
+                        <td>@(city.IsActive ? "Yes" : "No")</td>
+
+                        <td>
+                            <button type="button" id="GetupdateButton" class="btn btn-outline-primary btn-md " data-id="@city.Id">Update</button>
+                            <button type="button" id="deleteButton" class="btn btn-outline-danger btn-md" data-id="@city.Id">Delete</button>
+                        </td>
+
+
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="7" class="text-muted">No data available</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
+
+<div id="wrapper ">
+    <ul class="d-flex justify-content-end" id="pagination">
+        @if (Model.HasPreviousPage)
+        {
+            <li>
+                <button onclick="loadPage(@(Model.PageIndex - 1))">«</button>
+            </li>
+        }
+        else
+        {
+            <li><button class="disabled" disabled>«</button></li>
+        }
+
+        @for (var i = 1; i <= Model.TotalPages; i++)
+        {
+            <li>
+                <button class="@(Model.PageIndex == i ? "active" : "")"
+                        onclick="loadPage(@i)">
+                    @i
+                </button>
+            </li>
+        }
+
+        @if (Model.HasNextPage)
+        {
+            <li>
+                <button onclick="loadPage(@(Model.PageIndex + 1))">»</button>
+            </li>
+        }
+        else
+        {
+            <li><button class="disabled" disabled>»</button></li>
+        }
+    </ul>
+</div>

@@ -13,6 +13,7 @@ using courierMs.ViewModel;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Hosting;
 using NuGet.Protocol.Plugins;
+using courierMs.Services;
 
 
 namespace courierMs.Controllers
@@ -120,12 +121,9 @@ namespace courierMs.Controllers
         }
 
         [Authorize(Roles = RoleType.S_Admin)]
-        public IActionResult CreateLookup()
+        public async Task<IActionResult> CreateLookup(int? pageNumber)
         {
-            ViewBag.List = _context.Lookup
-                .Where(x=> x.Id>0)
-                .OrderBy(x=>x.Serial)
-                .ToList();
+
 
             var lastSerial = _context.Lookup
                 .OrderByDescending(x => x.Serial)
@@ -134,9 +132,19 @@ namespace courierMs.Controllers
 
             // Pass the last serial to ViewBag
             ViewBag.LastSerial = lastSerial;
+            int pageSize = 5;
+            var lookup = _context.Lookup.AsQueryable();
+            var paginatedLookup = await Pagination<Lookup>.CreateAsync(lookup.OrderBy(x => x.Id), pageNumber ?? 1, pageSize);
+            return View(paginatedLookup);
 
 
-            return View();
+        }
+        public async Task<IActionResult> LoadPage(int? pageNumber)
+        {
+            int pageSize = 5;
+            var lookup = _context.Lookup.AsQueryable();
+            var paginatedLookup = await Pagination<Lookup>.CreateAsync(lookup.OrderBy(x => x.Id), pageNumber ?? 1, pageSize);
+            return PartialView("_lookupPartial", paginatedLookup);
         }
 
         //get lastserial
