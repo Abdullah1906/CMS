@@ -4,16 +4,18 @@
 
 }
 
+<link rel='stylesheet' href='https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css'>
+
 
 <div class="row">
     <div class="col-md-12">
         <div class="card shadow-lg mb-4">
-            <div class="card-header bg-secondary text-white text-center">
+            <div class="card-header text-white text-center" style="background-color:#2980b9">
                 <h4 class="mb-0">List of Sender</h4>
             </div>
             <div class="card-body">
                 <table class="table table-hover table-bordered text-center align-middle display" id="lookupTable">
-                    <thead class="text-white bg-dark">
+                    <thead class="text-white" style="background-color:#3498db">
                         <tr>
                             <th scope="col">Name</th>
                             <th scope="col">Number</th>
@@ -33,7 +35,7 @@
                             {
                                 if (item.Customerinfo != null)
                                 {
-                                    <tr>
+                                    <tr class="text-dark">
                                         <td>@item.Customerinfo.Name</td>
                                         <td>@item.Customerinfo.PhoneNumber</td>
                                         <td>@item.Customerinfo.Email</td>
@@ -41,7 +43,9 @@
                                         <td>@item.Customerinfo.Note</td>
                                         <td>@item.Customerinfo.city</td>
                                         <td>
-                                            <button type="button" id="GetupdateButton" onclick="window.location.href='/Customer/Create';" class="btn btn-outline-primary btn-md " data-id="@item.Customerinfo.Id">Update</button>
+                                            <button type="button" id="GetupdateButton" class="btn btn-outline-primary btn-md " data-id="@item.Customerinfo.Id" onclick="location.href='@Url.Action("GetUpdate", "Customer", new { id = item.Customerinfo.Id })'">
+                                                Update
+                                            </button>
                                         </td>
 
                                     </tr>
@@ -58,12 +62,12 @@
     </div>
     <div class="col-md-12">
         <div class="card shadow-lg mb-4">
-            <div class="card-header bg-secondary text-white text-center">
+            <div class="card-header text-white text-center" style="background-color:#2980b9">
                 <h4 class="mb-0">List of Receiver</h4>
             </div>
             <div class="card-body">
-                <table class="table table-hover table-bordered text-center align-middle" id="lookupTable">
-                    <thead class="text-white bg-dark">
+                <table class="table table-hover table-bordered text-center align-middle" id="lookupTable2">
+                    <thead class="text-white" style="background-color:#3498db">
                         <tr>
                             <th scope="col">Name</th>
                             <th scope="col">Number</th>
@@ -83,7 +87,7 @@
                             {
                                 if (item.ReceiverInfo != null)
                                 {
-                                    <tr>
+                                    <tr class ="text-dark">
                                         <td>@item.ReceiverInfo.Name</td>
                                         <td>@item.ReceiverInfo.PhoneNumber</td>
                                         <td>@item.ReceiverInfo.Email</td>
@@ -91,7 +95,7 @@
                                         <td>@item.ReceiverInfo.Note</td>
                                         <td>@item.ReceiverInfo.city</td>
                                         <td>
-                                            <button type="button" id="GetupdateButton" onclick="window.location.href='/Customer/Create';" class="btn btn-outline-primary btn-md " data-id="@item.ReceiverInfo.Id">Update</button>
+                                            <button type="button" id="GetupdateButton" class="btn btn-outline-primary btn-md " data-id="@item.ReceiverInfo.Id" onclick="location.href='@Url.Action("GetUpdate", "Customer", new { id = item.ReceiverInfo.Id })'">Update</button>
 
                                         </td>
 
@@ -110,12 +114,12 @@
 
 <div class="col-md-12">
     <div class="card shadow-lg mb-4">
-        <div class="card-header bg-secondary text-white text-center">
+        <div class="card-header text-white text-center" style="background-color:#2980b9">
             <h4 class="mb-0">Percel Details</h4>
         </div>
         <div class="card-body">
-            <table class="table table-hover table-bordered text-center align-middle" id="lookupTable">
-                <thead class="text-white bg-dark">
+            <table class="table table-hover table-bordered text-center align-middle" id="lookupTable3">
+                <thead class="text-white" style="background-color:#3498db">
                     <tr>
                         <th scope="col">Percel Type</th>
                         <th scope="col">Weight</th>
@@ -135,7 +139,7 @@
                         {
                             if (item.Percelinfo != null)
                             {
-                                <tr>
+                                <tr class="text-dark">
                                     <td>@item.Percelinfo.ParcelType</td>
                                     <td>@item.Percelinfo.Weight</td>
                                     <td>@item.Percelinfo.Price</td>
@@ -145,7 +149,7 @@
 
 
                                     <td>
-                                        <button type="button" id="GetupdateButton" onclick="window.location.href='/Customer/Create';" class="btn btn-outline-primary btn-md " data-id="@item.Percelinfo.Id">Update</button>
+                                        <button type="button" id="GetupdateButton" class="btn btn-outline-primary btn-md " data-id="@item.Percelinfo.Id" onclick="location.href='@Url.Action("GetUpdate", "Customer", new { id = item.Percelinfo.Id })'">Update</button>
                                         
                                     </td>
 
@@ -169,76 +173,14 @@
 </div>
 
 
-<script src="~/js/jquery-3.6.0.min.js"></script>
+<script src="~/js/jquery-3.6.0.min.js"></script>@* age javascript then datatables dite hobe*@
+<script src='https://cdn.datatables.net/2.1.8/js/dataTables.js'></script>
 <script src="~/js/alert.js"></script>
 
 <script>
-
-
-    // getupdatebutton
-    $(document).on('click', '#GetupdateButton', function () { //  is used to attach event handlers to dynamically added all delete elements
-        var id = $(this).data('id');
-        debugger;
-
-        var ListData = {
-            Id: id,
-
-        };
-        console.log(ListData);
-
-
-        $.ajax({
-            url: '@Url.Action("GetUpdate", "Customer")',
-            type: 'POST',
-            data: ListData,
-            success: function (response) {
-                Swal.fire("Updated!", "The item has been Updated.", "success");
-
-                console.log(response.data);
-
-                var sender = response.data.Sender;
-                var receiver = response.data.Receiver;
-                var percel = response.data.Percel;
-
-                $('#name').val(sender.name)
-                $('#name1').val(receiver.name);
-                $('#p_number').val(sender.phoneNumber);
-                $('#p_number1').val(receiver.phoneNumber);
-                $('#email').val(sender.email);
-                $('#email1').val(receiver.email);
-                $('#address').val(sender.address);
-                $('#address1').val(receiver.address);
-                $('#note').val(sender.note);
-                $('#note1').val(receiver.note);
-                $('#city').val(sender.city);
-                $('#city1').val(receiver.city);
-                $('#charge').val(percel);
-                $('#percel').val(percel.parcelType);
-                $('#weight').val(percel.weight);
-                $('#price').val(percel.price);
-                $('#note2').val(percel.note);
-
-
-
-                // document.getElementById("Type").value=response.data.type;
-                // document.getElementById("Name").value =response.data.name;
-                // document.getElementById("Value").value = response.data.value;
-                // document.getElementById("IsActive").value = response.data.isActive;
-
-
-
-            },
-            error: function () {
-                swal.fire("Error!");
-            }
-
-        })
-
-
-
-    });
-
-
-    
+    // for pagination
+    new DataTable('#lookupTable');
+    new DataTable('#lookupTable2');
+    new DataTable('#lookupTable3');
 
 </script>

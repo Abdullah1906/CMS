@@ -104,68 +104,88 @@ namespace courierMs.Controllers
  
 
         }
-        public IActionResult GetUpdate(int Id)
+        [HttpGet]
+        
+        public async Task<IActionResult> GetUpdate(int Id)
         {
             if (Id <= 0)
+            {
                 return Json(new { success = false, message = PopupMessage.error });
+            }
+            
+                
 
 
-            var Senderdata = _context.Customerinfo.FirstOrDefault(x => x.Id == Id);
-            var Receiverdata = _context.ReceiverInfo.FirstOrDefault(x => x.Id == Id);
-            var Perceldata = _context.Percelinfo.FirstOrDefault(x => x.Id == Id);
+            var Senderdata = await _context.Customerinfo.FirstOrDefaultAsync(x => x.Id == Id);
+            var Receiverdata = await _context.ReceiverInfo.FirstOrDefaultAsync(x => x.Id == Id);
+            var Perceldata = await _context.Percelinfo.FirstOrDefaultAsync(x => x.Id == Id);
 
 
             if (Senderdata == null && Receiverdata == null && Perceldata == null)
-                return Json(new { success = false, message = PopupMessage.error });
+                return NotFound();
 
-            return Json(new
+            var MultiModelVM = new MultiModelVM()
             {
-                success = true,
-                message = PopupMessage.success,
-
-                data = new
+                Customerinfo = new CustomerinfoVM
                 {
-                    Sender = new
-                    {
-                        Senderdata.Id,
-                        Senderdata.Name,
-                        Senderdata.PhoneNumber,
-                        Senderdata.Email,
-                        Senderdata.Address,
-                        Senderdata.city,
-                        Senderdata.Note
-                    },
-
-                    Receiver = new
-                    {
-                        Receiverdata.Id,
-                        Receiverdata.Name,
-                        Receiverdata.PhoneNumber,
-                        Receiverdata.Email,
-                        Receiverdata.Address,
-                        Receiverdata.city,
-                        Receiverdata.Note
-                    },
-                    Percel = new
-                    {
-                        Perceldata.Id,
-                        Perceldata.ParcelType,
-                        Perceldata.Note,
-                        Perceldata.Weight,
-                        Perceldata.Price
-
-                    }
+                    Id = Senderdata.Id,
+                    Name = Senderdata.Name,
+                    PhoneNumber = Senderdata.PhoneNumber,
+                    Email = Senderdata.Email,
+                    Address = Senderdata.Address,
+                    city = Senderdata.city,
+                    Note = Senderdata.Note
+                },
+                ReceiverInfo = new ReceiverInfoVM
+                {
+                    Id = Receiverdata.Id,
+                    Name = Receiverdata.Name,
+                    PhoneNumber = Receiverdata.PhoneNumber,
+                    Email = Receiverdata.Email,
+                    Address = Receiverdata.Address,
+                    city = Receiverdata.city,
+                    Note = Receiverdata.Note
+                },
+                Percelinfo = new PercelinfoVM
+                {
+                    Id = Perceldata.Id,
+                    ParcelType = Perceldata.ParcelType,
+                    Note = Perceldata.Note,
+                    Weight = Perceldata.Weight,
+                    Price = Perceldata.Price
                 }
 
+            };
 
-            });
+            ViewBag.CityList = _context.Lookup
+               .Where(x => x.Type == LookupType.City && x.Serial > 0)
+               .OrderBy(x => x.Serial)
+               .ToList();
+
+            ViewBag.PercelList = _context.Lookup
+                .Where(x => x.Type == LookupType.Percel && x.Serial > 0)
+                .OrderBy(x => x.Serial)
+                .ToList();
+
+
+            return View("Create", MultiModelVM);
+
 
         }
 
-        // GET: Customer/Create
+
+
+
+
+        // GET: Customer/
+        // 
         [Authorize(Roles = RoleType.Admin)]
+        
         public IActionResult Create()
         {
+
+            
+
             ViewBag.CityList = _context.Lookup
                 .Where(x=> x.Type== LookupType.City && x.Serial>0)
                 .OrderBy(x=> x.Serial)
@@ -175,7 +195,9 @@ namespace courierMs.Controllers
                 .Where(x=> x.Type== LookupType.Percel && x.Serial>0)
                 .OrderBy(x=> x.Serial)
                 .ToList();
-            
+
+
+
 
             return View();
         }
