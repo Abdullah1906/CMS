@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using courierMs.Data;
 
@@ -11,9 +12,11 @@ using courierMs.Data;
 namespace courierMs.Migrations
 {
     [DbContext(typeof(courierMsContext))]
-    partial class courierMsContextModelSnapshot : ModelSnapshot
+    [Migration("20241210062323_addInvoiceinfo")]
+    partial class addInvoiceinfo
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

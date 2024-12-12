@@ -517,6 +517,10 @@
       "PackagePath": "staticwebassets\\css\\img\\undraw_rocket.svg"
     },
     {
+      "Id": "E:\\CMS\\CMS\\courierMs\\wwwroot\\css\\invoice.min.css",
+      "PackagePath": "staticwebassets\\css\\invoice.min.css"
+    },
+    {
       "Id": "E:\\CMS\\CMS\\courierMs\\wwwroot\\css\\js\\demo\\chart-area-demo.js",
       "PackagePath": "staticwebassets\\css\\js\\demo\\chart-area-demo.js"
     },
@@ -8139,6 +8143,14 @@
     {
       "Id": "E:\\CMS\\CMS\\courierMs\\wwwroot\\images\\why2.png",
       "PackagePath": "staticwebassets\\images\\why2.png"
+    },
+    {
+      "Id": "E:\\CMS\\CMS\\courierMs\\wwwroot\\img\\Footer.png",
+      "PackagePath": "staticwebassets\\img\\Footer.png"
+    },
+    {
+      "Id": "E:\\CMS\\CMS\\courierMs\\wwwroot\\img\\Header.png",
+      "PackagePath": "staticwebassets\\img\\Header.png"
     },
     {
       "Id": "E:\\CMS\\CMS\\courierMs\\wwwroot\\img\\undraw_posting_photo.svg",

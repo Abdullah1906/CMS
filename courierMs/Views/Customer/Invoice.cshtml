@@ -1,0 +1,276 @@
+﻿@model IEnumerable<courierMs.ViewModel.ReportVM>
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "_Layout";
+}
+
+<header>
+    <link rel="stylesheet" href="~/css/Icon.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+</header>
+
+<form id="InvoiceList" method="post">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="align-items-start ">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card-header text-white text-start" style="background-color:blueviolet">
+                            <h3 class="mb-0">Customer Information</h3>
+                        </div>
+                        <div class="card shadow-lg">
+                            <div class="card-body">
+                                <div class="col-md-12">
+                                    <div class="text-dark">
+                                        <div class="row">
+                                            <div class="row col-md-12">
+                                                <label for="C_Name" class="col-md-4"> Name:</label>
+                                                <input id="CustomerId" class="form-control" hidden />
+                                                <input id="C_Name" class="form-control col-md-8" name="C_Name" placeholder="Enter Customer Name" />
+                                            </div>
+                                            <div class="row pt-2 col-md-12">
+                                                <label for="C_Number" class="col-md-4">Phone No:</label>
+                                                <input id="C_Number" class="form-control col-md-8" name="C_Number" placeholder="Enter Phone Number" />
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="row pt-2 col-md-12">
+                                                <label for="C_Address" class="col-md-4">Address:</label>
+                                                <textarea id="C_Address" class="form-control col-md-8" name="C_Address" placeholder="Enter Address"></textarea>
+                                            </div>
+                                            <div class="row pt-2 col-md-12">
+                                                <label for="C_Email" class="col-md-4">Email:</label>
+                                                <input id="C_Email" class="form-control col-md-8" name="C_Email" placeholder="Enter Email" />
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-header text-white text-start" style="background-color:blueviolet">
+                            <h3 class="mb-0">Receiver Information</h3>
+                        </div>
+                        <div class="card shadow-lg">
+                            <div class="card-body">
+                                <div class="col-md-12">
+                                    <div class="text-dark">
+                                        <div class="row">
+                                            <div class="row col-md-12">
+                                                <label for="R_Name" class="col-md-4"> Name:</label>
+                                                <input id="CustomerId" class="form-control" hidden />
+                                                <input id="R_Name" class="form-control col-md-8" name="R_Name" placeholder="Enter Receiver Name" />
+                                            </div>
+                                            <div class="row pt-2 col-md-12">
+                                                <label for="R_Number" class="col-md-4">Phone No:</label>
+                                                <input id="R_Number" class="form-control col-md-8" name="R_Number" placeholder="Enter Phone Number" />
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="row pt-2 col-md-12">
+                                                <label for="R_Address" class="col-md-4">Address:</label>
+                                                <textarea id="R_Address" class="form-control col-md-8" name="R_Address" placeholder="Enter Address"></textarea>
+                                            </div>
+                                            <div class="row pt-2 col-md-12">
+                                                <label for="R_Email" class="col-md-4">Email:</label>
+                                                <input id="R_Email" class="form-control col-md-8" name="R_Email" placeholder="Enter Email" />
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="align-items-start ">
+                <div class="col-md-12">
+                    <div class="card shadow-lg">
+                        <div class="card-header text-white text-start" style="background-color:blueviolet">
+                            <h3 class="mb-0">Invoice Information</h3>
+                        </div>
+                        <div class="card-body" style="background-color:#6c5ce7">
+                            <div class="col-md-12">
+
+                                <div class="text-white">
+                                    <div class="row">
+                                        <div class="row pt-4 col-md-12">
+                                            <label for="InvoiceId" class="col-md-5">Invoice No:</label>
+                                            <input id="InvoiceId" class="form-control col-md-7" placeholder="Invoice Number" value="@DateTime.Now.ToString("yyMMddHHmm")" readonly />
+                                        </div>
+                                        <div class="row pt-4 col-md-12 ">
+                                            <label for="HolderName" class="col-md-5 ">Holder Name:</label>
+                                            <input id="HolderName" class="form-control col-md-7" placeholder="Holder Name" value="@User.Identity.Name" readonly />
+                                        </div>
+                                        <div class="row pt-4 col-md-12">
+                                            <label for="Date" class="col-md-5 ">Date:</label>
+                                            <input id="Date" class="form-control col-md-7" type="datetime-local" placeholder="Date" />
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-12 pt-2">
+            <div class="align-items-start">
+                <div class="col-md-12">
+                    <div class="card shadow-lg">
+                        <div class="card-header text-white text-start row" style="background-color:blueviolet">
+                            <h3 class="mb-0 col-md-11">Order List</h3>
+                            <input id="PercelId" class="form-control col-md-1" placeholder="P_Id" onkeyup="fetchData(this.value)" />
+                        </div>
+                        <div class="card-body text-white" style="background-color:#6c5ce7">
+                            <div class="col-md-12">
+                                <table class="table">
+                                    <thead class="text-white">
+                                        <tr>
+                                            <th>PercelType</th>
+                                            <th>Note</th>
+                                            <th>Weight</th>
+                                            <th>Price</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody id="invoice-items">
+                                        <tr >
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+
+                                    </tbody>
+
+
+                                </table>
+                                
+                                    <div class="d-flex justify-content-end">
+                                        <button type="submit" class="btn text-white col-md-1 ml-5" style="background-color:#00b894">save</button>
+                                        <button type="submit" class="btn btn-info col-md-1 ml-5">print</button>
+                                       
+                                    </div>
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    @Html.AntiForgeryToken()
+</form>
+
+
+@{
+    await Html.RenderPartialAsync("_ValidationScriptsPartial");
+}
+<script src="~/js/jquery-3.6.0.min.js"></script>
+<script src="~/js/alert.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    function fetchData(query) {
+        if(query.length==0){
+            $('#Number1').html('');
+            return;
+        }
+        if(query.length>=1){
+            console.log(query);
+            $.ajax({
+                url: '/Customer/GetNumber',
+                type: 'GET',
+                data: { query: query },
+                success: function (response) {
+
+                    console.log(response.data.percelinfo);
+                    const data = response.data;
+                    if (response && response.data) {
+                        
+
+                        //for sender
+                        document.querySelector("input[name='C_Name']").value = data.customerinfo.name || '';
+                        document.querySelector("input[name='C_Number']").value = data.customerinfo.phoneNumber || '';
+                        document.querySelector("textarea[name='C_Address']").value = data.customerinfo.address || '';
+                        document.querySelector("input[name='C_Email']").value = data.customerinfo.email || '';
+                        // for receiver                        
+                        document.querySelector("input[name='R_Name']").value = data.receiverInfo.name || '';
+                        document.querySelector("input[name='R_Number']").value = data.receiverInfo.phoneNumber || '';
+                        document.querySelector("textarea[name='R_Address']").value = data.receiverInfo.address || '';
+                        document.querySelector("input[name='R_Email']").value = data.receiverInfo.email || '';
+                    }
+                    const newRow = `
+                            <tr class="text-white">
+                                <td>${data.percelinfo.parcelType || ''}</td>
+                                <td>${data.percelinfo.note || ''}</td>
+                                <td>${data.percelinfo.weight || ''}</td>
+                                <td>${data.percelinfo.price || ''}</td>
+                        </tr>
+                    `;
+
+                    // Append the new row to the table body
+                    document.querySelector("#invoice-items").innerHTML = newRow;
+                },
+                error: function (xhr, status, error) {
+                    console.error('Error fetching data:', error);
+                }
+
+            });
+        }
+        
+        
+    }
+</script>
+<script>
+    function calculateVat(element) {
+
+        const itemRow = element.closest('#Total-item');
+        // get value
+        const SubTotalValue = parseFloat(document.getElementById("SubTotal").value) || 0;
+        const Discount = parseFloat(document.getElementById("Discount").value) || 0;
+        const VATValue = parseFloat(document.getElementById("VAT").value) || 0;
+
+        // calculation part
+        const VatCalculation = (SubTotalValue * (VATValue / 100)).toFixed(2);
+        const totalVat = parseFloat(VatCalculation).toFixed(2);
+        const DiscountVal = (parseFloat(SubTotalValue) - parseFloat(Discount)).toFixed(2);
+
+        // get and set value
+        const TotalVat = itemRow.querySelector("#TotalVAT");
+        TotalVat.value = totalVat;
+
+        const Total = document.getElementById("Total");
+        Total.value = (parseFloat(DiscountVal) + parseFloat(totalVat)).toFixed(2);
+
+
+
+    }
+</script>

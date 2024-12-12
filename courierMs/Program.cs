@@ -15,6 +15,7 @@ builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.R
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<mycontext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("courierMsContextConnection")));
+builder.Services.AddSession();
 
 var app = builder.Build();
 
@@ -32,7 +33,7 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
-
+app.UseSession();
 app.MapRazorPages();
 
 app.MapControllerRoute(

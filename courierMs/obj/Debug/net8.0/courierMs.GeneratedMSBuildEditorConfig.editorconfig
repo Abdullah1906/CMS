@@ -82,8 +82,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/CMS/CMS/courierMs/Views/Customer/Invoice.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcSW52b2ljZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/CMS/CMS/courierMs/Views/Customer/InvoicePrint.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcSW52b2ljZVByaW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/CMS/CMS/courierMs/Views/Customer/ShowList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcU2hvd0xpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/CMS/CMS/courierMs/Views/Customer/Trackinfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcVHJhY2tpbmZvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/CMS/CMS/courierMs/Views/Customer/Uploadfile.cshtml]

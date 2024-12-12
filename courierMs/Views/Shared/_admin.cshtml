@@ -1,13 +1,5 @@
 ﻿<!-- Nav Item - Dashboard -->
 
-@if (User.IsInRole(RoleType.Admin) || User.IsInRole(RoleType.Customer)){
-    <li class="nav-item active">
-    <a class="nav-link" href="index.html">
-        <i class="fas fa-fw fa-tachometer-alt"></i>
-        <span>Dashboard</span>
-    </a>
-</li>
-}
 
 
 <!-- Divider -->
@@ -23,7 +15,7 @@
 <li class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
        aria-expanded="true" aria-controls="collapseTwo">
-        <i class="fas fa-cog"></i>
+        <i class='fas fa-user-cog text-white' style='font-size:25px'></i>
         <span>Management Table</span>
     </a>
     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
@@ -31,21 +23,63 @@
             @if (User.IsInRole(RoleType.Admin))
             {
                 <a class="collapse-item" href="/Customer/Create">
-                    <i class="fa-solid fa-circle-plus"></i>
-                    Customer Information
+                    <i class='fas fa-user-plus mr-2' style='font-size:20px'></i>
+                    <span>Customer Details</span>
+                    
                 </a>
-                <a class="collapse-item" asp-area="" asp-controller="Customer" asp-action="ShowList"><i class="bi bi-person-fill-add"></i>Information Management</a>
-                <a class="collapse-item" asp-area="" asp-controller="Customer" asp-action="addproduct">Upload File</a>
+                <a class="collapse-item " asp-area="" asp-controller="Customer" asp-action="ShowList">
+                    <i class='fas fa-clipboard-list mr-2' style='font-size:20px '></i><span>Information Manage</span>
+                </a>
+                <a class="collapse-item" asp-area="" asp-controller="Customer" asp-action="Invoice">
+                    <i class='fas fa-file mr-2' style='font-size:20px'></i>
+                    <span>Generate Report</span>
+
+                </a>
+                <a class="collapse-item" asp-area="" asp-controller="Customer" asp-action="addproduct">
+                    <i class='fas fa-file-upload mr-1' style='font-size:20px'></i>
+                    <span>Percel File </span>
+                </a>
+
+                <a class="collapse-item " asp-area="" asp-controller="Customer" asp-action="Track">
+                    <i class='fas fa-clipboard-list mr-2' style='font-size:20px '></i><span>Track</span>
+                </a>
             }
+
 
             @if (User.IsInRole(RoleType.S_Admin))
             {
-                <a class="collapse-item" asp-area="" asp-controller="Customer" asp-action="CreateLookup"><i class="bi bi-table"></i>Lookup</a>
+                <a class="collapse-item" asp-area="" asp-controller="Customer" asp-action="CreateLookup">
+                    <i class="fa fa-table mr-2" style="font-size:20px"></i><span>Lookup</span>
+                </a>
+                <a class="collapse-item" href="/Customer/Create">
+                    <i class='fas fa-user-plus mr-2' style='font-size:20px'></i>
+                    <span>Customer Details</span>
+                </a>
+                <a class="collapse-item " asp-area="" asp-controller="Customer" asp-action="ShowList">
+                    <i class='fas fa-clipboard-list mr-2' style='font-size:20px '></i><span>Information Manage</span>
+                </a>
+                <a class="collapse-item" asp-area="" asp-controller="Customer" asp-action="Invoice">
+                    <i class='fas fa-file mr-2' style='font-size:20px'></i>
+                    <span>Generate Report</span>
+
+                </a>
+                <a class="collapse-item" asp-area="" asp-controller="Customer" asp-action="addproduct">
+                    <i class='fas fa-file-upload mr-1' style='font-size:20px'></i>
+                    <span>Percel File </span>
+                </a>
+
+                <a class="collapse-item " asp-area="" asp-controller="Customer" asp-action="Track">
+                    <i class='fas fa-clipboard-list mr-2' style='font-size:20px '></i><span>Track</span>
+                </a>
             }
-           
+
+               
+            
+                
         </div>
     </div>
 </li>
+
 
 
 <!-- Divider -->

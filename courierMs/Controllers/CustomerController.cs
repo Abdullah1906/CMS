@@ -15,6 +15,7 @@ using Microsoft.Extensions.Hosting;
 using NuGet.Protocol.Plugins;
 using courierMs.Services;
 using courierMs.Migrations;
+using Newtonsoft.Json;
 
 
 namespace courierMs.Controllers
@@ -55,6 +56,13 @@ namespace courierMs.Controllers
 
             return View(customerinfo);
         }
+        // customer tracking
+
+        public IActionResult Track()
+        {
+            return View();
+        }
+
 
         //showlist for admin
         public IActionResult ShowList()
@@ -172,10 +180,97 @@ namespace courierMs.Controllers
 
 
         }
+        [HttpGet]
+        public IActionResult GetNumber(int query)
+        {
+            if (query <= 0)
+                return Json(new { success = false, message = PopupMessage.error });
+
+            var percelData = _context.Percelinfo.FirstOrDefault(x => x.Id == query);
+            var customerData = _context.Customerinfo.FirstOrDefault(x => x.CustomerId == percelData.SenderId);
+            var receiverData = _context.ReceiverInfo.FirstOrDefault(x => x.ReceiverId == percelData.ReceiverId);
+
+            var submitData = new MultiModelVM
+            {
+                Percelinfo = new PercelinfoVM
+                {
+                   
+                    Id = percelData.Id,
+                    ParcelType = percelData.ParcelType,
+                    Weight=percelData.Weight,
+                    Price=percelData.Price,
+                    Note=percelData.Note
+                    
+                },
+                Customerinfo = new CustomerinfoVM
+                {
+
+                
+                    Name = customerData?.Name,
+                    PhoneNumber=customerData?.PhoneNumber,
+                    Address=customerData?.Address,
+                    Email=customerData?.Email
+
+                },
+                ReceiverInfo = new ReceiverInfoVM
+                {
+
+                    Name = receiverData?.Name,
+                    PhoneNumber = receiverData?.PhoneNumber,
+                    Address = receiverData?.Address,
+                    Email = receiverData?.Email
+
+                }
+            };
+
+
+            //MultiModelVM data = new MultiModelVM();
 
 
 
+            return Json(new { success = true, message = PopupMessage.success, data = submitData });
+        }
+        [HttpGet]
+        public IActionResult Invoice()
+        {
+            
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Invoice(ReportVM model)
+        {
+            return View();
+                
+        }
+        public IActionResult Report(MultiModelVM model)
+        {
+            if (model == null)
+                return Json(new { success = false, message = PopupMessage.error });
 
+            if (model.IsPrint)
+            {
+
+
+                HttpContext.Session.Remove("InvoiceModel");
+
+                HttpContext.Session.SetString("InvoiceModel", JsonConvert.SerializeObject(model));
+
+
+                return Json(new { success = true, message = PopupMessage.success });
+            }
+            return Json(new { success = true, message = PopupMessage.success });
+        }
+        public IActionResult InvoicePrint()
+        {
+
+            var invoiceModelJson = HttpContext.Session.GetString("InvoiceModel");
+
+
+            MultiModelVM model = JsonConvert.DeserializeObject<MultiModelVM>(invoiceModelJson);
+
+
+            return View(model);
+        }
 
         // GET: Customer/
         // 
@@ -248,13 +343,17 @@ namespace courierMs.Controllers
         public async Task<IActionResult> Create(MultiModelVM model)
         {
             var userid = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
             Customerinfo sender = new Customerinfo();
             ReceiverInfo receiver = new ReceiverInfo();
             Percelinfo percelData = new Percelinfo();
+            Invoice InvoiceData = new Invoice();
 
 
             //phoneNumber check
             //var exCustomer = _context.Customerinfo.Where(x => x.PhoneNumber == model.Customerinfo.PhoneNumber).Any(); // for using any() because it will return true false
+            //for all customer in single table
+
 
 
             // for customer sender and reciever
@@ -286,7 +385,6 @@ namespace courierMs.Controllers
 
 
 
-
             // for percel
             percelData.ParcelType = model.Percelinfo.ParcelType;
             percelData.Weight = model.Percelinfo.Weight;
@@ -299,7 +397,15 @@ namespace courierMs.Controllers
             percelData.UpdatedBy = GuidHelper.ToGuidOrDefault(userid);
             percelData.ParcelId = Guid.NewGuid();
 
-
+            // for Invoice
+            InvoiceData.InvoiceId = model.Invoice.InvoiceId;
+            InvoiceData.Email = model.Invoice.Email;
+            InvoiceData.Date = model.Invoice.Date;
+            InvoiceData.ParcelId = percelData.ParcelId;
+            InvoiceData.CreatedAt = DateTime.Now;
+            InvoiceData.UpdatedAt = DateTime.Now;
+            InvoiceData.CreatedBy = GuidHelper.ToGuidOrDefault(userid);
+            InvoiceData.UpdatedBy = GuidHelper.ToGuidOrDefault(userid);
 
             if (ModelState.IsValid)
             {
@@ -311,10 +417,15 @@ namespace courierMs.Controllers
                 await _context.SaveChangesAsync();
 
 
+
+
                 percelData.SenderId = sender.CustomerId;
                 percelData.ReceiverId = receiver.ReceiverId;
 
                 _context.Add(percelData);
+                await _context.SaveChangesAsync();
+
+                _context.Add(InvoiceData);
                 await _context.SaveChangesAsync();
 
 

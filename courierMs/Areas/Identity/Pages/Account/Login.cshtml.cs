@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using courierMs.Areas.Identity.Model;
+using courierMs.Models;
 
 namespace courierMs.Areas.Identity.Pages.Account
 {
@@ -86,8 +87,22 @@ namespace courierMs.Areas.Identity.Pages.Account
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
-                    return RedirectToAction("Create", "Customer");
+
+                    // Check user roles and redirect accordingly
+                    var user = await _userManager.FindByEmailAsync(Input.Email);
+                    if (await _userManager.IsInRoleAsync(user, RoleType.S_Admin))
+                    {
+                        return RedirectToAction("CreateLookup", "Customer");
+                    }
+                    else if (await _userManager.IsInRoleAsync(user, RoleType.Admin))
+                    {
+                        return RedirectToAction("Create", "Customer");
+                    }
+
+                    // Default redirect for other roles
+                    return RedirectToAction("Index", "Customer");
                 }
+
                 if (result.RequiresTwoFactor)
                 {
                     return RedirectToPage("./LoginWith2fa", new { ReturnUrl = returnUrl, RememberMe = Input.RememberMe });

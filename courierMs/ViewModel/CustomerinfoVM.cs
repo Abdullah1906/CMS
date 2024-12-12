@@ -28,5 +28,7 @@ namespace courierMs.ViewModel
         public ReceiverInfoVM? ReceiverInfo { get; set; } 
         public CustomerinfoVM? Customerinfo { get; set; }
         public PercelinfoVM? Percelinfo { get; set; }
+        public InvoiceVM? Invoice { get; set; }
+        public bool IsPrint { get; set; }
     }
 }

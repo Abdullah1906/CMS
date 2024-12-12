@@ -17,7 +17,7 @@
                         <h1 class="mb-0 display-5">Create Customer & Parcel Info</h1>
                     </div>
                     <div class="card-body" id="price-items">
-                        <form asp-action="Create">
+                        <form asp-action="Create" id="formData" method="post">
                             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                             <div class="row">
                                 <div class="col-md-6 mr-5">
@@ -199,21 +199,55 @@
                                                 <span asp-validation-for="Percelinfo.Price" class="text-danger"></span>
                                             </div>
                                         </div>
+                                        <div class="col-md-12 mt-2 ">
+                                            <div class="card shadow-lg">
+                                                <div class="card-header text-white text-start " style="background-color:blueviolet">
+                                                    <h3 class="mb-0 d-flex justify-content-center">Invoice Information</h3>
+                                                </div>
+                                                <div class="card-body" style="background-color:#6c5ce7">
+                                                    <div class="col-md-12">
+
+                                                        <div class="text-white">
+                                                            <div class="row">
+                                                                <div class="row pt-4 col-md-12">
+                                                                    <label asp-for="Invoice.InvoiceId" class="col-md-5 control-label">Invoice No:</label>
+                                                                    <input asp-for="Invoice.InvoiceId" id="InvoiceId" class="form-control col-md-7" placeholder="Invoice Number" value="@DateTime.Now.ToString("yyMMddHHmm")" readonly />
+                                                                </div>
+                                                                <div class="row pt-4 col-md-12 ">
+                                                                    <label asp-for="Invoice.Email" class="col-md-5 control-label">Holder Name:</label>
+                                                                    <input asp-for="Invoice.Email" id="HolderName" class="form-control col-md-7" placeholder="Holder Name" value="@User.Identity.Name" readonly />
+                                                                </div>
+                                                                <div class="row pt-4 col-md-12">
+                                                                    <label asp-for="Invoice.Date" class="col-md-5 control-label">Date:</label>
+                                                                    <input asp-for="Invoice.Date" id="Date" class="form-control col-md-7" type="datetime-local" placeholder="Date" />
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="mr-auto ">
+                                                <a asp-action="Index" class="btn btn-primary text-end">Back to List</a>
+                                            </div>
+                                            <div class="form-group  ">
+                                                <input type="submit" value="Clear" id="clearButton" class="btn btn-danger  " />
+                                                <button type="submit" class="btn btn-info" id="printButton">print</button>
+                                                <input type="submit" value="Create" id="submitButton" class="btn btn-primary  " />
+
+
+                                            </div>
+                                        </div>
                                         
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="mr-auto ">
-                                    <a asp-action="Index" class="btn btn-primary text-end">Back to List</a>
-                                </div>
-                                <div class="form-group  ">
-                                    <input type="submit" value="Clear" id="clearButton" class="btn btn-danger  " />
-                                    <input type="submit" value="Create" class="btn btn-primary  " />
-                                    
-
-                                </div>
-                            </div>
+                            
                         </form>
                     </div>
                 </div>
@@ -233,6 +267,7 @@
 
 <script>
     $(document).ready(function () {
+
         $('#clearButton').click(function () {
             // Clear the form
             $('#name').val('');
@@ -252,9 +287,22 @@
             $('#weight').val('');
             $('#price').val('');
             $('#note2').val('');
+            $('#InvoiceId').val('');
+            $('#HolderName').val('');
+            $('#Date').val('');
         });
     });
 </script>
+<script>
+    document.getElementById('formData').addEventListener('submit', function (event) {
+        // Allow the form to submit normally
+        setTimeout(function () {
+           
+            document.getElementById('formData').reset();
+        }, 100); 
+    });
+</script>
+
 <script>
     function calculateTotal(element) {
 
@@ -280,11 +328,75 @@
                 return (Weight * Charge);
             case 'Chemical':
                 return (Weight * Charge);
+            case 'Machine':
+                return (Weight * Charge);
             default:
                 return 0;
         }
 
     }
+</script>
+<script>
+    $(document).ready(function () {
+
+        $("#printButton").click(function (event) {
+            event.preventDefault();
+
+            var invoiceData = {
+                Customerinfo: {
+                    Id: $('#Id').val(),
+                    
+                    Name: $('#name').val(),
+                    PhoneNumber: $('#p_number').val(),
+                    Email: $('#email').val(),
+                    Address: $('#address').val(),
+                    Note: $('#note').val(),
+                    city: $('#city').val()
+                },
+                ReceiverInfo: {
+                    Id: $('#Id').val(),
+                    
+                    Name: $('#name1').val(),
+                    PhoneNumber: $('#p_number1').val(),
+                    Email: $('#email1').val(),
+                    Address: $('#address1').val(),
+                    Note: $('#note1').val(),
+                    city: $('#city1').val()
+                },
+                Percelinfo: {
+                    
+                    ParcelType: $('#percel').val(),
+                    Weight: parseFloat($('#weight').val()),
+                    Price: parseFloat($('#price').val()),
+                    Note: $('#note2').val(),
+                    SenderId: $('#SenderId').val(),
+                    ReceiverId: $('#ReceiverId').val()
+                },
+                Invoice: {
+                    InvoiceId: $('#InvoiceId').val(),
+                    Date: $('#Date').val(),
+                    Email: $('#HolderName').val()
+                },
+                IsPrint: true 
+            };
+
+            console.log(invoiceData);
+            $.ajax({
+                url: '@Url.Action("Report", "Customer")',
+                type: 'POST',
+                data: invoiceData, 
+                success: function () {
+                    // Open a new tab or window for the Invoice Print action
+                    window.open('@Url.Action("InvoicePrint", "Customer")', '_blank');
+                    
+                },
+                error: function () {
+                    alert("Failed to print invoice.");
+                }
+            });
+        });
+    });
+
 </script>
 
 

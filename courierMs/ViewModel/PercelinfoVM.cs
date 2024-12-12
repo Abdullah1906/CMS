@@ -11,6 +11,8 @@
         public Guid SenderId { get; set; }
         public Guid ReceiverId { get; set; }
 
+        public string? InvoiceId { get; set; }
+
 
         public DateTime CreatedAt { get; set; }
         public Guid CreatedBy { get; set; }
