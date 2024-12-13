@@ -57,12 +57,76 @@ namespace courierMs.Controllers
             return View(customerinfo);
         }
         // customer tracking
-
-        public IActionResult Track()
+        public IActionResult UpdateStatus()
         {
             return View();
         }
+        // for assign rider
+        public IActionResult Assign()
+        {
+            ViewBag.EmployeeList = _context.Lookup.Where(x => x.Type == LookupType.Rider).OrderBy(x=> x.Serial).ToList();
 
+            var query = from percel in _context.Percelinfo
+                        join sender in _context.Customerinfo on percel.SenderId equals sender.CustomerId
+                        join receiver in _context.ReceiverInfo on percel.ReceiverId equals receiver.ReceiverId
+                        select new TrackerinfoVM
+                        {
+                            Percelinfo = new PercelinfoVM
+                            {
+                                Id = percel.Id,
+                                
+                                ParcelType = percel.ParcelType,
+                                Weight = percel.Weight,
+                                Price = percel.Price,
+                                
+                            },
+                            Customerinfo = new CustomerinfoVM
+                            {
+                                
+                                Name = sender.Name,
+                                PhoneNumber = sender.PhoneNumber,
+                                
+                                Address = sender.Address,
+                                
+                                city = sender.city
+                            },
+                            ReceiverInfo = new ReceiverInfoVM
+                            {
+                                
+                                Name = receiver.Name,
+                                PhoneNumber = receiver.PhoneNumber,
+                                
+                                Address = receiver.Address,
+                                
+                                city = receiver.city
+                            },
+                            
+
+                        };
+            var resultList = query.ToList();
+
+            return View(resultList);
+
+        }
+
+        
+        [HttpPost]
+        public IActionResult Assign(int ParcelId, string EmployeeId)
+        {
+            var percel = _context.Percelinfo.Find(ParcelId);
+            var employee = _context.Lookup.FirstOrDefault(x=>x.Value== EmployeeId);
+
+            if (percel == null)
+            {
+                return NotFound();
+            }
+
+            percel.Status = Status.OnTheWay;
+            percel.Rider = employee.Name;
+            percel.TrackingNumber = employee.Value;
+            _context.SaveChanges();
+            return View();
+        }
 
         //showlist for admin
         public IActionResult ShowList()

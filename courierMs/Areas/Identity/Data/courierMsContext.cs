@@ -21,6 +21,7 @@ namespace courierMs.Data
         }
         public DbSet<Customerinfo> Customerinfo { get; set; } = default!;
         public DbSet<Invoice> Invoiceinfo { get; set; } = default!;
+        public DbSet<TrackerInfo> TrackerInfo { get; set; } = default!;
      
         public DbSet<ReceiverInfo> ReceiverInfo { get; set; } = default!;
         public DbSet<Percelinfo> Percelinfo { get; set; } = default!;

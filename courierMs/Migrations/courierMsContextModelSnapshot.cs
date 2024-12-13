@@ -383,8 +383,17 @@ namespace courierMs.Migrations
                     b.Property<Guid>("ReceiverId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("Rider")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<Guid>("SenderId")
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Status")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TrackingNumber")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2");
@@ -478,6 +487,34 @@ namespace courierMs.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("ReceiverInfo");
+                });
+
+            modelBuilder.Entity("courierMs.DataModel.TrackerInfo", b =>
+                {
+                    b.Property<int>("TrackId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TrackId"));
+
+                    b.Property<string>("CustomerId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PercelId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ReceiverId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TrackerName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Tracker_P_Number")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("TrackId");
+
+                    b.ToTable("TrackerInfo");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

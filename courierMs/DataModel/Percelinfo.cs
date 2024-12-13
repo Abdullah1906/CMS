@@ -13,7 +13,9 @@ namespace courierMs.DataModel
         public string? Note { get; set; }
         public Guid SenderId { get; set; }
         public Guid ReceiverId { get; set; }
-
+        public string? TrackingNumber { get; set; }
+        public string? Status { get; set; }
+        public string? Rider { get; set; }
         public string? InvoiceId { get; set; }
 
 

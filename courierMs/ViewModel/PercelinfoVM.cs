@@ -12,6 +12,9 @@
         public Guid ReceiverId { get; set; }
 
         public string? InvoiceId { get; set; }
+        public string? TrackingNumber { get; set; }
+        public string? Status { get; set; }
+        public string? Rider { get; set; }
 
 
         public DateTime CreatedAt { get; set; }

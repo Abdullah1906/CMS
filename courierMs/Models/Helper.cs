@@ -7,6 +7,13 @@
     {
         public const string City = "City";
         public const string Percel = "Percel";
+        public const string Employee = "Employee";
+        public const string Rider = "Rider";
+    }
+    public static class Status
+    {
+        public const string OnTheWay ="On The Way";
+        public const string Delivered = "Delivered";
     }
     public static class RoleType
     {

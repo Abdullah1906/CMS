@@ -1,0 +1,120 @@
+﻿@model IEnumerable<courierMs.ViewModel.TrackerinfoVM>
+
+@{
+    ViewData["Title"] = "Assign Order";
+   
+
+}
+<div class="row">
+    <div class="col-md-12">
+        <div class="card shadow-lg mb-4">
+            <div class="card-header text-white text-center" style="background-color:#2980b9">
+                <h4 class="mb-0">List of Sender</h4>
+            </div>
+            <div class="card-body">
+                <table class="table table-hover table-bordered text-center align-middle display" id="lookupTable">
+                    <thead class="text-white" style="background-color:#3498db">
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">Percel Info</th>
+                            <th scope="col">Sender Info</th>
+                            <th scope="col">Reciever Info</th>
+                            <th scope="col">Action</th>
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model != null && Model.Any())
+                        {
+
+                            foreach (var item in Model)
+                            {
+                                
+                                <tr class="text-dark">
+                                    <td>@item.Percelinfo.Id</td>
+                                    <td>
+                                        <b>Parcel Type:</b> @item.Percelinfo.ParcelType <br />
+                                        <b>Parcel Weight:</b> @item.Percelinfo.Weight <br />
+                                        <b>Price:</b> @item.Percelinfo.Price <br />
+                                    </td>
+                                    <td>
+                                        <b>Name:</b> @item.Customerinfo.Name <br />
+                                        <b>PhoneNumber:</b> @item.Customerinfo.PhoneNumber <br />
+                                        <b>Address :</b> @item.Customerinfo.Address ,@item.Customerinfo.city<br />
+                                        
+                                    </td>
+                                    <td>
+                                        <b>Name:</b> @item.ReceiverInfo.Name <br />
+                                        <b>PhoneNumber:</b> @item.ReceiverInfo.PhoneNumber <br />
+                                        <b>Address :</b> @item.ReceiverInfo.Address ,@item.ReceiverInfo.city<br />
+
+                                    </td>
+                                    
+                                    <td>
+                                        <div class="row">
+                                            <select id="Employee" class="form-control col-md-8 ml-1">
+                                                <option value="-1">Assign Rider</option>
+                                                @if (ViewBag.EmployeeList != null)
+                                                {
+                                                    @foreach (var Emp in ViewBag.EmployeeList)
+                                                    {
+                                                        <option value="@Emp.Value">@Emp.Name</option>
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    <option value="">No Employee available</option>
+                                                }
+
+                                            </select>
+                                            <button type="button" id="AssignButton" class="btn btn-primary btn-md ml-1 " data-id="@item.Percelinfo.Id" onclick="assignRider(this)">Assign</button>
+                                        </div> 
+                                    </td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script src="~/js/jquery-3.6.0.min.js"></script>
+<script src="~/js/alert.js"></script>
+<script>
+
+        function assignRider(button) {
+            
+
+            const parcelId = $(button).data("id");
+            const employeeId = $(button).closest("tr").find("#Employee").val();
+
+
+            if (employeeId === "-1" || employeeId === "") {
+                alert("Please select a rider to assign.");
+                return;
+            }
+            $.ajax({
+                url: '/Customer/Assign', 
+                type: 'POST',
+                data: { ParcelId: parcelId, EmployeeId: employeeId },
+                success: function (response) {
+                    Swal.fire("Assigned!", "success");
+                    
+                    $(button).closest("tr").find("#Employee").prop("disabled", true);
+                    $(button).prop("disabled", true);
+
+                    
+                },
+                error: function (xhr, status, error) {
+                    alert("An error occurred: " + xhr.responseText || error);
+                }
+            });
+        };
+    
+
+</script>

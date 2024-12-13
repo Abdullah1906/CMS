@@ -1,0 +1,103 @@
+﻿@model IEnumerable<courierMs.ViewModel.TrackerinfoVM>
+
+@{
+    ViewData["Title"] = "Assign Order";
+
+
+}
+<div class="row">
+    <div class="col-md-12">
+        <div class="card shadow-lg mb-4">
+            <div class="card-header text-white text-center" style="background-color:#2980b9">
+                <h4 class="mb-0">List of Sender</h4>
+            </div>
+            <div class="card-body">
+                <table class="table table-hover table-bordered text-center align-middle display" id="lookupTable">
+                    <thead class="text-white" style="background-color:#3498db">
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">Percel Info</th>
+                            <th scope="col">Sender Info</th>
+                            <th scope="col">Reciever Info</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Action</th>
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model != null && Model.Any())
+                        {
+
+                            foreach (var item in Model)
+                            {
+
+                                <tr class="text-dark">
+                                    <td>@item.Percelinfo.Id</td>
+                                    <td>
+                                        <b>Parcel Type:</b> @item.Percelinfo.ParcelType <br />
+                                        <b>Parcel Weight:</b> @item.Percelinfo.Weight <br />
+                                        <b>Price:</b> @item.Percelinfo.Price <br />
+                                    </td>
+                                    <td>
+                                        <b>Name:</b> @item.Customerinfo.Name <br />
+                                        <b>PhoneNumber:</b> @item.Customerinfo.PhoneNumber <br />
+                                        <b>Address :</b> @item.Customerinfo.Address ,@item.Customerinfo.city<br />
+
+                                    </td>
+                                    <td>
+                                        <b>Name:</b> @item.ReceiverInfo.Name <br />
+                                        <b>PhoneNumber:</b> @item.ReceiverInfo.PhoneNumber <br />
+                                        <b>Address :</b> @item.ReceiverInfo.Address ,@item.ReceiverInfo.city<br />
+
+                                    </td>
+                                    <td>
+                                        @item.Percelinfo.Status
+                                    </td>
+                                    <td>
+                                        <div class="row">
+                                            <button type="button" id="EditDeliverButton" class="btn btn-primary btn-md ml-1 " data-id="@item.Percelinfo.Id" onclick="EditDeliver(this)">Edit</button>
+                                            <button type="button" id="DeliverButton" class="btn btn-Success btn-md ml-1 " data-id="@item.Percelinfo.Id" onclick="Deliver(this)">Delivered</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="~/js/jquery-3.6.0.min.js"></script>
+<script src="~/js/alert.js"></script>
+<script>
+
+    function Deliver(button) {
+
+
+        const parcelId = $(button).data("id");
+        
+
+        $.ajax({
+            url: '/Customer/UpdateStatus',
+            type: 'POST',
+            data:parcelId ,
+            success: function (response) {
+                Swal.fire("Delivered!", "success");
+
+                $(button).closest("tr").find("#Employee").prop("disabled", true);
+                $(button).prop("disabled", true);
+
+
+            },
+            error: function (xhr, status, error) {
+                alert("An error occurred: " + xhr.responseText || error);
+            }
+        });
+    };
+
+
+</script>
