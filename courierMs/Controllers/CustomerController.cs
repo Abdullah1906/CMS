@@ -16,6 +16,8 @@ using NuGet.Protocol.Plugins;
 using courierMs.Services;
 using courierMs.Migrations;
 using Newtonsoft.Json;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Reflection;
 
 
 namespace courierMs.Controllers
@@ -56,11 +58,129 @@ namespace courierMs.Controllers
 
             return View(customerinfo);
         }
-        // customer tracking
+        // customer tracking(deliver)
         public IActionResult UpdateStatus()
         {
-            return View();
+            var query = from percel in _context.Percelinfo
+                        join sender in _context.Customerinfo on percel.SenderId equals sender.CustomerId
+                        join receiver in _context.ReceiverInfo on percel.ReceiverId equals receiver.ReceiverId
+                        select new TrackerinfoVM
+                        {
+                            Percelinfo = new PercelinfoVM
+                            {
+                                Id = percel.Id,
+
+                                ParcelType = percel.ParcelType,
+                                Weight = percel.Weight,
+                                Price = percel.Price,
+                                Status = percel.Status,
+                                Rider = percel.Rider,
+                                TrackingNumber = percel.TrackingNumber
+
+                            },
+                            Customerinfo = new CustomerinfoVM
+                            {
+
+                                Name = sender.Name,
+                                PhoneNumber = sender.PhoneNumber,
+
+                                Address = sender.Address,
+
+                                city = sender.city
+                            },
+                            ReceiverInfo = new ReceiverInfoVM
+                            {
+
+                                Name = receiver.Name,
+                                PhoneNumber = receiver.PhoneNumber,
+
+                                Address = receiver.Address,
+
+                                city = receiver.city
+                            },
+
+
+                        };
+            var resultList = query.ToList();
+
+            return View(resultList);
         }
+
+        [HttpPost]
+        public IActionResult UpdateStatus(int ParcelId)
+        {
+            var percel = _context.Percelinfo.Find(ParcelId);
+            
+
+            if (percel == null)
+            {
+                return Json(new { success = false, message = PopupMessage.error });
+            }
+
+
+
+            try
+            {
+
+
+                percel.Status = Status.Delivered;
+
+                _context.SaveChanges();
+
+                var query = from percels in _context.Percelinfo
+                            join sender in _context.Customerinfo on percel.SenderId equals sender.CustomerId
+                            join receiver in _context.ReceiverInfo on percel.ReceiverId equals receiver.ReceiverId
+                            select new TrackerinfoVM
+                            {
+                                Percelinfo = new PercelinfoVM
+                                {
+                                    Id = percel.Id,
+                                    ParcelType = percel.ParcelType,
+                                    Weight = percel.Weight,
+                                    Price = percel.Price,
+                                    Status = percel.Status,
+                                    Rider = percel.Rider,
+                                    TrackingNumber = percel.TrackingNumber
+
+                                },
+                                Customerinfo = new CustomerinfoVM
+                                {
+
+                                    Name = sender.Name,
+                                    PhoneNumber = sender.PhoneNumber,
+
+                                    Address = sender.Address,
+
+                                    city = sender.city
+                                },
+                                ReceiverInfo = new ReceiverInfoVM
+                                {
+
+                                    Name = receiver.Name,
+                                    PhoneNumber = receiver.PhoneNumber,
+
+                                    Address = receiver.Address,
+
+                                    city = receiver.city
+                                },
+
+
+                            };
+
+                var resultList = query.ToList();
+
+                return Json(new { success = true, message = PopupMessage.success, data= resultList });
+
+            }
+            catch (Exception e)
+            {
+                return Json(new { success = false, message = PopupMessage.error });
+            }
+
+            
+            
+        }
+
         // for assign rider
         public IActionResult Assign()
         {
@@ -113,19 +233,34 @@ namespace courierMs.Controllers
         [HttpPost]
         public IActionResult Assign(int ParcelId, string EmployeeId)
         {
+
+            var userid = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var percel = _context.Percelinfo.Find(ParcelId);
             var employee = _context.Lookup.FirstOrDefault(x=>x.Value== EmployeeId);
-
+            
             if (percel == null)
             {
                 return NotFound();
             }
 
-            percel.Status = Status.OnTheWay;
-            percel.Rider = employee.Name;
-            percel.TrackingNumber = employee.Value;
-            _context.SaveChanges();
-            return View();
+            try
+            {
+                // Update parcel details
+                percel.Status = Status.OnTheWay;
+                percel.Rider = employee.Name;
+                percel.TrackingNumber = employee.Value;
+
+                // Save the updated parcel information
+                _context.SaveChanges();
+
+                
+                return View();
+            }
+            catch (Exception e)
+            {
+                return NotFound();
+            }
+            
         }
 
         //showlist for admin
@@ -244,6 +379,7 @@ namespace courierMs.Controllers
 
 
         }
+
         [HttpGet]
         public IActionResult GetNumber(int query)
         {

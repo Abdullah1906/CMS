@@ -9,16 +9,17 @@
     <div class="col-md-12">
         <div class="card shadow-lg mb-4">
             <div class="card-header text-white text-center" style="background-color:#2980b9">
-                <h4 class="mb-0">List of Sender</h4>
+                <h4 class="mb-0">Track</h4>
             </div>
             <div class="card-body">
-                <table class="table table-hover table-bordered text-center align-middle display" id="lookupTable">
+                <table class="table table-hover table-bordered text-center align-middle display" id="UpdateTable">
                     <thead class="text-white" style="background-color:#3498db">
                         <tr>
                             <th scope="col">No</th>
-                            <th scope="col">Percel Info</th>
-                            <th scope="col">Sender Info</th>
-                            <th scope="col">Reciever Info</th>
+                            <th scope="col">Percel Details</th>
+                            <th scope="col">Sender Details</th>
+                            <th scope="col">Reciever Details</th>
+                            <th scope="col">Tracker Details</th>
                             <th scope="col">Status</th>
                             <th scope="col">Action</th>
 
@@ -36,7 +37,7 @@
                                     <td>@item.Percelinfo.Id</td>
                                     <td>
                                         <b>Parcel Type:</b> @item.Percelinfo.ParcelType <br />
-                                        <b>Parcel Weight:</b> @item.Percelinfo.Weight <br />
+                                        <b>Weight:</b> @item.Percelinfo.Weight <br />
                                         <b>Price:</b> @item.Percelinfo.Price <br />
                                     </td>
                                     <td>
@@ -52,12 +53,16 @@
 
                                     </td>
                                     <td>
+                                        <b>Tracker Name:</b> @item.Percelinfo.Rider <br />
+                                        <b>Tracker Number:</b> @item.Percelinfo.TrackingNumber <br />
+                                    </td>
+                                    <td>
                                         @item.Percelinfo.Status
                                     </td>
                                     <td>
                                         <div class="row">
-                                            <button type="button" id="EditDeliverButton" class="btn btn-primary btn-md ml-1 " data-id="@item.Percelinfo.Id" onclick="EditDeliver(this)">Edit</button>
-                                            <button type="button" id="DeliverButton" class="btn btn-Success btn-md ml-1 " data-id="@item.Percelinfo.Id" onclick="Deliver(this)">Delivered</button>
+                                            <button type="button" id="EditDeliverButton" class="btn btn-primary btn-sm ml-1" data-id="@item.Percelinfo.Id" onclick="EditDeliver(this)">Edit</button>
+                                            <button type="button" id="DeliverButton" class="btn btn-success btn-sm" data-id="@item.Percelinfo.Id" onclick="Deliver(this)">Delivered</button>
                                         </div>
                                     </td>
                                 </tr>
@@ -75,29 +80,81 @@
 <script src="~/js/alert.js"></script>
 <script>
 
-    function Deliver(button) {
+function Deliver(button) {
+    const parcelId = $(button).data("id");
 
+   
+    console.log(parcelId);
 
-        const parcelId = $(button).data("id");
-        
+    $.ajax({
+        url: '/Customer/UpdateStatus',
+        type: 'POST',
+        data: { ParcelId: parcelId },
+        success: function (response) {
+            if (response.success) {
+                Swal.fire("Delivered!", "Success");
 
-        $.ajax({
-            url: '/Customer/UpdateStatus',
-            type: 'POST',
-            data:parcelId ,
-            success: function (response) {
-                Swal.fire("Delivered!", "success");
+                console.log(response.data[0]);
 
-                $(button).closest("tr").find("#Employee").prop("disabled", true);
-                $(button).prop("disabled", true);
+                // Use the ParcelId to locate and remove the specific row in the table
+                $('#UpdateTable tbody')
+                    .find(`button[data-id="${response.data[0].Percelinfo.Id}"]`)
+                    .closest('tr')
+                    .remove();
 
+                // Construct a new table row dynamically
+                let newRow = `
+                    <tr class="text-dark">
+                        <td>${response.data[0].percelinfo.id}</td>
+                        <td>
+                            <b>Parcel Type:</b> ${response.data[0].percelinfo.parcelType} <br />
+                            <b>Weight:</b> ${response.data[0].percelinfo.weight} <br />
+                            <b>Price:</b> ${response.data[0].percelinfo.price} <br />
+                        </td>
+                        <td>
+                            <b>Name:</b> ${response.data[0].customerinfo.name} <br />
+                            <b>Phone Number:</b> ${response.data[0].customerinfo.phoneNumber} <br />
+                            <b>Address:</b> ${response.data[0].customerinfo.address}, ${response.data[0].customerinfo.city} <br />
+                        </td>
+                        <td>
+                            <b>Name:</b> ${response.data[0].receiverInfo.name} <br />
+                            <b>Phone Number:</b> ${response.data[0].receiverInfo.phoneNumber} <br />
+                            <b>Address:</b> ${response.data[0].receiverInfo.address}, ${response.data[0].receiverInfo.city} <br />
+                        </td>
+                        <td>
+                            <b>Tracker Name:</b> ${response.data[0].percelinfo.rider} <br />
+                            <b>Tracker Number:</b> ${response.data[0].percelinfo.trackingNumber} <br />
+                        </td>
+                        <td>
+                            ${response.data[0].percelinfo.status}
+                        </td>
+                        <td>
+                            <div class="row">
+                                <button type="button" id="EditDeliverButton" class="btn btn-primary btn-sm ml-1" 
+                                    data-id="${response.data[0].percelinfo.id}" onclick="EditDeliver(this)">Edit</button>
+                                <button type="button" id="DeliverButton" class="btn btn-success btn-sm" 
+                                    data-id="${response.data[0].percelinfo.id}" onclick="Deliver(this)">Delivered</button>
+                            </div>
+                        </td>
+                    </tr>`;
 
-            },
-            error: function (xhr, status, error) {
-                alert("An error occurred: " + xhr.responseText || error);
+                // Append the new row to the table body
+                $('#UpdateTable tbody').append(newRow);
+            } else {
+                Swal.fire("Error!", response.message, "error");
             }
-        });
-    };
-
+        },
+        error: function (xhr, status, error) {
+            alert("An error occurred: " + (xhr.responseText || error));
+        }
+    });
+}
 
 </script>
+
+@* <script>
+    $(document).on('click', '#DeliverButton', function() {
+    const parcelId = $(this).data('id');
+    Deliver(this); // Call the Deliver function
+});
+</script> *@

@@ -26,8 +26,8 @@
                                             <div class="form-group">
                                                 <h3 class="mb-0 text-center text-dark">Sender Information</h3>
                                                 <hr />
-                                                <label asp-for="Customerinfo.Name" class="control-label">Sender Name</label>
-                                                <input asp-for="Customerinfo.Name" id="name" class="form-control" placeholder="Enter Sender Name" />
+                                                <label asp-for="Customerinfo.Name" class="control-label">Sender Name<span style="color: red;">*</span></label>
+                                                <input asp-for="Customerinfo.Name" id="name" class="form-control" placeholder="Enter Sender Name" required />
                                                 <input asp-for="Customerinfo.Id" id="Id" name="Id" hidden />
                                                 <span asp-validation-for="Customerinfo.Name" class="text-danger"></span>
                                             </div>
@@ -36,8 +36,8 @@
                                             <div class="form-group">
                                                 <h3 class="mb-0 text-center text-dark">Receiver Information</h3>
                                                 <hr />
-                                                <label asp-for="ReceiverInfo.Name" class="control-label">Reciever Name</label>
-                                                <input asp-for="ReceiverInfo.Name" id="name1" class="form-control" placeholder="Enter Reciever Name" />
+                                                <label asp-for="ReceiverInfo.Name" class="control-label">Reciever Name<span style="color: red;">*</span></label>
+                                                <input asp-for="ReceiverInfo.Name" id="name1" class="form-control" placeholder="Enter Reciever Name" required />
                                                 <span asp-validation-for="ReceiverInfo.Name" class="text-danger"></span>
                                             </div>
                                         </div>
@@ -45,15 +45,15 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label asp-for="Customerinfo.PhoneNumber" class="control-label">Phone Number</label>
-                                                <input asp-for="Customerinfo.PhoneNumber" id="p_number" class="form-control" placeholder="Enter Sender Number" />
+                                                <label asp-for="Customerinfo.PhoneNumber" class="control-label">Phone Number<span style="color: red;">*</span></label>
+                                                <input asp-for="Customerinfo.PhoneNumber" id="p_number" class="form-control" placeholder="Enter Sender Number" required />
                                                 <span asp-validation-for="Customerinfo.PhoneNumber" class="text-danger"></span>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label asp-for="ReceiverInfo.PhoneNumber" class="control-label">Phone Number</label>
-                                                <input asp-for="ReceiverInfo.PhoneNumber" id="p_number1" class="form-control" placeholder="Enter Reciever Number" />
+                                                <label asp-for="ReceiverInfo.PhoneNumber" class="control-label">Phone Number<span style="color: red;">*</span></label>
+                                                <input asp-for="ReceiverInfo.PhoneNumber" id="p_number1" class="form-control" placeholder="Enter Reciever Number" required />
                                                 <span asp-validation-for="ReceiverInfo.PhoneNumber" class="text-danger"></span>
                                             </div>
                                         </div>
@@ -77,15 +77,15 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label asp-for="Customerinfo.Address" class="control-label">Address</label>
-                                                <input asp-for="Customerinfo.Address" id="address" class="form-control" placeholder="Enter Sender Address" />
+                                                <label asp-for="Customerinfo.Address" class="control-label">Address<span style="color: red;">*</span></label>
+                                                <input asp-for="Customerinfo.Address" id="address" class="form-control" placeholder="Enter Sender Address" required />
                                                 <span asp-validation-for="Customerinfo.Address" class="text-danger"></span>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label asp-for="ReceiverInfo.Address" class="control-label">Address</label>
-                                                <input asp-for="ReceiverInfo.Address" id="address1" class="form-control" placeholder="Enter Reciever Address" />
+                                                <label asp-for="ReceiverInfo.Address" class="control-label">Address<span style="color: red;">*</span></label>
+                                                <input asp-for="ReceiverInfo.Address" id="address1" class="form-control" placeholder="Enter Reciever Address" required />
                                                 <span asp-validation-for="ReceiverInfo.Address" class="text-danger"></span>
                                             </div>
                                         </div>
@@ -109,14 +109,14 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label asp-for="Customerinfo.city" class="control-label">City</label>
+                                                <label asp-for="Customerinfo.city" class="control-label">City<span style="color: red;">*</span></label>
                                                 <select asp-for="Customerinfo.city" id="city" class="form-control">
                                                     <option value="-1">Select City</option>
                                                     @if (ViewBag.CityList != null)
                                                     {
                                                         @foreach (var city in ViewBag.CityList)
                                                         {
-                                                            <option value="@city.Value">@city.Name</option>
+                                                            <option value="@city.Value" required>@city.Name</option>
                                                         }
                                                     }
                                                     else
@@ -130,14 +130,14 @@
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label asp-for="ReceiverInfo.city" class="control-label">City</label>
+                                                <label asp-for="ReceiverInfo.city" class="control-label">City<span style="color: red;">*</span></label>
                                                 <select asp-for="ReceiverInfo.city" id="city1" class="form-control">
                                                     <option value="-1">Select City</option>
                                                     @if (ViewBag.CityList != null)
                                                     {
                                                         @foreach (var city in ViewBag.CityList)
                                                         {
-                                                            <option value="@city.Value">@city.Name</option>
+                                                            <option value="@city.Value" required>@city.Name</option>
                                                         }
                                                     }
                                                     else
@@ -159,14 +159,14 @@
                                     <div class="">
                                         <div class="row">
                                             <div class="form-group col-md-6">
-                                                <label asp-for="Percelinfo.ParcelType" class="control-label">Parcel Type</label>
+                                                <label asp-for="Percelinfo.ParcelType" class="control-label">Parcel Type<span style="color: red;">*</span></label>
                                                 <select asp-for="Percelinfo.ParcelType" id="percel" class="form-control">
                                                     <option value="-1">Select ParcelType</option>
                                                     @if (ViewBag.PercelList != null)
                                                     {
                                                         @foreach (var city in ViewBag.PercelList)
                                                         {
-                                                            <option value="@city.Value">@city.Name</option>
+                                                            <option value="@city.Value" required>@city.Name</option>
                                                         }
                                                     }
                                                     else
@@ -185,11 +185,11 @@
                                         </div>
                                         <div class="row">
                                             <div class="form-group col-md-4">
-                                                <label class="control-label">Charge(৳)</label>
+                                                <label class="control-label">Charge(৳)<span style="color: red;">*</span></label>
                                                 <input id="charge" class="form-control" onkeyup="calculateTotal(this)" autocomplete="off" placeholder="Enter Charge" />
                                             </div>
                                             <div class="form-group col-md-4">
-                                                <label asp-for="Percelinfo.Weight" class="control-label">Quantity</label>
+                                                <label asp-for="Percelinfo.Weight" class="control-label">Quantity<span style="color: red;">*</span></label>
                                                 <input asp-for="Percelinfo.TrackingNumber" id="TrackingNumber" hidden />
                                                 <input asp-for="Percelinfo.Status" id="Status" hidden />
                                                 <input asp-for="Percelinfo.Weight" id="weight" class="form-control" autocomplete="off" onkeyup="calculateTotal(this)" placeholder="Enter Weight" />
@@ -212,16 +212,16 @@
                                                         <div class="text-white">
                                                             <div class="row">
                                                                 <div class="row pt-4 col-md-12">
-                                                                    <label asp-for="Invoice.InvoiceId" class="col-md-5 control-label">Invoice No:</label>
+                                                                    <label asp-for="Invoice.InvoiceId" class="col-md-5 control-label">Invoice No :</label>
                                                                     <input asp-for="Invoice.InvoiceId" id="InvoiceId" class="form-control col-md-7" placeholder="Invoice Number" value="@DateTime.Now.ToString("yyMMddHHmm")" readonly />
                                                                 </div>
                                                                 <div class="row pt-4 col-md-12 ">
-                                                                    <label asp-for="Invoice.Email" class="col-md-5 control-label">Holder Name:</label>
+                                                                    <label asp-for="Invoice.Email" class="col-md-5 control-label">Holder Name :</label>
                                                                     <input asp-for="Invoice.Email" id="HolderName" class="form-control col-md-7" placeholder="Holder Name" value="@User.Identity.Name" readonly />
                                                                 </div>
                                                                 <div class="row pt-4 col-md-12">
-                                                                    <label asp-for="Invoice.Date" class="col-md-5 control-label">Date:</label>
-                                                                    <input asp-for="Invoice.Date" id="Date" class="form-control col-md-7" type="datetime-local" placeholder="Date" />
+                                                                    <label asp-for="Invoice.Date" class="col-md-5 control-label">Date :</label>
+                                                                    <input asp-for="Invoice.Date" id="Date" class="form-control col-md-7" type="datetime-local" placeholder="Date" required />
                                                                 </div>
 
                                                             </div>

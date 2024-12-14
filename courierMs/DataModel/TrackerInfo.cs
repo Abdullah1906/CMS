@@ -6,10 +6,10 @@ namespace courierMs.DataModel
     public class TrackerInfo
     {
         [Key]
-        public int TrackId { get; set; }
-        public string? ReceiverId { get; set; }
-        public string? CustomerId { get; set; }
-        public string? PercelId { get; set; }
+        public Guid TrackId { get; set; }
+        public Guid? ReceiverId { get; set; }
+        public Guid? CustomerId { get; set; }
+        public Guid? PercelId { get; set; }
 
         public string? TrackerName { get; set; }
         public string? Tracker_P_Number { get; set; }

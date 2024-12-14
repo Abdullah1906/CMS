@@ -38,7 +38,7 @@
                 // Call the delete API to remove the file from the server
                 $.ajax({
                     type: 'POST',
-                    url: '/Customer/DeleteImage', // Update with your delete endpoint
+                    url: '/Customer/DeleteImage', 
                     data: { fileName: file.uploadedFileName },
                     headers: {
                         'X-CSRF-TOKEN': $('input[name="__RequestVerificationToken"]').val()

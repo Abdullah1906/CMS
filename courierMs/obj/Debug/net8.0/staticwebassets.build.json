@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "EhcjSS0V03bfUuIVB0JeFvu6+26zNqRzHST0UNQkuik=",
+  "Hash": "+fTIDS5FxgDwee/MJLrMUgq1Z+bANM9QJKF5nBn40c0=",
   "Source": "courierMs",
   "BasePath": "_content/courierMs",
   "Mode": "Default",
@@ -39478,6 +39478,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\download (1).jpg"
+    },
+    {
+      "Identity": "E:\\CMS\\CMS\\courierMs\\wwwroot\\images\\download (4).jpg",
+      "SourceId": "courierMs",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\CMS\\CMS\\courierMs\\wwwroot\\",
+      "BasePath": "_content/courierMs",
+      "RelativePath": "images/download (4).jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\download (4).jpg"
     },
     {
       "Identity": "E:\\CMS\\CMS\\courierMs\\wwwroot\\images\\download.jpg",

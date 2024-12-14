@@ -491,20 +491,18 @@ namespace courierMs.Migrations
 
             modelBuilder.Entity("courierMs.DataModel.TrackerInfo", b =>
                 {
-                    b.Property<int>("TrackId")
+                    b.Property<Guid>("TrackId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("uniqueidentifier");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TrackId"));
+                    b.Property<Guid?>("CustomerId")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("CustomerId")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<Guid?>("PercelId")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("PercelId")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ReceiverId")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<Guid?>("ReceiverId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("TrackerName")
                         .HasColumnType("nvarchar(max)");
