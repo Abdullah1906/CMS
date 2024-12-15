@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "E:\\CMS\\CMS\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|e:\\cms\\cms\\courierms\\views\\customer\\showlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\views\\customer\\showlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|e:\\cms\\cms\\courierms\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|e:\\cms\\cms\\courierms\\views\\shared\\_admin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\views\\shared\\_admin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -11,36 +19,52 @@
       "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\views\\customer\\updatestatus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|e:\\cms\\cms\\courierms\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|e:\\cms\\cms\\courierms\\datamodel\\trackerinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\datamodel\\trackerinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|e:\\cms\\cms\\courierms\\views\\customer\\assign.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\views\\customer\\assign.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|e:\\cms\\cms\\courierms\\viewmodel\\percelinfovm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\viewmodel\\percelinfovm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|e:\\cms\\cms\\courierms\\datamodel\\percelinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\datamodel\\percelinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|e:\\cms\\cms\\courierms\\views\\customer\\createlookup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\views\\customer\\createlookup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|e:\\cms\\cms\\courierms\\views\\customer\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\views\\customer\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|e:\\cms\\cms\\courierms\\datamodel\\receiverinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\datamodel\\receiverinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|e:\\cms\\cms\\courierms\\datamodel\\customerinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\datamodel\\customerinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|e:\\cms\\cms\\courierms\\viewmodel\\receiverinfovm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\viewmodel\\receiverinfovm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|e:\\cms\\cms\\courierms\\areas\\identity\\data\\couriermscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\areas\\identity\\data\\couriermscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|e:\\cms\\cms\\courierms\\migrations\\20241210062323_addinvoiceinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\migrations\\20241210062323_addinvoiceinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|e:\\cms\\cms\\courierms\\views\\customer\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\views\\customer\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|e:\\cms\\cms\\courierms\\viewmodel\\trackerinfovm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\viewmodel\\trackerinfovm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|e:\\cms\\cms\\courierms\\datamodel\\trackerinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\datamodel\\trackerinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|e:\\cms\\cms\\courierms\\models\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\models\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|e:\\cms\\cms\\courierms\\viewmodel\\percelinfovm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30D79635-F052-415C-98A0-002A8B814AE7}|courierMs\\courierMs.csproj|solutionrelative:courierms\\viewmodel\\percelinfovm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,17 +74,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "CustomerController.cs",
               "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\Controllers\\CustomerController.cs",
               "RelativeDocumentMoniker": "courierMs\\Controllers\\CustomerController.cs",
               "ToolTip": "E:\\CMS\\CMS\\courierMs\\Controllers\\CustomerController.cs",
               "RelativeToolTip": "courierMs\\Controllers\\CustomerController.cs",
-              "ViewState": "AgIAAJsAAAAAAAAAAAAqwG4AAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAOkAAAAAAAAAAAAIwPIAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-20T19:05:01.868Z",
               "IsPinned": true,
@@ -72,84 +96,137 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_admin.cshtml",
-              "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\Views\\Shared\\_admin.cshtml",
-              "RelativeDocumentMoniker": "courierMs\\Views\\Shared\\_admin.cshtml",
-              "ToolTip": "E:\\CMS\\CMS\\courierMs\\Views\\Shared\\_admin.cshtml",
-              "RelativeToolTip": "courierMs\\Views\\Shared\\_admin.cshtml",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAAC4AAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-14T06:18:15.064Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UpdateStatus.cshtml",
-              "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\Views\\Customer\\UpdateStatus.cshtml",
-              "RelativeDocumentMoniker": "courierMs\\Views\\Customer\\UpdateStatus.cshtml",
-              "ToolTip": "E:\\CMS\\CMS\\courierMs\\Views\\Customer\\UpdateStatus.cshtml",
-              "RelativeToolTip": "courierMs\\Views\\Customer\\UpdateStatus.cshtml",
-              "ViewState": "AgIAADMAAAAAAAAAAAAqwEAAAAByAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-14T04:55:38.299Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PercelinfoVM.cs",
-              "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\ViewModel\\PercelinfoVM.cs",
-              "RelativeDocumentMoniker": "courierMs\\ViewModel\\PercelinfoVM.cs",
-              "ToolTip": "E:\\CMS\\CMS\\courierMs\\ViewModel\\PercelinfoVM.cs",
-              "RelativeToolTip": "courierMs\\ViewModel\\PercelinfoVM.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAxwBAAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T04:00:16.934Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CreateLookup.cshtml",
-              "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\Views\\Customer\\CreateLookup.cshtml",
-              "RelativeDocumentMoniker": "courierMs\\Views\\Customer\\CreateLookup.cshtml",
-              "ToolTip": "E:\\CMS\\CMS\\courierMs\\Views\\Customer\\CreateLookup.cshtml",
-              "RelativeToolTip": "courierMs\\Views\\Customer\\CreateLookup.cshtml",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAAEYBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-14T03:45:38.004Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
               "Title": "Assign.cshtml",
               "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\Views\\Customer\\Assign.cshtml",
               "RelativeDocumentMoniker": "courierMs\\Views\\Customer\\Assign.cshtml",
               "ToolTip": "E:\\CMS\\CMS\\courierMs\\Views\\Customer\\Assign.cshtml",
               "RelativeToolTip": "courierMs\\Views\\Customer\\Assign.cshtml",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAAABQAAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAF0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-12T08:01:39.731Z",
+              "WhenOpened": "2024-12-15T11:47:54.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ShowList.cshtml",
+              "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\Views\\Customer\\ShowList.cshtml",
+              "RelativeDocumentMoniker": "courierMs\\Views\\Customer\\ShowList.cshtml",
+              "ToolTip": "E:\\CMS\\CMS\\courierMs\\Views\\Customer\\ShowList.cshtml",
+              "RelativeToolTip": "courierMs\\Views\\Customer\\ShowList.cshtml",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAAAIUAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-15T11:47:06.132Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\Views\\Customer\\Create.cshtml",
-              "RelativeDocumentMoniker": "courierMs\\Views\\Customer\\Create.cshtml",
-              "ToolTip": "E:\\CMS\\CMS\\courierMs\\Views\\Customer\\Create.cshtml",
-              "RelativeToolTip": "courierMs\\Views\\Customer\\Create.cshtml",
-              "ViewState": "AgIAAM8AAAAAAAAAAAAAAN4AAACGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-12T07:21:08.812Z"
+              "Title": "Customerinfo.cs",
+              "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\DataModel\\Customerinfo.cs",
+              "RelativeDocumentMoniker": "courierMs\\DataModel\\Customerinfo.cs",
+              "ToolTip": "E:\\CMS\\CMS\\courierMs\\DataModel\\Customerinfo.cs",
+              "RelativeToolTip": "courierMs\\DataModel\\Customerinfo.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T10:37:11.501Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "courierMsContext.cs",
+              "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\Areas\\Identity\\Data\\courierMsContext.cs",
+              "RelativeDocumentMoniker": "courierMs\\Areas\\Identity\\Data\\courierMsContext.cs",
+              "ToolTip": "E:\\CMS\\CMS\\courierMs\\Areas\\Identity\\Data\\courierMsContext.cs",
+              "RelativeToolTip": "courierMs\\Areas\\Identity\\Data\\courierMsContext.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBUAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T10:35:58.389Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "UpdateStatus.cshtml",
+              "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\Views\\Customer\\UpdateStatus.cshtml",
+              "RelativeDocumentMoniker": "courierMs\\Views\\Customer\\UpdateStatus.cshtml",
+              "ToolTip": "E:\\CMS\\CMS\\courierMs\\Views\\Customer\\UpdateStatus.cshtml",
+              "RelativeToolTip": "courierMs\\Views\\Customer\\UpdateStatus.cshtml",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAFUAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-14T04:55:38.299Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_admin.cshtml",
+              "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\Views\\Shared\\_admin.cshtml",
+              "RelativeDocumentMoniker": "courierMs\\Views\\Shared\\_admin.cshtml",
+              "ToolTip": "E:\\CMS\\CMS\\courierMs\\Views\\Shared\\_admin.cshtml",
+              "RelativeToolTip": "courierMs\\Views\\Shared\\_admin.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAC4AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-14T06:18:15.064Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ReceiverInfoVM.cs",
+              "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\ViewModel\\ReceiverInfoVM.cs",
+              "RelativeDocumentMoniker": "courierMs\\ViewModel\\ReceiverInfoVM.cs",
+              "ToolTip": "E:\\CMS\\CMS\\courierMs\\ViewModel\\ReceiverInfoVM.cs",
+              "RelativeToolTip": "courierMs\\ViewModel\\ReceiverInfoVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T10:44:53.126Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ReceiverInfo.cs",
+              "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\DataModel\\ReceiverInfo.cs",
+              "RelativeDocumentMoniker": "courierMs\\DataModel\\ReceiverInfo.cs",
+              "ToolTip": "E:\\CMS\\CMS\\courierMs\\DataModel\\ReceiverInfo.cs",
+              "RelativeToolTip": "courierMs\\DataModel\\ReceiverInfo.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwBUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T10:44:56.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Percelinfo.cs",
+              "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\DataModel\\Percelinfo.cs",
+              "RelativeDocumentMoniker": "courierMs\\DataModel\\Percelinfo.cs",
+              "ToolTip": "E:\\CMS\\CMS\\courierMs\\DataModel\\Percelinfo.cs",
+              "RelativeToolTip": "courierMs\\DataModel\\Percelinfo.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAiwBkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T10:55:23.925Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "20241210062323_addInvoiceinfo.cs",
+              "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\Migrations\\20241210062323_addInvoiceinfo.cs",
+              "RelativeDocumentMoniker": "courierMs\\Migrations\\20241210062323_addInvoiceinfo.cs",
+              "ToolTip": "E:\\CMS\\CMS\\courierMs\\Migrations\\20241210062323_addInvoiceinfo.cs",
+              "RelativeToolTip": "courierMs\\Migrations\\20241210062323_addInvoiceinfo.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T10:34:24.556Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "TrackerInfo.cs",
               "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\DataModel\\TrackerInfo.cs",
               "RelativeDocumentMoniker": "courierMs\\DataModel\\TrackerInfo.cs",
@@ -157,24 +234,11 @@
               "RelativeToolTip": "courierMs\\DataModel\\TrackerInfo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T04:03:09.957Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-13T04:03:09.957Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Customerinfo.cs",
-              "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\DataModel\\Customerinfo.cs",
-              "RelativeDocumentMoniker": "courierMs\\DataModel\\Customerinfo.cs",
-              "ToolTip": "E:\\CMS\\CMS\\courierMs\\DataModel\\Customerinfo.cs",
-              "RelativeToolTip": "courierMs\\DataModel\\Customerinfo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T04:46:44.506Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "TrackerinfoVM.cs",
               "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\ViewModel\\TrackerinfoVM.cs",
               "RelativeDocumentMoniker": "courierMs\\ViewModel\\TrackerinfoVM.cs",
@@ -183,6 +247,42 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-12T08:48:12.22Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\Views\\Customer\\Create.cshtml",
+              "RelativeDocumentMoniker": "courierMs\\Views\\Customer\\Create.cshtml",
+              "ToolTip": "E:\\CMS\\CMS\\courierMs\\Views\\Customer\\Create.cshtml",
+              "RelativeToolTip": "courierMs\\Views\\Customer\\Create.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABkAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-12T07:21:08.812Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "PercelinfoVM.cs",
+              "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\ViewModel\\PercelinfoVM.cs",
+              "RelativeDocumentMoniker": "courierMs\\ViewModel\\PercelinfoVM.cs",
+              "ToolTip": "E:\\CMS\\CMS\\courierMs\\ViewModel\\PercelinfoVM.cs",
+              "RelativeToolTip": "courierMs\\ViewModel\\PercelinfoVM.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwBAAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-14T04:00:16.934Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Helper.cs",
+              "DocumentMoniker": "E:\\CMS\\CMS\\courierMs\\Models\\Helper.cs",
+              "RelativeDocumentMoniker": "courierMs\\Models\\Helper.cs",
+              "ToolTip": "E:\\CMS\\CMS\\courierMs\\Models\\Helper.cs",
+              "RelativeToolTip": "courierMs\\Models\\Helper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T04:06:13.131Z"
             }
           ]
         }

@@ -23,9 +23,9 @@
                                 <div class="col-md-6 mr-5">
                                     <div class="row">
                                         <div class="col-md-6">
+                                            <h3 class="mb-0 text-center text-white card-header" style="background-color:#182C61">Sender Info</h3>
+                                            <hr/>
                                             <div class="form-group">
-                                                <h3 class="mb-0 text-center text-dark">Sender Information</h3>
-                                                <hr />
                                                 <label asp-for="Customerinfo.Name" class="control-label">Sender Name<span style="color: red;">*</span></label>
                                                 <input asp-for="Customerinfo.Name" id="name" class="form-control" placeholder="Enter Sender Name" required />
                                                 <input asp-for="Customerinfo.Id" id="Id" name="Id" hidden />
@@ -33,9 +33,9 @@
                                             </div>
                                         </div>
                                         <div class="col-md-6">
+                                            <h3 class="mb-0 text-center text-white card-header" style="background-color:#182C61">Receiver Info</h3>
+                                            <hr />
                                             <div class="form-group">
-                                                <h3 class="mb-0 text-center text-dark">Receiver Information</h3>
-                                                <hr />
                                                 <label asp-for="ReceiverInfo.Name" class="control-label">Reciever Name<span style="color: red;">*</span></label>
                                                 <input asp-for="ReceiverInfo.Name" id="name1" class="form-control" placeholder="Enter Reciever Name" required />
                                                 <span asp-validation-for="ReceiverInfo.Name" class="text-danger"></span>
@@ -153,7 +153,7 @@
                                 </div>
                                 <div class="col-md-5 ml-5">
                                     <div>
-                                        <h3 class="text-center text-dark">Parcel Info</h3><hr>
+                                        <h3 class="text-center text-white card-header" style="background-color:#182C61">Parcel Info</h3><hr>
                                     </div>
                                     
                                     <div class="">

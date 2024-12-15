@@ -117,59 +117,20 @@ namespace courierMs.Controllers
                 return Json(new { success = false, message = PopupMessage.error });
             }
 
-
-
             try
             {
-
 
                 percel.Status = Status.Delivered;
 
                 _context.SaveChanges();
 
-                var query = from percels in _context.Percelinfo
-                            join sender in _context.Customerinfo on percel.SenderId equals sender.CustomerId
-                            join receiver in _context.ReceiverInfo on percel.ReceiverId equals receiver.ReceiverId
-                            select new TrackerinfoVM
-                            {
-                                Percelinfo = new PercelinfoVM
-                                {
-                                    Id = percel.Id,
-                                    ParcelType = percel.ParcelType,
-                                    Weight = percel.Weight,
-                                    Price = percel.Price,
-                                    Status = percel.Status,
-                                    Rider = percel.Rider,
-                                    TrackingNumber = percel.TrackingNumber
+                var result = new
+                {
+                    ParcelId,
+                    percel.Status
+                };
 
-                                },
-                                Customerinfo = new CustomerinfoVM
-                                {
-
-                                    Name = sender.Name,
-                                    PhoneNumber = sender.PhoneNumber,
-
-                                    Address = sender.Address,
-
-                                    city = sender.city
-                                },
-                                ReceiverInfo = new ReceiverInfoVM
-                                {
-
-                                    Name = receiver.Name,
-                                    PhoneNumber = receiver.PhoneNumber,
-
-                                    Address = receiver.Address,
-
-                                    city = receiver.city
-                                },
-
-
-                            };
-
-                var resultList = query.ToList();
-
-                return Json(new { success = true, message = PopupMessage.success, data= resultList });
+                return Json(new { success = true, message = PopupMessage.success, data= result });
 
             }
             catch (Exception e)

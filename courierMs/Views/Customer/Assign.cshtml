@@ -5,6 +5,11 @@
    
 
 }
+
+
+<link rel='stylesheet' href='https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css'>
+
+
 <div class="row">
     <div class="col-md-12">
         <div class="card shadow-lg mb-4">
@@ -84,7 +89,13 @@
 
 
 <script src="~/js/jquery-3.6.0.min.js"></script>
+<script src='https://cdn.datatables.net/2.1.8/js/dataTables.js'></script>
 <script src="~/js/alert.js"></script>
+<script>
+    // for pagination
+    new DataTable('#lookupTable');
+
+</script>
 <script>
 
         function assignRider(button) {

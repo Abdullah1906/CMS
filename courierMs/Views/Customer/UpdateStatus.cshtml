@@ -5,6 +5,8 @@
 
 
 }
+<link rel='stylesheet' href='https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css'>
+
 <div class="row">
     <div class="col-md-12">
         <div class="card shadow-lg mb-4">
@@ -12,7 +14,7 @@
                 <h4 class="mb-0">Track</h4>
             </div>
             <div class="card-body">
-                <table class="table table-hover table-bordered text-center align-middle display" id="UpdateTable">
+                <table class="table table-hover table-bordered text-center align-middle display" id="parcelTable">
                     <thead class="text-white" style="background-color:#3498db">
                         <tr>
                             <th scope="col">No</th>
@@ -56,13 +58,13 @@
                                         <b>Tracker Name:</b> @item.Percelinfo.Rider <br />
                                         <b>Tracker Number:</b> @item.Percelinfo.TrackingNumber <br />
                                     </td>
-                                    <td>
+                                    <td id="status-@item.Percelinfo.Id">
                                         @item.Percelinfo.Status
                                     </td>
                                     <td>
                                         <div class="row">
-                                            <button type="button" id="EditDeliverButton" class="btn btn-primary btn-sm ml-1" data-id="@item.Percelinfo.Id" onclick="EditDeliver(this)">Edit</button>
-                                            <button type="button" id="DeliverButton" class="btn btn-success btn-sm" data-id="@item.Percelinfo.Id" onclick="Deliver(this)">Delivered</button>
+
+                                            <button type="button" id="DeliverButton" class="btn btn-success btn-sm ml-1" data-id="@item.Percelinfo.Id" onclick="Deliver(this)">Delivered</button>
                                         </div>
                                     </td>
                                 </tr>
@@ -77,84 +79,38 @@
 </div>
 
 <script src="~/js/jquery-3.6.0.min.js"></script>
+<script src='https://cdn.datatables.net/2.1.8/js/dataTables.js'></script>
 <script src="~/js/alert.js"></script>
 <script>
-
-function Deliver(button) {
-    const parcelId = $(button).data("id");
-
-   
-    console.log(parcelId);
-
-    $.ajax({
-        url: '/Customer/UpdateStatus',
-        type: 'POST',
-        data: { ParcelId: parcelId },
-        success: function (response) {
-            if (response.success) {
-                Swal.fire("Delivered!", "Success");
-
-                console.log(response.data[0]);
-
-                // Use the ParcelId to locate and remove the specific row in the table
-                $('#UpdateTable tbody')
-                    .find(`button[data-id="${response.data[0].Percelinfo.Id}"]`)
-                    .closest('tr')
-                    .remove();
-
-                // Construct a new table row dynamically
-                let newRow = `
-                    <tr class="text-dark">
-                        <td>${response.data[0].percelinfo.id}</td>
-                        <td>
-                            <b>Parcel Type:</b> ${response.data[0].percelinfo.parcelType} <br />
-                            <b>Weight:</b> ${response.data[0].percelinfo.weight} <br />
-                            <b>Price:</b> ${response.data[0].percelinfo.price} <br />
-                        </td>
-                        <td>
-                            <b>Name:</b> ${response.data[0].customerinfo.name} <br />
-                            <b>Phone Number:</b> ${response.data[0].customerinfo.phoneNumber} <br />
-                            <b>Address:</b> ${response.data[0].customerinfo.address}, ${response.data[0].customerinfo.city} <br />
-                        </td>
-                        <td>
-                            <b>Name:</b> ${response.data[0].receiverInfo.name} <br />
-                            <b>Phone Number:</b> ${response.data[0].receiverInfo.phoneNumber} <br />
-                            <b>Address:</b> ${response.data[0].receiverInfo.address}, ${response.data[0].receiverInfo.city} <br />
-                        </td>
-                        <td>
-                            <b>Tracker Name:</b> ${response.data[0].percelinfo.rider} <br />
-                            <b>Tracker Number:</b> ${response.data[0].percelinfo.trackingNumber} <br />
-                        </td>
-                        <td>
-                            ${response.data[0].percelinfo.status}
-                        </td>
-                        <td>
-                            <div class="row">
-                                <button type="button" id="EditDeliverButton" class="btn btn-primary btn-sm ml-1" 
-                                    data-id="${response.data[0].percelinfo.id}" onclick="EditDeliver(this)">Edit</button>
-                                <button type="button" id="DeliverButton" class="btn btn-success btn-sm" 
-                                    data-id="${response.data[0].percelinfo.id}" onclick="Deliver(this)">Delivered</button>
-                            </div>
-                        </td>
-                    </tr>`;
-
-                // Append the new row to the table body
-                $('#UpdateTable tbody').append(newRow);
-            } else {
-                Swal.fire("Error!", response.message, "error");
-            }
-        },
-        error: function (xhr, status, error) {
-            alert("An error occurred: " + (xhr.responseText || error));
-        }
-    });
-}
+    // for pagination
+    new DataTable('#parcelTable');
 
 </script>
+<script>
 
-@* <script>
-    $(document).on('click', '#DeliverButton', function() {
-    const parcelId = $(this).data('id');
-    Deliver(this); // Call the Deliver function
-});
-</script> *@
+
+    function Deliver(button) {
+        const parcelId = $(button).data("id");
+        console.log(parcelId);
+
+        $.ajax({
+            url: '/Customer/UpdateStatus',
+            type: 'POST',
+            data: { ParcelId: parcelId },
+            success: function (response) {
+                if (response.success) {
+                    Swal.fire("Delivered!", "Success");
+                    debugger;
+                    console.log(response.data);
+                    $('#status-' + parcelId).text(response.data.status);
+
+                } else {
+                    Swal.fire("Error!", response.message, "error");
+                }
+            },
+            error: function (xhr, status, error) {
+                Swal.fire("Error!", `Status: ${ status }, Error: ${ error }`, "error");
+            }
+        });
+    }
+</script>

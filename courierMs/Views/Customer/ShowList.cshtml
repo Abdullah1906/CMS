@@ -130,8 +130,8 @@
                         <th scope="col">Weight</th>
                         <th scope="col">Price</th>
                         <th scope="col">Note</th>
-                        <th scope="col">Sender Id</th>
-                        <th scope="col">Reciever Id</th>
+                        <th scope="col">Sender Name</th>
+                        <th scope="col">Reciever Name</th>
                         <th scope="col">Action</th>
 
 
@@ -142,7 +142,7 @@
                     {
                         foreach(var item in Model)
                         {
-                            if (item.Percelinfo != null)
+                            if (item.Percelinfo != null && item.ReceiverInfo != null && item.Customerinfo != null)
                             {
                                 <tr class="text-dark">
                                     <td>@item.Percelinfo.Id</td>
@@ -150,8 +150,8 @@
                                     <td>@item.Percelinfo.Weight</td>
                                     <td>@item.Percelinfo.Price</td>
                                     <td>@item.Percelinfo.Note</td>
-                                    <td>@item.Percelinfo.SenderId</td>
-                                    <td>@item.Percelinfo.ReceiverId</td>
+                                    <td>@item.Customerinfo.Name</td>
+                                    <td>@item.ReceiverInfo.Name</td>
 
 
                                     <td>
